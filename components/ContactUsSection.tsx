@@ -60,7 +60,7 @@ export default function ContactUsSection() {
         {Array.from({ length: 6 }).map((_, i) => (
           <div
             key={i}
-            className="absolute w-2 h-2 bg-brand-red/20 rounded-full animate-float"
+            className="absolute w-2 h-2 bg-brand-primary/20 rounded-full animate-float"
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
@@ -77,7 +77,7 @@ export default function ContactUsSection() {
           <h2 className="text-4xl md:text-5xl font-bold text-brand-dark mb-4 text-shadow-lg">
             Contact us
           </h2>
-          <div className="w-24 h-1 bg-brand-red mx-auto shadow-lg shadow-red-500/50"></div>
+          <div className="w-24 h-1 bg-brand-primary mx-auto shadow-lg shadow-brand-primary/50"></div>
         </div>
 
         {/* Premium Contact Form */}
@@ -86,7 +86,7 @@ export default function ContactUsSection() {
             {/* Left Column */}
             <div className="space-y-6">
               <div className="group">
-                <label htmlFor="name" className="block text-sm font-medium text-brand-dark mb-2 group-hover:text-brand-red transition-colors duration-300">
+                <label htmlFor="name" className="block text-sm font-medium text-brand-dark mb-2 group-hover:text-brand-primary transition-colors duration-300">
                   Name
                 </label>
                 <div className="relative">
@@ -100,19 +100,19 @@ export default function ContactUsSection() {
                     onBlur={handleBlur}
                     className={`w-full px-4 py-3 border-2 rounded-lg outline-none transition-all duration-300 bg-white/80 backdrop-blur-sm ${
                       focusedField === 'name' 
-                        ? 'border-brand-red shadow-lg shadow-red-500/25' 
-                        : 'border-gray-300 hover:border-brand-red/50'
+                        ? 'border-brand-primary shadow-lg shadow-brand-primary/25' 
+                        : 'border-gray-300 hover:border-brand-primary/50'
                     }`}
                     placeholder="Your Name"
                   />
                   {focusedField === 'name' && (
-                    <div className="absolute inset-0 border-2 border-brand-red rounded-lg animate-pulse pointer-events-none"></div>
+                    <div className="absolute inset-0 border-2 border-brand-primary rounded-lg animate-pulse pointer-events-none"></div>
                   )}
                 </div>
               </div>
 
               <div className="group">
-                <label htmlFor="phone" className="block text-sm font-medium text-brand-dark mb-2 group-hover:text-brand-red transition-colors duration-300">
+                <label htmlFor="phone" className="block text-sm font-medium text-brand-dark mb-2 group-hover:text-brand-primary transition-colors duration-300">
                   Phone Number
                 </label>
                 <div className="relative">
@@ -126,19 +126,19 @@ export default function ContactUsSection() {
                     onBlur={handleBlur}
                     className={`w-full px-4 py-3 border-2 rounded-lg outline-none transition-all duration-300 bg-white/80 backdrop-blur-sm ${
                       focusedField === 'phone' 
-                        ? 'border-brand-red shadow-lg shadow-red-500/25' 
-                        : 'border-gray-300 hover:border-brand-red/50'
+                        ? 'border-brand-primary shadow-lg shadow-brand-primary/25' 
+                        : 'border-gray-300 hover:border-brand-primary/50'
                     }`}
                     placeholder="Your Phone Number"
                   />
                   {focusedField === 'phone' && (
-                    <div className="absolute inset-0 border-2 border-brand-red rounded-lg animate-pulse pointer-events-none"></div>
+                    <div className="absolute inset-0 border-2 border-brand-primary rounded-lg animate-pulse pointer-events-none"></div>
                   )}
                 </div>
               </div>
 
               <div className="group">
-                <label htmlFor="notes" className="block text-sm font-medium text-brand-dark mb-2 group-hover:text-brand-red transition-colors duration-300">
+                <label htmlFor="notes" className="block text-sm font-medium text-brand-dark mb-2 group-hover:text-brand-primary transition-colors duration-300">
                   Additional Notes
                 </label>
                 <div className="relative">
@@ -152,13 +152,13 @@ export default function ContactUsSection() {
                     rows={4}
                     className={`w-full px-4 py-3 border-2 rounded-lg outline-none transition-all duration-300 bg-white/80 backdrop-blur-sm resize-none ${
                       focusedField === 'notes' 
-                        ? 'border-brand-red shadow-lg shadow-red-500/25' 
-                        : 'border-gray-300 hover:border-brand-red/50'
+                        ? 'border-brand-primary shadow-lg shadow-brand-primary/25' 
+                        : 'border-gray-300 hover:border-brand-primary/50'
                     }`}
                     placeholder="Your Message"
                   />
                   {focusedField === 'notes' && (
-                    <div className="absolute inset-0 border-2 border-brand-red rounded-lg animate-pulse pointer-events-none"></div>
+                    <div className="absolute inset-0 border-2 border-brand-primary rounded-lg animate-pulse pointer-events-none"></div>
                   )}
                 </div>
               </div>
@@ -167,7 +167,7 @@ export default function ContactUsSection() {
             {/* Right Column */}
             <div className="space-y-6">
               <div className="group">
-                <label htmlFor="email" className="block text-sm font-medium text-brand-dark mb-2 group-hover:text-brand-red transition-colors duration-300">
+                <label htmlFor="email" className="block text-sm font-medium text-brand-dark mb-2 group-hover:text-brand-primary transition-colors duration-300">
                   Email
                 </label>
                 <div className="relative">
@@ -181,19 +181,19 @@ export default function ContactUsSection() {
                     onBlur={handleBlur}
                     className={`w-full px-4 py-3 border-2 rounded-lg outline-none transition-all duration-300 bg-white/80 backdrop-blur-sm ${
                       focusedField === 'email' 
-                        ? 'border-brand-red shadow-lg shadow-red-500/25' 
-                        : 'border-gray-300 hover:border-brand-red/50'
+                        ? 'border-brand-primary shadow-lg shadow-brand-primary/25' 
+                        : 'border-gray-300 hover:border-brand-primary/50'
                     }`}
                     placeholder="Your Email"
                   />
                   {focusedField === 'email' && (
-                    <div className="absolute inset-0 border-2 border-brand-red rounded-lg animate-pulse pointer-events-none"></div>
+                    <div className="absolute inset-0 border-2 border-brand-primary rounded-lg animate-pulse pointer-events-none"></div>
                   )}
                 </div>
               </div>
 
               <div className="group">
-                <label htmlFor="address" className="block text-sm font-medium text-brand-dark mb-2 group-hover:text-brand-red transition-colors duration-300">
+                <label htmlFor="address" className="block text-sm font-medium text-brand-dark mb-2 group-hover:text-brand-primary transition-colors duration-300">
                   Address
                 </label>
                 <div className="relative">
@@ -207,13 +207,13 @@ export default function ContactUsSection() {
                     onBlur={handleBlur}
                     className={`w-full px-4 py-3 border-2 rounded-lg outline-none transition-all duration-300 bg-white/80 backdrop-blur-sm ${
                       focusedField === 'address' 
-                        ? 'border-brand-red shadow-lg shadow-red-500/25' 
-                        : 'border-gray-300 hover:border-brand-red/50'
+                        ? 'border-brand-primary shadow-lg shadow-brand-primary/25' 
+                        : 'border-gray-300 hover:border-brand-primary/50'
                     }`}
                     placeholder="Your Address"
                   />
                   {focusedField === 'address' && (
-                    <div className="absolute inset-0 border-2 border-brand-red rounded-lg animate-pulse pointer-events-none"></div>
+                    <div className="absolute inset-0 border-2 border-brand-primary rounded-lg animate-pulse pointer-events-none"></div>
                   )}
                 </div>
               </div>
@@ -224,7 +224,7 @@ export default function ContactUsSection() {
           <div className="pt-6">
             <button
               type="submit"
-              className="group relative w-full bg-brand-red text-white px-8 py-4 text-lg font-semibold hover:bg-red-700 transition-all duration-300 rounded-lg overflow-hidden shadow-lg hover:shadow-xl hover:shadow-red-500/25 transform hover:scale-105"
+              className="group relative w-full bg-brand-primary text-white px-8 py-4 text-lg font-semibold hover:bg-brand-secondary transition-all duration-300 rounded-lg overflow-hidden shadow-lg hover:shadow-xl hover:shadow-brand-primary/25 transform hover:scale-105"
             >
               {/* Button shine effect */}
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>

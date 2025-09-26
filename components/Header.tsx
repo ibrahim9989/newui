@@ -84,7 +84,7 @@ export default function Header() {
             </div>
             <div className="flex space-x-2">
               {[1, 2, 3, 4, 5].map((i) => (
-                <div key={i} className="w-6 h-6 bg-gray-600 rounded-full hover:bg-brand-red transition-all duration-300 cursor-pointer transform hover:scale-110 hover:shadow-lg hover:shadow-red-500/25"></div>
+                <div key={i} className="w-6 h-6 bg-gray-600 rounded-full hover:bg-brand-primary transition-all duration-300 cursor-pointer transform hover:scale-110 hover:shadow-lg hover:shadow-brand-primary/25"></div>
               ))}
             </div>
           </div>

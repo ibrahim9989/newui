@@ -8,9 +8,10 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'brand-red': '#DC2626',
-        'brand-gray': '#374151',
-        'brand-dark': '#1F2937',
+        'brand-primary': '#014C83',
+        'brand-secondary': '#5BA7DB',
+        'brand-accent': '#FFBB5B',
+        'brand-dark': '#014C83',
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],

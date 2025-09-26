@@ -62,7 +62,7 @@ export default function OurClientsSection() {
         {Array.from({ length: 8 }).map((_, i) => (
           <div
             key={i}
-            className="absolute w-2 h-2 bg-brand-red/20 rounded-full animate-float"
+            className="absolute w-2 h-2 bg-brand-primary/20 rounded-full animate-float"
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
@@ -79,7 +79,7 @@ export default function OurClientsSection() {
           <h2 className="text-4xl md:text-5xl font-bold text-brand-dark mb-4">
             Our clients
           </h2>
-          <div className="w-24 h-1 bg-brand-red mx-auto"></div>
+          <div className="w-24 h-1 bg-brand-primary mx-auto"></div>
         </div>
 
         {/* Premium Client Logos */}

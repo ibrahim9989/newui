@@ -58,7 +58,7 @@ export default function ParticleSystem() {
         vy: (Math.random() - 0.5) * 2 - 1, // Slight upward bias
         size: Math.random() * 3 + 1,
         opacity: Math.random() * 0.8 + 0.2,
-        color: Math.random() > 0.7 ? '#DC2626' : '#FFFFFF', // 30% red, 70% white
+        color: Math.random() > 0.7 ? '#014C83' : '#FFFFFF', // 30% brand primary, 70% white
         life: 0,
         maxLife: Math.random() * 60 + 30 // 30-90 frames
       })
@@ -121,7 +121,7 @@ export default function ParticleSystem() {
             height: particle.size,
             backgroundColor: particle.color,
             opacity: particle.opacity,
-            boxShadow: particle.color === '#DC2626' 
+            boxShadow: particle.color === '#014C83' 
               ? `0 0 ${particle.size * 2}px ${particle.color}` 
               : `0 0 ${particle.size}px ${particle.color}`,
             transition: 'opacity 0.1s ease-out'

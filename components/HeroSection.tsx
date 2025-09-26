@@ -29,7 +29,7 @@ export default function HeroSection() {
       {/* Premium background effects */}
       <div className="absolute inset-0">
         {/* Animated gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-red-900/20 to-red-800/30 animate-pulse"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-brand-primary/20 to-brand-secondary/30 animate-pulse"></div>
         
         {/* Advanced floating particles with mouse interaction */}
         <div className="absolute inset-0">
@@ -51,7 +51,7 @@ export default function HeroSection() {
 
         {/* Mouse-following glow effect */}
         <div 
-          className="absolute w-96 h-96 bg-red-500/10 rounded-full blur-3xl pointer-events-none transition-all duration-300"
+          className="absolute w-96 h-96 bg-brand-primary/10 rounded-full blur-3xl pointer-events-none transition-all duration-300"
           style={{
             left: mousePosition.x - 192,
             top: mousePosition.y - 192,
@@ -99,7 +99,7 @@ export default function HeroSection() {
           }}
         >
           {/* Enhanced red glow with animation */}
-          <div className="absolute inset-0 bg-red-500/20 rounded-full blur-2xl animate-pulse"></div>
+          <div className="absolute inset-0 bg-brand-primary/20 rounded-full blur-2xl animate-pulse"></div>
           <div className="relative w-full h-full">
             {/* Body with enhanced animation */}
             <div 
@@ -166,7 +166,7 @@ export default function HeroSection() {
                 {/* Animated screen content */}
                 <div className="text-gray-400 text-sm animate-pulse">Monitor Display</div>
                 {/* Enhanced screen glow effect */}
-                <div className="absolute inset-0 bg-blue-500/10 rounded animate-pulse"></div>
+                <div className="absolute inset-0 bg-brand-secondary/10 rounded animate-pulse"></div>
                 {/* Screen scan lines */}
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/5 to-transparent animate-pulse" style={{ animationDuration: '2s' }}></div>
                 {/* Corner highlights */}
@@ -193,7 +193,7 @@ export default function HeroSection() {
             <span className="block drop-shadow-2xl animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
               ONLY CERTIFIED
             </span>
-            <span className="block text-brand-red text-8xl md:text-[10rem] drop-shadow-2xl animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
+            <span className="block text-brand-primary text-8xl md:text-[10rem] drop-shadow-2xl animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
               PHONES
             </span>
           </h1>
@@ -205,14 +205,14 @@ export default function HeroSection() {
 
           {/* Premium buttons with enhanced effects */}
           <div className="flex flex-col sm:flex-row gap-4 max-w-md animate-fade-in-up" style={{ animationDelay: '0.8s' }}>
-            <button className="group relative bg-brand-red text-white px-8 py-4 text-lg font-semibold hover:bg-red-700 transition-all duration-300 rounded-lg overflow-hidden shadow-lg hover:shadow-xl hover:shadow-red-500/25 transform hover:scale-105">
+            <button className="group relative bg-brand-primary text-white px-8 py-4 text-lg font-semibold hover:bg-brand-secondary transition-all duration-300 rounded-lg overflow-hidden shadow-lg hover:shadow-xl hover:shadow-brand-primary/25 transform hover:scale-105">
               {/* Button shine effect */}
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
               <span className="relative z-10">READ MORE</span>
             </button>
-            <button className="group relative bg-white text-brand-red border-2 border-brand-red px-8 py-4 text-lg font-semibold hover:bg-brand-red hover:text-white transition-all duration-300 rounded-lg overflow-hidden shadow-lg hover:shadow-xl hover:shadow-red-500/25 transform hover:scale-105">
+            <button className="group relative bg-white text-brand-primary border-2 border-brand-primary px-8 py-4 text-lg font-semibold hover:bg-brand-primary hover:text-white transition-all duration-300 rounded-lg overflow-hidden shadow-lg hover:shadow-xl hover:shadow-brand-primary/25 transform hover:scale-105">
               {/* Button shine effect */}
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-brand-red/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-brand-primary/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
               <span className="relative z-10">JOIN US</span>
             </button>
           </div>

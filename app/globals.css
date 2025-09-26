@@ -52,12 +52,12 @@ a {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #DC2626;
+  background: #014C83;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #B91C1C;
+  background: #5BA7DB;
 }
 
 /* Premium animations */
@@ -83,10 +83,10 @@ a {
 
 @keyframes glow {
   0%, 100% {
-    box-shadow: 0 0 20px rgba(220, 38, 38, 0.3);
+    box-shadow: 0 0 20px rgba(1, 76, 131, 0.3);
   }
   50% {
-    box-shadow: 0 0 30px rgba(220, 38, 38, 0.6);
+    box-shadow: 0 0 30px rgba(1, 76, 131, 0.6);
   }
 }
 
@@ -125,7 +125,7 @@ a {
 
 /* Premium gradient text */
 .gradient-text {
-  background: linear-gradient(135deg, #DC2626, #F59E0B, #DC2626);
+  background: linear-gradient(135deg, #014C83, #FFBB5B, #5BA7DB);
   background-size: 200% 200%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -163,11 +163,29 @@ a {
 
 /* Premium text effects */
 .text-glow {
-  text-shadow: 0 0 20px rgba(220, 38, 38, 0.5);
+  text-shadow: 0 0 20px rgba(1, 76, 131, 0.5);
 }
 
 .text-shadow-lg {
   text-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Custom cursor */
+.custom-cursor {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  background: #014C83;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transition: all 0.3s ease;
+  mix-blend-mode: difference;
+}
+
+.custom-cursor.hover {
+  transform: scale(1.5);
+  background: #FFBB5B;
 }
 
 /* Advanced button effects */
@@ -301,7 +319,7 @@ a {
 .loading-dots div {
   width: 8px;
   height: 8px;
-  background: #DC2626;
+  background: #014C83;
   border-radius: 50%;
   animation: loading-bounce 1.4s ease-in-out infinite both;
 }
@@ -329,7 +347,7 @@ a {
 
 /* Premium text effects */
 .text-shimmer {
-  background: linear-gradient(90deg, #DC2626, #F59E0B, #DC2626);
+  background: linear-gradient(90deg, #014C83, #FFBB5B, #5BA7DB);
   background-size: 200% 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

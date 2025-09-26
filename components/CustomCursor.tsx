@@ -59,14 +59,14 @@ export default function CustomCursor() {
       
       {/* Cursor trail */}
       <div
-        className="absolute w-6 h-6 bg-brand-red/20 rounded-full pointer-events-none transition-all duration-300"
+        className="absolute w-6 h-6 bg-brand-primary/20 rounded-full pointer-events-none transition-all duration-300"
         style={{
           left: cursorPosition.x - 12,
           top: cursorPosition.y - 12,
           transform: isHovering ? 'scale(1.5)' : 'scale(1)',
           boxShadow: isHovering 
-            ? '0 0 20px rgba(220, 38, 38, 0.4)' 
-            : '0 0 10px rgba(220, 38, 38, 0.2)'
+            ? '0 0 20px rgba(1, 76, 131, 0.4)' 
+            : '0 0 10px rgba(1, 76, 131, 0.2)'
         }}
       />
     </>

@@ -47,7 +47,7 @@ export default function FeaturedServicesSection() {
   ]
 
   return (
-    <section className="bg-gradient-to-br from-brand-dark to-purple-900 py-20">
+    <section className="bg-gradient-to-br from-brand-dark to-brand-secondary py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Title */}
         <div className="text-center mb-12">
@@ -65,7 +65,7 @@ export default function FeaturedServicesSection() {
               onClick={() => setActiveTab(tab)}
               className={`group relative px-6 py-3 text-sm font-semibold transition-all duration-300 overflow-hidden rounded-lg animate-fade-in-up ${
                 activeTab === tab
-                  ? 'bg-brand-red text-white shadow-lg shadow-red-500/25'
+                  ? 'bg-brand-primary text-white shadow-lg shadow-brand-primary/25'
                   : 'bg-transparent border-2 border-white text-white hover:bg-white hover:text-brand-dark hover:shadow-lg hover:shadow-white/25'
               }`}
               style={{ animationDelay: `${index * 0.1}s` }}
@@ -94,14 +94,14 @@ export default function FeaturedServicesSection() {
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
               </div>
               <div className="p-6 relative">
-                <h3 className="text-lg font-bold text-gray-800 mb-2 group-hover:text-brand-red transition-colors duration-300">
+                <h3 className="text-lg font-bold text-gray-800 mb-2 group-hover:text-brand-primary transition-colors duration-300">
                   {service.title}
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
                   {service.description}
                 </p>
                 {/* Premium border effect */}
-                <div className="absolute bottom-0 left-0 w-0 h-1 bg-brand-red group-hover:w-full transition-all duration-300"></div>
+                <div className="absolute bottom-0 left-0 w-0 h-1 bg-brand-primary group-hover:w-full transition-all duration-300"></div>
               </div>
             </div>
           ))}

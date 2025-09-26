@@ -27,7 +27,7 @@ export default function CreativeSolutionsSection() {
               {solutions.map((solution, index) => (
                 <div key={index} className="flex items-center space-x-4">
                   <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center flex-shrink-0">
-                    <svg className="w-4 h-4 text-brand-red" fill="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-4 h-4 text-brand-accent" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
                     </svg>
                   </div>
@@ -36,7 +36,7 @@ export default function CreativeSolutionsSection() {
               ))}
             </div>
 
-            <button className="bg-white text-brand-red px-8 py-4 text-lg font-semibold hover:bg-gray-100 transition-colors transform hover:scale-105">
+            <button className="bg-white text-brand-primary px-8 py-4 text-lg font-semibold hover:bg-gray-100 transition-colors transform hover:scale-105">
               READ MORE
             </button>
           </div>

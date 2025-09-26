@@ -122,7 +122,7 @@ export default function FeaturesIconSection() {
                   {/* Glow background */}
                   <div className="absolute inset-0 bg-white/20 rounded-full blur-xl group-hover:bg-white/30 transition-all duration-300"></div>
                   {/* Icon container */}
-                  <div className="relative bg-brand-red/20 p-4 rounded-full group-hover:bg-brand-red/30 transition-all duration-300">
+                  <div className="relative bg-brand-primary/20 p-4 rounded-full group-hover:bg-brand-primary/30 transition-all duration-300">
                     {feature.icon}
                   </div>
                   {/* Rotating ring effect */}

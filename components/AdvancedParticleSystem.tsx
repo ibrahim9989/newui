@@ -56,7 +56,7 @@ export default function AdvancedParticleSystem() {
 
     for (let i = 0; i < particleCount; i++) {
       const type = ['sparkle', 'trail', 'glow', 'star'][Math.floor(Math.random() * 4)] as AdvancedParticle['type']
-      const colors = ['#DC2626', '#FFFFFF', '#F59E0B', '#10B981', '#8B5CF6']
+      const colors = ['#014C83', '#FFFFFF', '#FFBB5B', '#5BA7DB', '#000000']
       
       newParticles.push({
         id: particleId.current++,

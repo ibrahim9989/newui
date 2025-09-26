@@ -7,7 +7,7 @@ export default function AboutUsSection() {
           <h2 className="text-4xl md:text-5xl font-bold text-brand-dark mb-4">
             About us
           </h2>
-          <div className="w-24 h-1 bg-brand-red mx-auto"></div>
+          <div className="w-24 h-1 bg-brand-primary mx-auto"></div>
         </div>
 
         {/* Description */}
