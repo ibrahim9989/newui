@@ -5,8 +5,15 @@ import { useState, useEffect } from 'react'
 export default function HeroSection() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
   const [scrollY, setScrollY] = useState(0)
+  const [isClient, setIsClient] = useState(false)
 
   useEffect(() => {
+    setIsClient(true)
+  }, [])
+
+  useEffect(() => {
+    if (!isClient) return
+    
     const handleMouseMove = (e: MouseEvent) => {
       setMousePosition({ x: e.clientX, y: e.clientY })
     }
@@ -33,20 +40,23 @@ export default function HeroSection() {
         
         {/* Advanced floating particles with mouse interaction */}
         <div className="absolute inset-0">
-          {Array.from({ length: 30 }).map((_, i) => (
-            <div
-              key={i}
-              className="absolute w-1 h-1 bg-white/20 rounded-full animate-pulse"
-              style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-                animationDelay: `${Math.random() * 3}s`,
-                animationDuration: `${2 + Math.random() * 2}s`,
-                transform: `translate(${(mousePosition.x - window.innerWidth / 2) * (i % 3) * 0.01}px, ${(mousePosition.y - window.innerHeight / 2) * (i % 3) * 0.01}px)`,
-                transition: 'transform 0.1s ease-out'
-              }}
-            />
-          ))}
+          {Array.from({ length: 30 }).map((_, i) => {
+            if (!isClient) return null
+            return (
+              <div
+                key={i}
+                className="absolute w-1 h-1 bg-white/20 rounded-full animate-pulse"
+                style={{
+                  left: `${Math.random() * 100}%`,
+                  top: `${Math.random() * 100}%`,
+                  animationDelay: `${Math.random() * 3}s`,
+                  animationDuration: `${2 + Math.random() * 2}s`,
+                  transform: `translate(${(mousePosition.x - (typeof window !== 'undefined' ? window.innerWidth / 2 : 0)) * (i % 3) * 0.01}px, ${(mousePosition.y - (typeof window !== 'undefined' ? window.innerHeight / 2 : 0)) * (i % 3) * 0.01}px)`,
+                  transition: 'transform 0.1s ease-out'
+                }}
+              />
+            )
+          })}
         </div>
 
         {/* Mouse-following glow effect */}
@@ -189,17 +199,17 @@ export default function HeroSection() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="max-w-4xl">
           {/* Premium headline with text effects */}
-          <h1 className="text-7xl md:text-9xl font-black text-white leading-[0.9] mb-8 text-left">
-            <span className="block drop-shadow-2xl animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+          <h1 className="text-7xl md:text-9xl font-black text-white leading-[0.9] mb-8 text-left font-primary">
+            <span className="block drop-shadow-2xl animate-fade-in-up font-primary" style={{ animationDelay: '0.2s' }}>
               ONLY CERTIFIED
             </span>
-            <span className="block text-brand-primary text-8xl md:text-[10rem] drop-shadow-2xl animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
+            <span className="block text-brand-primary text-8xl md:text-[10rem] drop-shadow-2xl animate-fade-in-up font-primary" style={{ animationDelay: '0.4s' }}>
               PHONES
             </span>
           </h1>
           
           {/* Premium description with subtle animation */}
-          <p className="text-lg text-gray-300 mb-12 max-w-xl leading-relaxed animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
+          <p className="text-lg text-gray-300 mb-12 max-w-xl leading-relaxed animate-fade-in-up font-secondary" style={{ animationDelay: '0.6s' }}>
             Quisque elementum vulputate risus, id pellentesque
           </p>
 

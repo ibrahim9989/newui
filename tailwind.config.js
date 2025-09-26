@@ -14,7 +14,9 @@ module.exports = {
         'brand-dark': '#014C83',
       },
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
+        sans: ['Montserrat', 'sans-serif'],
+        primary: ['Montserrat', 'sans-serif'],
+        secondary: ['Helvetica', 'Arial', 'sans-serif'],
       },
     },
   },
