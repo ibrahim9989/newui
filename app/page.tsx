@@ -1,12 +1,17 @@
 import Header from '@/components/Header'
-import HeroSection from '@/components/HeroSection'
-import FeaturedServicesSection from '@/components/FeaturedServicesSection'
+import SectorCarousel from '@/components/SectorCarousel'
+import AboutHASCOGroup from '@/components/AboutHASCOGroup'
+import OurServices from '@/components/OurServices'
+import HASCOOperationOffices from '@/components/HASCOOperationOffices'
+import ProjectsShowcase from '@/components/ProjectsShowcase'
+import WhyHASCO from '@/components/WhyHASCO'
 import OurClientsSection from '@/components/OurClientsSection'
-import FeaturesIconSection from '@/components/FeaturesIconSection'
+import OurDivisions from '@/components/OurDivisions'
 import ContactUsSection from '@/components/ContactUsSection'
-import AboutUsSection from '@/components/AboutUsSection'
+import ConditionalFooter from '@/components/ConditionalFooter'
 import AdvancedParticleSystem from '@/components/AdvancedParticleSystem'
 import CustomCursor from '@/components/CustomCursor'
+import SectionTransition from '@/components/SectionTransition'
 
 export default function Home() {
   return (
@@ -14,24 +19,112 @@ export default function Home() {
       <AdvancedParticleSystem />
       <CustomCursor />
       <Header />
-      <section id="home" className="pt-24">
-        <HeroSection />
-      </section>
-      <section id="services">
-        <FeaturedServicesSection />
-      </section>
-      <section id="gallery">
-        <OurClientsSection />
-      </section>
-      <section id="blog">
-        <FeaturesIconSection />
-      </section>
-      <section id="contacts">
-        <ContactUsSection />
-      </section>
-      <section id="about">
-        <AboutUsSection />
-      </section>
+      
+      {/* Section 1: Hero Section (SectorCarousel) */}
+      <SectionTransition 
+        transitionType="reveal" 
+        className="pt-24"
+        addGradientOverlay={true}
+      >
+        <div id="home">
+          <SectorCarousel />
+        </div>
+      </SectionTransition>
+      
+      {/* Section 2: About HASCO Group */}
+      <SectionTransition 
+        transitionType="slide-up" 
+        delay={200}
+        addDivider={true}
+        addGradientOverlay={true}
+      >
+        <div id="about">
+          <AboutHASCOGroup />
+        </div>
+      </SectionTransition>
+      
+      {/* Section 3: Our Services */}
+      <SectionTransition 
+        transitionType="fade-in" 
+        delay={300}
+        addDivider={true}
+      >
+        <div id="services">
+          <OurServices />
+        </div>
+      </SectionTransition>
+      
+      {/* Section 4: HASCO Operation Offices */}
+      <SectionTransition 
+        transitionType="scale-in" 
+        delay={400}
+        addDivider={true}
+        addGradientOverlay={true}
+      >
+        <div id="offices">
+          <HASCOOperationOffices />
+        </div>
+      </SectionTransition>
+      
+      {/* Section 5: Projects Showcase */}
+      <SectionTransition 
+        transitionType="slide-up" 
+        delay={500}
+        addDivider={true}
+      >
+        <div id="projects">
+          <ProjectsShowcase />
+        </div>
+      </SectionTransition>
+      
+      {/* Section 6: Why HASCO */}
+      <SectionTransition 
+        transitionType="fade-in" 
+        delay={600}
+        addDivider={true}
+        addGradientOverlay={true}
+      >
+        <div id="why-hasco">
+          <WhyHASCO />
+        </div>
+      </SectionTransition>
+      
+      {/* Section 7: Our Clients */}
+      <SectionTransition 
+        transitionType="reveal" 
+        delay={700}
+        addDivider={true}
+      >
+        <div id="clients">
+          <OurClientsSection />
+        </div>
+      </SectionTransition>
+      
+      {/* Section 8: Our Divisions */}
+      <SectionTransition 
+        transitionType="scale-in" 
+        delay={800}
+        addDivider={true}
+        addGradientOverlay={true}
+      >
+        <div id="divisions">
+          <OurDivisions />
+        </div>
+      </SectionTransition>
+      
+      {/* Contact Section */}
+      <SectionTransition 
+        transitionType="slide-up" 
+        delay={900}
+        addDivider={true}
+      >
+        <div id="contact">
+          <ContactUsSection />
+        </div>
+      </SectionTransition>
+      
+      {/* Footer */}
+      <ConditionalFooter />
     </main>
   )
 }

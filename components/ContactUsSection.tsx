@@ -12,7 +12,7 @@ export default function ContactUsSection() {
   })
   const [isVisible, setIsVisible] = useState(false)
   const [focusedField, setFocusedField] = useState<string | null>(null)
-  const sectionRef = useRef<HTMLElement>(null)
+  const sectionRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -54,7 +54,7 @@ export default function ContactUsSection() {
   }
 
   return (
-    <section ref={sectionRef} className="bg-gray-100 py-20 relative overflow-hidden">
+    <div ref={sectionRef} className="bg-gray-100 py-20 relative overflow-hidden section-bg-transition">
       {/* Background effects */}
       <div className="absolute inset-0 opacity-5">
         {Array.from({ length: 6 }).map((_, i) => (
@@ -74,8 +74,8 @@ export default function ContactUsSection() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Premium Section Title */}
         <div className={`text-center mb-12 ${isVisible ? 'animate-fade-in-up' : 'opacity-0'}`}>
-          <h2 className="text-4xl md:text-5xl font-bold text-brand-dark mb-4 text-shadow-lg">
-            Contact us
+          <h2 className="text-4xl md:text-5xl font-bold text-brand-dark mb-4 text-shadow-lg font-heading animate-slide-in-down">
+            Contact <span>us</span>
           </h2>
           <div className="w-24 h-1 bg-brand-primary mx-auto shadow-lg shadow-brand-primary/50"></div>
         </div>
@@ -86,7 +86,7 @@ export default function ContactUsSection() {
             {/* Left Column */}
             <div className="space-y-6">
               <div className="group">
-                <label htmlFor="name" className="block text-sm font-medium text-brand-dark mb-2 group-hover:text-brand-primary transition-colors duration-300">
+                <label htmlFor="name" className="block text-sm font-medium text-brand-dark mb-2 group-hover:text-brand-primary transition-colors duration-300 font-heading">
                   Name
                 </label>
                 <div className="relative">
@@ -224,7 +224,7 @@ export default function ContactUsSection() {
           <div className="pt-6">
             <button
               type="submit"
-              className="group relative w-full bg-brand-primary text-white px-8 py-4 text-lg font-semibold hover:bg-brand-secondary transition-all duration-300 rounded-lg overflow-hidden shadow-lg hover:shadow-xl hover:shadow-brand-primary/25 transform hover:scale-105"
+              className="group relative w-full bg-brand-primary text-white px-8 py-4 text-lg font-semibold font-heading hover:bg-brand-secondary transition-all duration-500 rounded-lg overflow-hidden shadow-lg hover:shadow-xl hover:shadow-brand-primary/25 transform hover:scale-105 hover-lift-3d hover-ripple"
             >
               {/* Button shine effect */}
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
@@ -233,7 +233,7 @@ export default function ContactUsSection() {
           </div>
         </form>
       </div>
-    </section>
+    </div>
   )
 }
 

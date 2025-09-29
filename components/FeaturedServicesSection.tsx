@@ -3,56 +3,95 @@
 import { useState } from 'react'
 
 export default function FeaturedServicesSection() {
-  const [activeTab, setActiveTab] = useState('NETWORKING')
+  const [activeTab, setActiveTab] = useState('ALL SERVICES')
 
-  const tabs = ['NETWORKING', 'DEVELOPMENT', 'HARDWARE', 'ALL SERVICES']
+  const tabs = ['MARINE', 'LOGISTICS', 'HOSPITALITY', 'CONSTRUCTION', 'ENVIRONMENTAL', 'ALL SERVICES']
 
   const services = [
     {
       id: 1,
-      title: "BUSINESS STRATEGY",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop&crop=face",
-      description: "Professional business consulting and strategy development"
+      title: "Marine",
+      image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=400&h=300&fit=crop",
+      description: "Comprehensive marine services and solutions",
+      category: "MARINE"
     },
     {
       id: 2,
-      title: "MOBILE SOLUTIONS",
-      image: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=400&h=300&fit=crop",
-      description: "Advanced mobile technology and smartphone solutions"
+      title: "Shipping",
+      image: "https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?w=400&h=300&fit=crop",
+      description: "Global shipping and vessel management services",
+      category: "MARINE"
     },
     {
       id: 3,
-      title: "DIGITAL WORKSPACE",
-      image: "https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?w=400&h=300&fit=crop",
-      description: "Modern digital workspace setup and optimization"
+      title: "Bunkering",
+      image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=300&fit=crop",
+      description: "Marine fuel supply and bunkering operations",
+      category: "MARINE"
     },
     {
       id: 4,
-      title: "CLOUD COMPUTING",
-      image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=400&h=300&fit=crop",
-      description: "Scalable cloud computing and storage solutions"
+      title: "Logistics & Supply Chain",
+      image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=400&h=300&fit=crop",
+      description: "End-to-end logistics and supply chain management",
+      category: "LOGISTICS"
     },
     {
       id: 5,
-      title: "PRODUCTIVITY",
-      image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop",
-      description: "Enterprise productivity tools and solutions"
+      title: "Freight Forwarding",
+      image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=300&fit=crop",
+      description: "International freight forwarding services",
+      category: "LOGISTICS"
     },
     {
       id: 6,
-      title: "REMOTE CLIENTS",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop",
-      description: "Remote client management and support systems"
+      title: "Air Cargo",
+      image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=400&h=300&fit=crop",
+      description: "Air cargo transportation and handling",
+      category: "LOGISTICS"
+    },
+    {
+      id: 7,
+      title: "Tourism, Event & Entertainment",
+      image: "https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=400&h=300&fit=crop",
+      description: "Tourism, event management and entertainment services",
+      category: "HOSPITALITY"
+    },
+    {
+      id: 8,
+      title: "Hospitality & Catering",
+      image: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=400&h=300&fit=crop",
+      description: "Professional hospitality and catering solutions",
+      category: "HOSPITALITY"
+    },
+    {
+      id: 9,
+      title: "Construction",
+      image: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=400&h=300&fit=crop",
+      description: "Construction and infrastructure development",
+      category: "CONSTRUCTION"
+    },
+    {
+      id: 10,
+      title: "Environmental Service",
+      image: "https://images.unsplash.com/photo-1569163139394-de4e4f43e4e3?w=400&h=300&fit=crop",
+      description: "Environmental protection and sustainability services",
+      category: "ENVIRONMENTAL"
     }
   ]
+
+  // Filter services based on active tab
+  const filteredServices = activeTab === 'ALL SERVICES' 
+    ? services 
+    : services.filter(service => service.category === activeTab)
 
   return (
     <section className="bg-gradient-to-br from-brand-dark to-brand-secondary py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Title */}
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Featured services
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 font-primary">
+            Our Services
           </h2>
           <div className="w-24 h-1 bg-white mx-auto"></div>
         </div>
@@ -78,8 +117,8 @@ export default function FeaturedServicesSection() {
         </div>
 
         {/* Premium Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          {services.map((service, index) => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-12">
+          {filteredServices.map((service, index) => (
             <div key={service.id} className="group bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 animate-fade-in-up" style={{ animationDelay: `${index * 0.1}s` }}>
               <div className="relative overflow-hidden">
                 <img
@@ -89,7 +128,7 @@ export default function FeaturedServicesSection() {
                 />
                 {/* Premium overlay effects */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="absolute inset-0 bg-brand-red/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-brand-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 {/* Shine effect */}
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
               </div>

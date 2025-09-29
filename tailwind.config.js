@@ -8,13 +8,16 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'brand-primary': '#014C83',
-        'brand-secondary': '#5BA7DB',
-        'brand-accent': '#FFBB5B',
-        'brand-dark': '#014C83',
+        'brand-primary': '#1e40af',
+        'brand-secondary': '#3b82f6',
+        'brand-accent': '#60a5fa',
+        'brand-dark': '#0f172a',
+        'brand-light': '#f8fafc',
       },
       fontFamily: {
-        sans: ['Montserrat', 'sans-serif'],
+        sans: ['Helvetica', 'Arial', 'sans-serif'],
+        heading: ['Montserrat', 'sans-serif'],
+        body: ['Helvetica', 'Arial', 'sans-serif'],
         primary: ['Montserrat', 'sans-serif'],
         secondary: ['Helvetica', 'Arial', 'sans-serif'],
       },
