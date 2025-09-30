@@ -80,7 +80,7 @@ export default function Header() {
               </div>
             </div>
             
-            <button className="apple-btn bg-brand-primary text-white px-6 py-2.5 rounded-full font-medium font-heading hover:bg-brand-secondary hover:shadow-lg hover:shadow-brand-primary/25 transition-colors duration-300">
+            <button className="apple-btn bg-brand-primary text-white px-6 py-2.5 rounded-full font-medium font-heading hover:bg-brand-secondary transition-colors duration-300">
               <span className="relative z-10">Get Quote</span>
             </button>
           </div>
@@ -145,7 +145,7 @@ export default function Header() {
                 </div>
               </div>
               
-              <button className="w-full mt-4 bg-gradient-to-r from-brand-primary to-brand-secondary text-white px-6 py-3 rounded-full font-medium font-heading hover:shadow-lg transition-all duration-300">
+              <button className="w-full mt-4 bg-brand-primary text-white px-6 py-3 rounded-full font-medium font-heading hover:bg-brand-secondary transition-colors duration-300">
                 Get Quote
               </button>
             </div>
