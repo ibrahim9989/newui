@@ -71,7 +71,7 @@ export default function AboutHASCOGroup() {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-16 items-start">
           {/* Company Story */}
           <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
             <div className="apple-card rounded-2xl p-8 shadow-xl apple-hover-lift">
@@ -135,69 +135,30 @@ export default function AboutHASCOGroup() {
               ))}
             </div>
 
-            {/* Statistics */}
-             <div className="mt-12 grid grid-cols-2 gap-6">
-               <div className="text-center apple-hover-lift">
-                 <AnimatedCounter 
-                   end={19} 
-                   suffix="+" 
-                   className="text-3xl font-bold apple-text-shimmer mb-2"
-                   duration={2000}
-                 />
-                 <div className="text-gray-600 text-sm font-body">Years of Excellence</div>
-               </div>
-               <div className="text-center apple-hover-lift">
-                 <AnimatedCounter 
-                   end={500} 
-                   suffix="+" 
-                   className="text-3xl font-bold apple-text-shimmer mb-2"
-                   duration={2500}
-                 />
-                 <div className="text-gray-600 text-sm font-body">Projects Completed</div>
-               </div>
-               <div className="text-center apple-hover-lift">
-                 <AnimatedCounter 
-                   end={50} 
-                   suffix="+" 
-                   className="text-3xl font-bold apple-text-shimmer mb-2"
-                   duration={1800}
-                 />
-                 <div className="text-gray-600 text-sm font-body">Team Members</div>
-               </div>
-               <div className="text-center apple-hover-lift">
-                 <AnimatedCounter 
-                   end={15} 
-                   suffix="+" 
-                   className="text-3xl font-bold apple-text-shimmer mb-2"
-                   duration={1500}
-                 />
-                 <div className="text-gray-600 text-sm font-body">Countries Served</div>
-               </div>
-             </div>
           </div>
         </div>
 
         {/* Mission & Vision */}
-        <div className="mt-20 grid md:grid-cols-2 gap-8">
-          <div className="apple-card rounded-2xl p-8 shadow-lg apple-hover-lift apple-fade-in apple-stagger-5">
-            <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center mb-6 apple-float">
-              <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div className="mt-16 grid md:grid-cols-2 gap-6">
+          <div className="apple-card rounded-xl p-6 shadow-lg apple-hover-lift apple-fade-in apple-stagger-5">
+            <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center mb-4 apple-float">
+              <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
             </div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-4 apple-text-shimmer">Our Mission</h3>
-            <p className="text-gray-600 leading-relaxed">
+            <h3 className="text-xl font-bold text-gray-900 mb-3 apple-text-shimmer">Our Mission</h3>
+            <p className="text-gray-600 leading-relaxed text-sm">
               Deliver exceptional integrated solutions across marine, logistics, and development sectors while maintaining the highest standards of quality, safety, and environmental responsibility. We are committed to sustainable growth and creating lasting value for our clients and communities.
             </p>
           </div>
-          <div className="apple-card rounded-2xl p-8 shadow-lg apple-hover-lift apple-fade-in apple-stagger-6">
-            <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center mb-6 apple-float" style={{ animationDelay: '0.5s' }}>
-              <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div className="apple-card rounded-xl p-6 shadow-lg apple-hover-lift apple-fade-in apple-stagger-6">
+            <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center mb-4 apple-float" style={{ animationDelay: '0.5s' }}>
+              <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
               </svg>
             </div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-4 apple-text-shimmer">Our Vision</h3>
-            <p className="text-gray-600 leading-relaxed">
+            <h3 className="text-xl font-bold text-gray-900 mb-3 apple-text-shimmer">Our Vision</h3>
+            <p className="text-gray-600 leading-relaxed text-sm">
               Be the leading integrated solutions provider in the Middle East, recognized for our innovation, reliability, and commitment to excellence. We aim to be the preferred partner for organizations seeking comprehensive solutions that drive growth and success.
             </p>
           </div>

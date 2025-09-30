@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import AnimatedCounter from './AnimatedCounter'
 import Image from 'next/image'
 
 const divisions = [
@@ -208,19 +209,40 @@ export default function OurDivisions() {
         {/* Division Statistics */}
         <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6">
           <div className="text-center">
-            <div className="text-3xl font-bold text-brand-primary mb-2">8</div>
+            <AnimatedCounter 
+              end={8} 
+              className="text-3xl font-bold text-brand-primary mb-2"
+              duration={2000}
+            />
             <div className="text-gray-600">Active Divisions</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl font-bold text-brand-primary mb-2">6</div>
+            <AnimatedCounter 
+              end={6} 
+              className="text-3xl font-bold text-brand-primary mb-2"
+              duration={1800}
+            />
             <div className="text-gray-600">Core Sectors</div>
           </div>
-          <div className="text-center">
-            <div className="text-3xl font-bold text-brand-primary mb-2">500+</div>
+          <div className="text-center group">
+            <div className="relative">
+              <AnimatedCounter 
+                end={500} 
+                suffix="+" 
+                className="text-3xl font-bold text-brand-primary mb-2"
+                duration={2500}
+              />
+              <div className="absolute -top-2 -left-2 w-2 h-2 bg-cyan-400 rounded-full opacity-60 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </div>
             <div className="text-gray-600">Projects Completed</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl font-bold text-brand-primary mb-2">100%</div>
+            <AnimatedCounter 
+              end={100} 
+              suffix="%" 
+              className="text-3xl font-bold text-brand-primary mb-2"
+              duration={2200}
+            />
             <div className="text-gray-600">Client Satisfaction</div>
           </div>
         </div>

@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
+import AnimatedCounter from './AnimatedCounter'
 
 const services = [
   {
@@ -170,23 +171,6 @@ export default function OurServices() {
           ))}
         </div>
 
-        {/* Call to Action */}
-        <div className="text-center mt-16">
-          <div className="bg-gradient-to-r from-brand-primary to-brand-secondary rounded-2xl p-8 text-white">
-            <h3 className="text-2xl font-bold mb-4">Ready to Work With Us?</h3>
-            <p className="text-lg mb-6 opacity-90">
-              Discover how our integrated solutions can drive your success
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-brand-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300">
-                Get Started
-              </button>
-              <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-brand-primary transition-colors duration-300">
-                Learn More
-              </button>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   )

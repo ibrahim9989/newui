@@ -23,24 +23,19 @@ export default function Header() {
     }`}>
 
       {/* Main navigation */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
-          {/* Logo Section - Enhanced with animations */}
-          <div className="flex items-center group cursor-pointer hover-tilt">
-            <div className="relative flex items-center justify-center">
-              <div className="absolute inset-0 bg-brand-primary/20 rounded-full blur-lg group-hover:blur-xl transition-all duration-500"></div>
-              <div className="relative w-20 h-20 sm:w-24 sm:h-24 hover:scale-110 transition-all duration-500 flex items-center justify-center hover-lift-3d">
-                <Image
-                  src="/logo.png"
-                  alt="HASCO Group Logo"
-                  width={96}
-                  height={96}
-                  className="object-contain drop-shadow-lg group-hover:animate-wobble"
-                  priority
-                />
-                {/* Ripple effect on click */}
-                <div className="absolute inset-0 rounded-full bg-brand-primary/10 scale-0 group-active:scale-150 transition-transform duration-300"></div>
-              </div>
+          {/* Logo Section */}
+          <div className="flex items-center">
+            <div className="w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center">
+              <Image
+                src="/logo.png"
+                alt="HASCO Group Logo"
+                width={96}
+                height={96}
+                className="object-contain"
+                priority
+              />
             </div>
           </div>
 
@@ -85,7 +80,7 @@ export default function Header() {
               </div>
             </div>
             
-            <button className="apple-btn bg-gradient-to-r from-brand-primary to-brand-secondary text-white px-6 py-2.5 rounded-full font-medium font-heading hover:shadow-lg hover:shadow-brand-primary/25">
+            <button className="apple-btn bg-brand-primary text-white px-6 py-2.5 rounded-full font-medium font-heading hover:bg-brand-secondary hover:shadow-lg hover:shadow-brand-primary/25 transition-colors duration-300">
               <span className="relative z-10">Get Quote</span>
             </button>
           </div>

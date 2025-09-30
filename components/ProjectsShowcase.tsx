@@ -248,47 +248,6 @@ export default function ProjectsShowcase() {
           </div>
         </div>
 
-        {/* Project Portfolio Summary */}
-        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6">
-          <div className="text-center">
-            <AnimatedCounter 
-              end={25} 
-              suffix="+" 
-              className="text-3xl font-bold text-brand-primary mb-2"
-              duration={2000}
-            />
-            <div className="text-gray-600">Projects Completed</div>
-          </div>
-          <div className="text-center">
-            <AnimatedCounter 
-              end={500} 
-              prefix="$" 
-              suffix="M+" 
-              className="text-3xl font-bold text-brand-primary mb-2"
-              duration={2500}
-            />
-            <div className="text-gray-600">Total Investment</div>
-          </div>
-          <div className="text-center">
-            <AnimatedCounter 
-              end={100} 
-              suffix="%" 
-              className="text-3xl font-bold text-brand-primary mb-2"
-              duration={1800}
-            />
-            <div className="text-gray-600">On-Time Delivery</div>
-          </div>
-          <div className="text-center">
-            <AnimatedCounter 
-              end={4.9} 
-              suffix="/5" 
-              className="text-3xl font-bold text-brand-primary mb-2"
-              duration={2200}
-              decimals={1}
-            />
-            <div className="text-gray-600">Client Rating</div>
-          </div>
-        </div>
       </div>
     </div>
   )

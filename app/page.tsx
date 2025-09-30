@@ -2,6 +2,7 @@ import Header from '@/components/Header'
 import SectorCarousel from '@/components/SectorCarousel'
 import AboutHASCOGroup from '@/components/AboutHASCOGroup'
 import OurServices from '@/components/OurServices'
+import StatisticsSection from '@/components/StatisticsSection'
 import HASCOOperationOffices from '@/components/HASCOOperationOffices'
 import ProjectsShowcase from '@/components/ProjectsShowcase'
 import WhyHASCO from '@/components/WhyHASCO'
@@ -23,7 +24,6 @@ export default function Home() {
       {/* Section 1: Hero Section (SectorCarousel) */}
       <SectionTransition 
         transitionType="reveal" 
-        className="pt-24"
         addGradientOverlay={true}
       >
         <div id="home">
@@ -54,7 +54,18 @@ export default function Home() {
         </div>
       </SectionTransition>
       
-      {/* Section 4: HASCO Operation Offices */}
+      {/* Section 4: Statistics */}
+      <SectionTransition 
+        transitionType="slide-up" 
+        delay={350}
+        addDivider={true}
+      >
+        <div id="statistics">
+          <StatisticsSection />
+        </div>
+      </SectionTransition>
+      
+      {/* Section 5: HASCO Operation Offices */}
       <SectionTransition 
         transitionType="scale-in" 
         delay={400}
@@ -66,7 +77,7 @@ export default function Home() {
         </div>
       </SectionTransition>
       
-      {/* Section 5: Projects Showcase */}
+      {/* Section 6: Projects Showcase */}
       <SectionTransition 
         transitionType="slide-up" 
         delay={500}
@@ -77,7 +88,7 @@ export default function Home() {
         </div>
       </SectionTransition>
       
-      {/* Section 6: Why HASCO */}
+      {/* Section 7: Why HASCO */}
       <SectionTransition 
         transitionType="fade-in" 
         delay={600}
@@ -89,7 +100,7 @@ export default function Home() {
         </div>
       </SectionTransition>
       
-      {/* Section 7: Our Clients */}
+      {/* Section 8: Our Clients */}
       <SectionTransition 
         transitionType="reveal" 
         delay={700}
@@ -100,7 +111,7 @@ export default function Home() {
         </div>
       </SectionTransition>
       
-      {/* Section 8: Our Divisions */}
+      {/* Section 9: Our Divisions */}
       <SectionTransition 
         transitionType="scale-in" 
         delay={800}

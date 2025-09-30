@@ -5,16 +5,16 @@ import AnimatedCounter from './AnimatedCounter'
 
 const differentiators = [
   {
-    title: "19+ Years of Excellence",
-    description: "Nearly two decades of proven expertise in integrated solutions",
-    icon: "🏆",
-    stat: "19+ Years"
-  },
-  {
     title: "Integrated Solutions",
     description: "Comprehensive services across multiple sectors under one roof",
     icon: "🔗",
     stat: "8 Divisions"
+  },
+  {
+    title: "Strategic Presence",
+    description: "Extensive network across Saudi Arabia with 12 office locations",
+    icon: "📍",
+    stat: "12 Locations"
   },
   {
     title: "Vision 2030 Alignment",
@@ -42,28 +42,6 @@ const differentiators = [
   }
 ]
 
-const servicePortfolio = [
-  {
-    title: "Marine & Shipping",
-    description: "Comprehensive maritime services from port operations to vessel handling",
-    services: ["Ship Agency", "Marine Operations", "Port Services"]
-  },
-  {
-    title: "Logistics & Transportation",
-    description: "End-to-end logistics solutions and supply chain management",
-    services: ["Freight Forwarding", "Warehousing", "Distribution"]
-  },
-  {
-    title: "Construction & Development",
-    description: "Strategic property development and construction management",
-    services: ["Property Development", "Construction", "Infrastructure"]
-  },
-  {
-    title: "Hospitality & Entertainment",
-    description: "Premium hospitality services and event management",
-    services: ["Event Management", "Catering", "Hospitality"]
-  }
-]
 
 export default function WhyHASCO() {
   const [isVisible, setIsVisible] = useState(false)
@@ -145,89 +123,8 @@ export default function WhyHASCO() {
           </div>
         </div>
 
-        {/* Service Portfolio */}
-        <div className="mb-16">
-          <h3 className="text-3xl font-bold text-gray-900 text-center mb-12">Our Service Portfolio</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {servicePortfolio.map((service, index) => (
-              <div
-                key={index}
-                className={`bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-500 ${
-                  isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-                }`}
-                style={{ transitionDelay: `${index * 150}ms` }}
-              >
-                <h4 className="text-2xl font-bold text-gray-900 mb-4">
-                  {service.title}
-                </h4>
-                <p className="text-gray-600 leading-relaxed mb-6">
-                  {service.description}
-                </p>
-                <div className="space-y-2">
-                  {service.services.map((item, idx) => (
-                    <div key={idx} className="flex items-center">
-                      <span className="w-2 h-2 bg-brand-primary rounded-full mr-3"></span>
-                      <span className="text-gray-700">{item}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
 
-        {/* Partnership CTA */}
-        <div className={`transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <div className="bg-gradient-to-r from-brand-primary to-brand-secondary rounded-3xl p-12 text-white text-center">
-            <h3 className="text-3xl font-bold mb-6">Ready to Partner with HASCO?</h3>
-            <p className="text-xl mb-8 opacity-90 max-w-3xl mx-auto">
-              Join hundreds of satisfied clients who trust HASCO Group for their integrated solutions needs. Let's build something extraordinary together.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <button className="bg-white text-brand-primary px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300 text-lg">
-                Start Your Project
-              </button>
-              <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-brand-primary transition-colors duration-300 text-lg">
-                Schedule Consultation
-              </button>
-            </div>
-          </div>
-        </div>
 
-        {/* Trust Indicators */}
-        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6">
-          <div className="text-center">
-            <AnimatedCounter 
-              end={19} 
-              suffix="+" 
-              className="text-3xl font-bold text-brand-primary mb-2"
-              duration={2000}
-            />
-            <div className="text-gray-600">Years of Excellence</div>
-          </div>
-          <div className="text-center">
-            <AnimatedCounter 
-              end={500} 
-              suffix="+" 
-              className="text-3xl font-bold text-brand-primary mb-2"
-              duration={2500}
-            />
-            <div className="text-gray-600">Projects Completed</div>
-          </div>
-          <div className="text-center">
-            <AnimatedCounter 
-              end={100} 
-              suffix="%" 
-              className="text-3xl font-bold text-brand-primary mb-2"
-              duration={1800}
-            />
-            <div className="text-gray-600">Client Satisfaction</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl font-bold text-brand-primary mb-2">24/7</div>
-            <div className="text-gray-600">Support Available</div>
-          </div>
-        </div>
       </div>
     </section>
   )

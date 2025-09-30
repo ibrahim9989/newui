@@ -214,38 +214,6 @@ export default function SectorCarousel() {
                 </button>
               </div>
 
-              {/* Trust indicators */}
-              <div className="flex items-center space-x-8 pt-4 animate-scale-in stagger-5">
-                <div className="text-center apple-hover-lift">
-                  <AnimatedCounter 
-                    end={19} 
-                    suffix="+" 
-                    className="text-2xl font-light text-blue-400"
-                    duration={2000}
-                  />
-                  <div className="text-xs text-slate-400 uppercase tracking-wider group-hover:text-white transition-colors duration-300">Years</div>
-                </div>
-                <div className="w-px h-8 bg-white/20 animate-pulse"></div>
-                <div className="text-center apple-hover-lift">
-                  <AnimatedCounter 
-                    end={500} 
-                    suffix="+" 
-                    className="text-2xl font-light text-blue-400"
-                    duration={2500}
-                  />
-                  <div className="text-xs text-slate-400 uppercase tracking-wider group-hover:text-white transition-colors duration-300">Projects</div>
-                </div>
-                <div className="w-px h-8 bg-white/20 animate-pulse"></div>
-                <div className="text-center apple-hover-lift">
-                  <AnimatedCounter 
-                    end={15} 
-                    suffix="+" 
-                    className="text-2xl font-light text-blue-400"
-                    duration={1800}
-                  />
-                  <div className="text-xs text-slate-400 uppercase tracking-wider group-hover:text-white transition-colors duration-300">Countries</div>
-                </div>
-              </div>
             </div>
 
             {/* Right Column - Elegant Sector Showcase */}
