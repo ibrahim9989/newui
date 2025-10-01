@@ -8,9 +8,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'brand-primary': '#1e40af',
-        'brand-secondary': '#3b82f6',
-        'brand-accent': '#60a5fa',
+        'brand-primary': '#004A81',
+        'brand-secondary': '#66AADD',
+        'brand-accent': '#FFBB5B',
         'brand-dark': '#0f172a',
         'brand-light': '#f8fafc',
       },

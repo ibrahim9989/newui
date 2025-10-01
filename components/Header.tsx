@@ -27,28 +27,30 @@ export default function Header() {
         <div className="flex justify-between items-center">
           {/* Logo Section */}
           <div className="flex items-center">
-            <div className="w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center">
-              <Image
-                src="/logo.png"
-                alt="HASCO Group Logo"
-                width={96}
-                height={96}
-                className="object-contain"
-                priority
-              />
-            </div>
+            <a href="/" className="flex items-center">
+              <div className="w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center">
+                <Image
+                  src="/logo.png"
+                  alt="HASCO Group Logo"
+                  width={96}
+                  height={96}
+                  className="object-contain"
+                  priority
+                />
+              </div>
+            </a>
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-8">
-            {[
-              { href: '#home', label: 'Home' },
-              { href: '#about', label: 'About' },
-              { href: '#services', label: 'Services' },
-              { href: '#projects', label: 'Projects' },
-              { href: '#clients', label: 'Clients' },
-              { href: '#contact', label: 'Contact' }
-            ].map((item) => (
+        <nav className="hidden lg:flex items-center space-x-8">
+          {[
+            { href: '/', label: 'Home' },
+            { href: '/about', label: 'About' },
+            { href: '/sectors', label: 'Sectors' },
+            { href: '/clients', label: 'Clients' },
+            { href: '/contact', label: 'Contact' },
+            { href: '/careers', label: 'Careers' }
+          ].map((item) => (
               <a
                 key={item.href}
                 href={item.href}
@@ -111,12 +113,12 @@ export default function Header() {
           <div className="pt-4 pb-6 border-t border-gray-200 mt-4">
             <nav className="flex flex-col space-y-4">
               {[
-                { href: '#home', label: 'Home' },
-                { href: '#about', label: 'About' },
-                { href: '#services', label: 'Services' },
-                { href: '#projects', label: 'Projects' },
-                { href: '#clients', label: 'Clients' },
-                { href: '#contact', label: 'Contact' }
+                { href: '/', label: 'Home' },
+                { href: '/about', label: 'About' },
+                { href: '/sectors', label: 'Sectors' },
+                { href: '/clients', label: 'Clients' },
+                { href: '/contact', label: 'Contact' },
+                { href: '/careers', label: 'Careers' }
               ].map((item) => (
                 <a
                   key={item.href}

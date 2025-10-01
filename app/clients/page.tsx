@@ -1,0 +1,445 @@
+'use client'
+
+import { useState, useEffect } from 'react'
+import Header from '@/components/Header'
+import ConditionalFooter from '@/components/ConditionalFooter'
+import AdvancedParticleSystem from '@/components/AdvancedParticleSystem'
+import CustomCursor from '@/components/CustomCursor'
+import SectionTransition from '@/components/SectionTransition'
+import AnimatedCounter from '@/components/AnimatedCounter'
+import Image from 'next/image'
+
+// Fallback client data when database is unavailable
+const fallbackClientSectors = [
+  {
+    id: 1,
+    division: "Marine Operations",
+    icon: "M",
+    color: "from-blue-500 to-cyan-500",
+    clients: [
+      { name: "Saudi Ports Authority", type: "Government" },
+      { name: "Red Sea Gateway", type: "Private" },
+      { name: "DP World", type: "International" },
+      { name: "Maersk Line", type: "International" },
+      { name: "CMA CGM", type: "International" },
+      { name: "Hapag-Lloyd", type: "International" }
+    ]
+  },
+  {
+    id: 2,
+    division: "Logistics & Supply Chain",
+    icon: "L",
+    color: "from-green-500 to-emerald-500",
+    clients: [
+      { name: "SABIC", type: "Corporation" },
+      { name: "Ma'aden", type: "Corporation" },
+      { name: "Global Freight", type: "Private" },
+      { name: "Almarai", type: "Corporation" },
+      { name: "STC", type: "Corporation" },
+      { name: "ACWA Power", type: "Corporation" }
+    ]
+  },
+  {
+    id: 3,
+    division: "Construction",
+    icon: "C",
+    color: "from-orange-500 to-red-500",
+    clients: [
+      { name: "Saudi Binladin Group", type: "Corporation" },
+      { name: "Nesma & Partners", type: "Private" },
+      { name: "Urban Development", type: "Private" },
+      { name: "Al-Rashid Construction", type: "Private" },
+      { name: "Saudi Oger", type: "Corporation" },
+      { name: "Al Habtoor Group", type: "Corporation" }
+    ]
+  },
+  {
+    id: 4,
+    division: "Hospitality & Events",
+    icon: "H",
+    color: "from-purple-500 to-pink-500",
+    clients: [
+      { name: "Saudi Aramco", type: "Corporation" },
+      { name: "Royal Commission", type: "Government" },
+      { name: "Ministry of Transport", type: "Government" },
+      { name: "Saudi Customs", type: "Government" },
+      { name: "STC", type: "Corporation" },
+      { name: "ACWA Power", type: "Corporation" }
+    ]
+  },
+  {
+    id: 5,
+    division: "Technology Solutions",
+    icon: "T",
+    color: "from-indigo-500 to-purple-500",
+    clients: [
+      { name: "STC", type: "Corporation" },
+      { name: "Saudi Aramco", type: "Corporation" },
+      { name: "SABIC", type: "Corporation" },
+      { name: "Ma'aden", type: "Corporation" },
+      { name: "ACWA Power", type: "Corporation" },
+      { name: "Saudi Electricity", type: "Government" }
+    ]
+  },
+  {
+    id: 6,
+    division: "Environmental Services",
+    icon: "E",
+    color: "from-green-600 to-teal-600",
+    clients: [
+      { name: "Saudi Aramco", type: "Corporation" },
+      { name: "SABIC", type: "Corporation" },
+      { name: "Ma'aden", type: "Corporation" },
+      { name: "ACWA Power", type: "Corporation" },
+      { name: "Petro Rabigh", type: "Corporation" },
+      { name: "Saudi Electricity", type: "Government" }
+    ]
+  }
+]
+
+const testimonials = [
+  {
+    id: 1,
+    name: "Ahmed Al-Rashid",
+    position: "CEO",
+    company: "Red Sea Gateway",
+    quote: "HASCO Group has been instrumental in our marine operations. Their expertise and professionalism are unmatched. The quality of service and attention to detail sets them apart from the competition.",
+    avatar: "A",
+    rating: 5
+  },
+  {
+    id: 2,
+    name: "Sarah Al-Mansouri",
+    position: "Operations Director",
+    company: "Global Freight",
+    quote: "The logistics solutions provided by HASCO Group have significantly improved our supply chain efficiency. Their integrated approach and technology solutions have helped us reduce costs by 25%.",
+    avatar: "S",
+    rating: 5
+  },
+  {
+    id: 3,
+    name: "Mohammed Al-Zahrani",
+    position: "Project Manager",
+    company: "Urban Development",
+    quote: "Their construction projects are delivered on time, within budget, and exceed our quality expectations. HASCO Group's commitment to excellence is evident in every project they undertake.",
+    avatar: "M",
+    rating: 5
+  }
+]
+
+export default function ClientsPage() {
+  const [isVisible, setIsVisible] = useState(false)
+  const [isStatsVisible, setIsStatsVisible] = useState(false)
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true)
+        }
+      },
+      { threshold: 0.1 }
+    )
+
+    const element = document.getElementById('clients-hero')
+    if (element) {
+      observer.observe(element)
+    }
+
+    return () => {
+      if (element) {
+        observer.unobserve(element)
+      }
+    }
+  }, [])
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsStatsVisible(true)
+        }
+      },
+      { threshold: 0.1 }
+    )
+
+    const element = document.getElementById('stats-section')
+    if (element) {
+      observer.observe(element)
+    }
+
+    return () => {
+      if (element) {
+        observer.unobserve(element)
+      }
+    }
+  }, [])
+
+  return (
+    <main className="min-h-screen bg-black">
+      <AdvancedParticleSystem />
+      <CustomCursor />
+      <Header />
+      
+      {/* Hero Section */}
+      <SectionTransition 
+        transitionType="reveal" 
+        addGradientOverlay={true}
+      >
+        <div id="clients-hero" className="pt-24 pb-20 bg-gradient-to-br from-gray-900 via-blue-900 to-black relative overflow-hidden">
+          <div className="absolute inset-0 bg-black/40"></div>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+              <div className="text-center">
+                <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 font-heading">
+                  Our <span className="text-white font-bold">Clients</span>
+                </h1>
+                <div className="w-32 h-1 bg-gradient-to-r from-brand-primary to-brand-secondary mx-auto mb-8"></div>
+                <p className="text-xl md:text-2xl text-white max-w-4xl mx-auto font-body leading-relaxed">
+                  We are proud to serve a diverse range of clients across various sectors, from 
+                  <span className="text-brand-secondary font-semibold"> government entities to private businesses</span>, delivering excellence in every project.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </SectionTransition>
+
+      {/* Client Sectors Section */}
+      <SectionTransition 
+        transitionType="slide-up" 
+        delay={200}
+        addDivider={true}
+        addGradientOverlay={true}
+      >
+        <div className="py-20 bg-black">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 font-heading">
+                Our <span className="text-brand-primary">Client Sectors</span>
+              </h2>
+              <div className="w-24 h-1 bg-gradient-to-r from-brand-primary to-brand-secondary mx-auto mb-8"></div>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto font-body">
+                Our clients organized by business divisions and sectors
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
+              {fallbackClientSectors.map((sector, index) => (
+                <div
+                  key={sector.id}
+                  className="group bg-gray-900 rounded-2xl overflow-hidden shadow-2xl hover:shadow-brand-primary/20 transition-all duration-500 transform hover:-translate-y-2 hover-lift-3d hover-glow animate-bounce-in"
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                >
+                  {/* Sector Header */}
+                  <div className={`h-24 bg-gradient-to-br ${sector.color} relative overflow-hidden`}>
+                    <div className="absolute inset-0 bg-black/30"></div>
+                    <div className="absolute top-4 left-6">
+                      <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
+                        <span className="text-xl font-bold text-white font-heading">{sector.icon}</span>
+                      </div>
+                    </div>
+                    <div className="absolute bottom-4 left-6 right-6">
+                      <h3 className="text-xl font-bold text-white font-heading">
+                        {sector.division}
+                      </h3>
+                    </div>
+                  </div>
+
+                  {/* Clients Grid */}
+                  <div className="p-6">
+                    <div className="grid grid-cols-2 gap-3">
+                      {sector.clients.map((client, clientIndex) => (
+                        <div
+                          key={clientIndex}
+                          className="group/client bg-gray-800 rounded-lg p-3 hover:bg-gray-700 transition-all duration-300 cursor-pointer"
+                        >
+                          <div className="flex items-center">
+                            <div className="min-w-0 flex-1">
+                              <p className="text-sm font-semibold text-white truncate font-heading">
+                                {client.name}
+                              </p>
+                              <p className="text-xs text-gray-400 truncate">
+                                {client.type}
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Hover Effect Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-brand-primary/5 to-brand-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </SectionTransition>
+
+      {/* Client Testimonials Section */}
+      <SectionTransition 
+        transitionType="fade-in" 
+        delay={400}
+        addDivider={true}
+        addGradientOverlay={true}
+      >
+        <div className="py-20 bg-gradient-to-r from-gray-900 to-black">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 font-heading">
+                Client <span className="text-brand-primary">Testimonials</span>
+              </h2>
+              <div className="w-24 h-1 bg-gradient-to-r from-brand-primary to-brand-secondary mx-auto mb-8"></div>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto font-body">
+                Hear what our satisfied clients have to say about their experience with HASCO Group
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {testimonials.map((testimonial, index) => (
+                <div
+                  key={testimonial.id}
+                  className="group bg-gray-900 rounded-2xl p-8 shadow-2xl hover:shadow-brand-primary/20 transition-all duration-500 transform hover:-translate-y-2 hover-lift-3d animate-bounce-in"
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                >
+                  {/* Rating Stars */}
+                  <div className="flex items-center mb-4">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <svg key={i} className="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                      </svg>
+                    ))}
+                  </div>
+
+                  {/* Quote */}
+                  <blockquote className="text-gray-300 leading-relaxed mb-6 font-body italic">
+                    "{testimonial.quote}"
+                  </blockquote>
+
+                  {/* Client Info */}
+                  <div className="flex items-center">
+                    <div className="w-12 h-12 bg-gradient-to-br from-brand-primary to-brand-secondary rounded-full flex items-center justify-center mr-4">
+                      <span className="text-lg font-bold text-white font-heading">{testimonial.avatar}</span>
+                    </div>
+                    <div>
+                      <p className="font-semibold text-white font-heading">{testimonial.name}</p>
+                      <p className="text-sm text-gray-400">{testimonial.position}</p>
+                      <p className="text-sm text-brand-primary font-semibold">{testimonial.company}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </SectionTransition>
+
+      {/* Client Satisfaction Statistics */}
+      <SectionTransition 
+        transitionType="scale-in" 
+        delay={500}
+        addDivider={true}
+        addGradientOverlay={true}
+      >
+        <div id="stats-section" className="py-20 bg-black">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 font-heading">
+                Client <span className="text-brand-primary">Satisfaction</span>
+              </h2>
+              <div className="w-24 h-1 bg-gradient-to-r from-brand-primary to-brand-secondary mx-auto mb-8"></div>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto font-body">
+                Key metrics showcasing HASCO Group's performance and client satisfaction
+              </p>
+            </div>
+
+            <div className={`transition-all duration-1000 ${isStatsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div className="text-center group">
+                  <div className="relative">
+                    <AnimatedCounter 
+                      end={100} 
+                      suffix="%" 
+                      className="text-4xl md:text-5xl font-bold text-brand-primary mb-2"
+                      duration={2000}
+                    />
+                    <div className="absolute -top-2 -left-2 w-2 h-2 bg-cyan-400 rounded-full opacity-60 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  </div>
+                  <div className="text-gray-300 text-sm md:text-base">Client Retention Rate</div>
+                </div>
+                
+                <div className="text-center">
+                  <div className="flex items-center justify-center mb-2">
+                    <AnimatedCounter 
+                      end={4.9} 
+                      className="text-4xl md:text-5xl font-bold text-brand-primary mr-1"
+                      duration={1800}
+                    />
+                    <span className="text-2xl text-gray-400">/5</span>
+                  </div>
+                  <div className="text-gray-300 text-sm md:text-base">Average Rating</div>
+                </div>
+                
+                <div className="text-center">
+                  <AnimatedCounter 
+                    end={95} 
+                    suffix="%" 
+                    className="text-4xl md:text-5xl font-bold text-brand-primary mb-2"
+                    duration={2200}
+                  />
+                  <div className="text-gray-300 text-sm md:text-base">On-Time Delivery</div>
+                </div>
+                
+                <div className="text-center">
+                  <AnimatedCounter 
+                    end={200} 
+                    suffix="+" 
+                    className="text-4xl md:text-5xl font-bold text-brand-primary mb-2"
+                    duration={2500}
+                  />
+                  <div className="text-gray-300 text-sm md:text-base">Happy Clients</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </SectionTransition>
+
+      {/* Call-to-Action Section */}
+      <SectionTransition 
+        transitionType="slide-up" 
+        delay={600}
+        addDivider={true}
+      >
+        <div className="py-20 bg-gradient-to-r from-brand-primary to-brand-secondary">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 font-heading">
+              Become Our Partner
+            </h2>
+            <p className="text-xl text-white/90 max-w-3xl mx-auto mb-8 font-body">
+              Join our network of satisfied clients and experience the HASCO Group difference. Let's work together to achieve your business goals.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a 
+                href="/#contact"
+                className="bg-white text-brand-primary px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300 apple-btn"
+              >
+                Get in Touch
+              </a>
+              <a 
+                href="/sectors"
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-brand-primary transition-colors duration-300"
+              >
+                Explore Our Services
+              </a>
+            </div>
+          </div>
+        </div>
+      </SectionTransition>
+
+      <ConditionalFooter />
+    </main>
+  )
+}

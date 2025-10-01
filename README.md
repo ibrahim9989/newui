@@ -1,6 +1,6 @@
-# Communication Company UI - Next.js
+# HASCO Group Website - Next.js
 
-A modern, responsive website template replicating the design from the provided image. Built with Next.js 14, TypeScript, and Tailwind CSS.
+A modern, responsive website for HASCO Group, a leading integrated solutions provider in marine, logistics, and development sectors. Built with Next.js 14, TypeScript, and Tailwind CSS.
 
 ## Features
 
@@ -10,13 +10,41 @@ A modern, responsive website template replicating the design from the provided i
 - **TypeScript**: Full type safety and better development experience
 - **Tailwind CSS**: Utility-first CSS framework for rapid styling
 
-## Sections
+## Pages
 
+### Home Page (`/`)
 1. **Header**: Navigation with logo, menu items, and contact information
-2. **Hero Section**: Large "ONLY CERTIFIED PHONES" headline with call-to-action buttons
-3. **Features Section**: Three-column layout showcasing "Why us", "Who we are", and "What we do"
-4. **Creative Solutions**: Red background section with bullet points and monitor visualization
-5. **Featured Services**: Tabbed service gallery with professional images
+2. **Hero Section**: Sector carousel showcasing HASCO Group's expertise
+3. **About Section**: Company overview with story and core services
+4. **Services Section**: Comprehensive service offerings
+5. **Statistics**: Key performance metrics and achievements
+6. **Operation Offices**: Geographic presence and locations
+7. **Projects Showcase**: Featured projects and case studies
+8. **Why HASCO**: Competitive advantages and value propositions
+9. **Clients Section**: Trusted partners and testimonials
+10. **Divisions**: Specialized business units and capabilities
+11. **Contact Section**: Contact information and inquiry forms
+
+### About Page (`/about`)
+1. **Hero Section**: "About HASCO Group" with company overview
+2. **Company Overview**: Our story, key statistics, and company image
+3. **Core Services**: Four main service areas with detailed descriptions
+4. **Mission & Vision**: Company mission and vision statements
+5. **Our Divisions**: Dynamic display of business divisions
+6. **Call-to-Action**: Contact and service exploration prompts
+
+### Sectors Page (`/sectors`)
+1. **Hero Section**: "Our Sectors" with comprehensive solutions overview
+2. **Sectors Grid**: Six core business sectors with detailed descriptions and features
+3. **Our Impact**: Statistics showcasing achievements (19+ years, 6 sectors, 500+ projects, 100% satisfaction)
+4. **Call-to-Action**: "Ready to Work Together?" with project start and learn more options
+
+### Clients Page (`/clients`)
+1. **Hero Section**: "Our Clients" with diverse client portfolio overview
+2. **Client Sectors**: Dynamic display of clients organized by business divisions
+3. **Client Testimonials**: Three featured testimonials with ratings and client information
+4. **Client Satisfaction Statistics**: Key metrics (100% retention, 4.9/5 rating, 95% on-time delivery, 200+ happy clients)
+5. **Call-to-Action**: "Become Our Partner" with get in touch and explore services options
 
 ## Getting Started
 
@@ -53,13 +81,33 @@ npm start
 ├── app/
 │   ├── globals.css          # Global styles and Tailwind imports
 │   ├── layout.tsx           # Root layout component
-│   └── page.tsx             # Main page component
+│   ├── page.tsx             # Home page component
+│   ├── about/
+│   │   └── page.tsx         # About page component
+│   ├── sectors/
+│   │   └── page.tsx         # Sectors page component
+│   ├── clients/
+│   │   └── page.tsx         # Clients page component
+│   └── not-found.tsx        # 404 error page
 ├── components/
 │   ├── Header.tsx           # Navigation header
-│   ├── HeroSection.tsx      # Hero banner section
-│   ├── FeaturesSection.tsx  # Three-column features
-│   ├── CreativeSolutionsSection.tsx # Red section with solutions
-│   └── FeaturedServicesSection.tsx  # Services gallery
+│   ├── SectorCarousel.tsx   # Hero section carousel
+│   ├── AboutHASCOGroup.tsx  # About section component
+│   ├── OurServices.tsx      # Services section
+│   ├── StatisticsSection.tsx # Statistics display
+│   ├── HASCOOperationOffices.tsx # Offices section
+│   ├── ProjectsShowcase.tsx # Projects gallery
+│   ├── WhyHASCO.tsx         # Value propositions
+│   ├── OurClientsSection.tsx # Clients and testimonials
+│   ├── OurDivisions.tsx     # Business divisions
+│   ├── ContactUsSection.tsx # Contact form
+│   ├── ConditionalFooter.tsx # Footer component
+│   ├── AdvancedParticleSystem.tsx # Background particles
+│   ├── CustomCursor.tsx     # Custom cursor effects
+│   └── SectionTransition.tsx # Section animations
+├── public/
+│   ├── logo.png            # Company logo
+│   └── images/             # Image assets
 ├── tailwind.config.js       # Tailwind configuration
 ├── tsconfig.json           # TypeScript configuration
 └── package.json            # Dependencies and scripts
@@ -69,9 +117,9 @@ npm start
 
 ### Colors
 The main brand colors are defined in `tailwind.config.js`:
-- `brand-red`: #DC2626
-- `brand-gray`: #374151  
-- `brand-dark`: #1F2937
+- `brand-primary`: #004A81 (HASCO Blue)
+- `brand-secondary`: #66AADD (Light Blue)
+- `brand-accent`: #FFBB5B (Gold)
 
 ### Content
 Update the content in each component file to match your specific needs.
