@@ -65,28 +65,6 @@ export default function Header() {
             ))}
           </nav>
 
-          {/* Contact Info & CTA */}
-          <div className="hidden lg:flex items-center space-x-6">
-            <div className="flex items-center space-x-4 text-sm">
-              <div className="flex items-center space-x-2 text-gray-600 hover:text-brand-primary transition-colors duration-300 group">
-                <svg className="w-4 h-4 fill-current group-hover:text-brand-primary transition-colors duration-300" viewBox="0 0 24 24">
-                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-                </svg>
-                <span>Dammam, Saudi Arabia</span>
-              </div>
-              <div className="flex items-center space-x-2 text-brand-primary hover:text-gray-700 transition-colors duration-300 group">
-                <svg className="w-4 h-4 fill-current group-hover:text-gray-700 transition-colors duration-300" viewBox="0 0 24 24">
-                  <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
-                </svg>
-                <span>+966 13 123 4567</span>
-              </div>
-            </div>
-            
-            <button className="apple-btn bg-brand-primary text-white px-6 py-2.5 rounded-full font-medium font-heading hover:bg-brand-secondary transition-colors duration-300">
-              <span className="relative z-10">Get Quote</span>
-            </button>
-          </div>
-
           {/* Mobile menu button */}
           <button
             className="lg:hidden relative w-10 h-10 flex items-center justify-center text-gray-700 hover:text-brand-primary transition-colors duration-300"
@@ -129,28 +107,7 @@ export default function Header() {
                   {item.label}
                 </a>
               ))}
-            </nav>
-            
-            <div className="mt-6 pt-6 border-t border-gray-200">
-              <div className="space-y-3 text-sm">
-                <div className="flex items-center space-x-2 text-gray-600">
-                  <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
-                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-                  </svg>
-                  <span>Dammam, Saudi Arabia</span>
-                </div>
-                <div className="flex items-center space-x-2 text-brand-primary">
-                  <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
-                    <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
-                  </svg>
-                  <span>+966 13 123 4567</span>
-                </div>
-              </div>
-              
-              <button className="w-full mt-4 bg-brand-primary text-white px-6 py-3 rounded-full font-medium font-heading hover:bg-brand-secondary transition-colors duration-300">
-                Get Quote
-              </button>
-            </div>
+              </nav>
           </div>
         </div>
       </div>
