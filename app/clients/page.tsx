@@ -176,7 +176,7 @@ export default function ClientsPage() {
   }, [])
 
   return (
-    <main className="min-h-screen bg-black">
+    <main className="min-h-screen bg-white">
       <AdvancedParticleSystem />
       <CustomCursor />
       <Header />
@@ -186,18 +186,18 @@ export default function ClientsPage() {
         transitionType="reveal" 
         addGradientOverlay={true}
       >
-        <div id="clients-hero" className="pt-24 pb-20 bg-gradient-to-br from-gray-900 via-blue-900 to-black relative overflow-hidden">
-          <div className="absolute inset-0 bg-black/40"></div>
+        <div id="clients-hero" className="pt-24 pb-20 bg-gradient-to-br from-gray-50 via-blue-50 to-gray-100 relative overflow-hidden">
+          <div className="absolute inset-0 bg-white/80"></div>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
               <div className="text-center">
-                <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 font-heading">
-                  Our <span className="text-white font-bold">Clients</span>
+                <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6 font-heading">
+                  Our <span className="text-brand-primary font-bold">Clients</span>
                 </h1>
                 <div className="w-32 h-1 bg-gradient-to-r from-brand-primary to-brand-secondary mx-auto mb-8"></div>
-                <p className="text-xl md:text-2xl text-white max-w-4xl mx-auto font-body leading-relaxed">
+                <p className="text-xl md:text-2xl text-gray-700 max-w-4xl mx-auto font-body leading-relaxed">
                   We are proud to serve a diverse range of clients across various sectors, from 
-                  <span className="text-brand-secondary font-semibold"> government entities to private businesses</span>, delivering excellence in every project.
+                  <span className="text-brand-primary font-semibold"> government entities to private businesses</span>, delivering excellence in every project.
                 </p>
               </div>
             </div>
@@ -212,14 +212,14 @@ export default function ClientsPage() {
         addDivider={true}
         addGradientOverlay={true}
       >
-        <div className="py-20 bg-black">
+        <div className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 font-heading">
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 font-heading">
                 Our <span className="text-brand-primary">Client Sectors</span>
               </h2>
               <div className="w-24 h-1 bg-gradient-to-r from-brand-primary to-brand-secondary mx-auto mb-8"></div>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto font-body">
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto font-body">
                 Our clients organized by business divisions and sectors
               </p>
             </div>
@@ -228,7 +228,7 @@ export default function ClientsPage() {
               {fallbackClientSectors.map((sector, index) => (
                 <div
                   key={sector.id}
-                  className="group bg-gray-900 rounded-2xl overflow-hidden shadow-2xl hover:shadow-brand-primary/20 transition-all duration-500 transform hover:-translate-y-2 hover-lift-3d hover-glow animate-bounce-in"
+                  className="group bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover-lift-3d hover-glow animate-bounce-in border border-gray-200"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   {/* Sector Header */}
@@ -252,14 +252,14 @@ export default function ClientsPage() {
                       {sector.clients.map((client, clientIndex) => (
                         <div
                           key={clientIndex}
-                          className="group/client bg-gray-800 rounded-lg p-3 hover:bg-gray-700 transition-all duration-300 cursor-pointer"
+                          className="group/client bg-gray-100 rounded-lg p-3 hover:bg-gray-200 transition-all duration-300 cursor-pointer"
                         >
                           <div className="flex items-center">
                             <div className="min-w-0 flex-1">
-                              <p className="text-sm font-semibold text-white truncate font-heading">
+                              <p className="text-sm font-semibold text-gray-900 truncate font-heading">
                                 {client.name}
                               </p>
-                              <p className="text-xs text-gray-400 truncate">
+                              <p className="text-xs text-gray-600 truncate">
                                 {client.type}
                               </p>
                             </div>
@@ -285,14 +285,14 @@ export default function ClientsPage() {
         addDivider={true}
         addGradientOverlay={true}
       >
-        <div className="py-20 bg-gradient-to-r from-gray-900 to-black">
+        <div className="py-20 bg-gradient-to-r from-gray-50 to-blue-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 font-heading">
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 font-heading">
                 Client <span className="text-brand-primary">Testimonials</span>
               </h2>
               <div className="w-24 h-1 bg-gradient-to-r from-brand-primary to-brand-secondary mx-auto mb-8"></div>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto font-body">
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto font-body">
                 Hear what our satisfied clients have to say about their experience with HASCO Group
               </p>
             </div>
@@ -301,7 +301,7 @@ export default function ClientsPage() {
               {testimonials.map((testimonial, index) => (
                 <div
                   key={testimonial.id}
-                  className="group bg-gray-900 rounded-2xl p-8 shadow-2xl hover:shadow-brand-primary/20 transition-all duration-500 transform hover:-translate-y-2 hover-lift-3d animate-bounce-in"
+                  className="group bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover-lift-3d animate-bounce-in border border-gray-200"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   {/* Rating Stars */}
@@ -314,7 +314,7 @@ export default function ClientsPage() {
                   </div>
 
                   {/* Quote */}
-                  <blockquote className="text-gray-300 leading-relaxed mb-6 font-body italic">
+                  <blockquote className="text-gray-600 leading-relaxed mb-6 font-body italic">
                     "{testimonial.quote}"
                   </blockquote>
 
@@ -324,8 +324,8 @@ export default function ClientsPage() {
                       <span className="text-lg font-bold text-white font-heading">{testimonial.avatar}</span>
                     </div>
                     <div>
-                      <p className="font-semibold text-white font-heading">{testimonial.name}</p>
-                      <p className="text-sm text-gray-400">{testimonial.position}</p>
+                      <p className="font-semibold text-gray-900 font-heading">{testimonial.name}</p>
+                      <p className="text-sm text-gray-600">{testimonial.position}</p>
                       <p className="text-sm text-brand-primary font-semibold">{testimonial.company}</p>
                     </div>
                   </div>
@@ -343,14 +343,14 @@ export default function ClientsPage() {
         addDivider={true}
         addGradientOverlay={true}
       >
-        <div id="stats-section" className="py-20 bg-black">
+        <div id="stats-section" className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 font-heading">
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 font-heading">
                 Client <span className="text-brand-primary">Satisfaction</span>
               </h2>
               <div className="w-24 h-1 bg-gradient-to-r from-brand-primary to-brand-secondary mx-auto mb-8"></div>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto font-body">
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto font-body">
                 Key metrics showcasing HASCO Group's performance and client satisfaction
               </p>
             </div>
@@ -367,7 +367,7 @@ export default function ClientsPage() {
                     />
                     <div className="absolute -top-2 -left-2 w-2 h-2 bg-cyan-400 rounded-full opacity-60 group-hover:opacity-100 transition-opacity duration-300"></div>
                   </div>
-                  <div className="text-gray-300 text-sm md:text-base">Client Retention Rate</div>
+                  <div className="text-gray-600 text-sm md:text-base">Client Retention Rate</div>
                 </div>
                 
                 <div className="text-center">
@@ -377,9 +377,9 @@ export default function ClientsPage() {
                       className="text-4xl md:text-5xl font-bold text-brand-primary mr-1"
                       duration={1800}
                     />
-                    <span className="text-2xl text-gray-400">/5</span>
+                    <span className="text-2xl text-gray-500">/5</span>
                   </div>
-                  <div className="text-gray-300 text-sm md:text-base">Average Rating</div>
+                  <div className="text-gray-600 text-sm md:text-base">Average Rating</div>
                 </div>
                 
                 <div className="text-center">
@@ -389,7 +389,7 @@ export default function ClientsPage() {
                     className="text-4xl md:text-5xl font-bold text-brand-primary mb-2"
                     duration={2200}
                   />
-                  <div className="text-gray-300 text-sm md:text-base">On-Time Delivery</div>
+                  <div className="text-gray-600 text-sm md:text-base">On-Time Delivery</div>
                 </div>
                 
                 <div className="text-center">
@@ -399,7 +399,7 @@ export default function ClientsPage() {
                     className="text-4xl md:text-5xl font-bold text-brand-primary mb-2"
                     duration={2500}
                   />
-                  <div className="text-gray-300 text-sm md:text-base">Happy Clients</div>
+                  <div className="text-gray-600 text-sm md:text-base">Happy Clients</div>
                 </div>
               </div>
             </div>
@@ -423,7 +423,7 @@ export default function ClientsPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
-                href="/#contact"
+                href="/contact"
                 className="bg-white text-brand-primary px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300 apple-btn"
               >
                 Get in Touch

@@ -116,7 +116,7 @@ export default function SectorsPage() {
   }, [])
 
   return (
-    <main className="min-h-screen bg-black">
+    <main className="min-h-screen bg-white">
       <AdvancedParticleSystem />
       <CustomCursor />
       <Header />
@@ -126,18 +126,18 @@ export default function SectorsPage() {
         transitionType="reveal" 
         addGradientOverlay={true}
       >
-        <div id="sectors-hero" className="pt-24 pb-20 bg-gradient-to-br from-gray-900 via-blue-900 to-black relative overflow-hidden">
-          <div className="absolute inset-0 bg-black/40"></div>
+        <div id="sectors-hero" className="pt-24 pb-20 bg-gradient-to-br from-gray-50 via-blue-50 to-gray-100 relative overflow-hidden">
+          <div className="absolute inset-0 bg-white/80"></div>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
               <div className="text-center">
-                <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 font-heading">
-                  Our <span className="text-white font-bold">Sectors</span>
+                <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6 font-heading">
+                  Our <span className="text-brand-primary font-bold">Sectors</span>
                 </h1>
                 <div className="w-32 h-1 bg-gradient-to-r from-brand-primary to-brand-secondary mx-auto mb-8"></div>
-                <p className="text-xl md:text-2xl text-white max-w-4xl mx-auto font-body leading-relaxed">
+                <p className="text-xl md:text-2xl text-gray-700 max-w-4xl mx-auto font-body leading-relaxed">
                   Comprehensive solutions across multiple industries with 
-                  <span className="text-brand-secondary font-semibold"> expertise, innovation, and excellence</span>
+                  <span className="text-brand-primary font-semibold"> expertise, innovation, and excellence</span>
                 </p>
               </div>
             </div>
@@ -152,14 +152,14 @@ export default function SectorsPage() {
         addDivider={true}
         addGradientOverlay={true}
       >
-        <div className="py-20 bg-black">
+        <div className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 font-heading">
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 font-heading">
                 Our <span className="text-brand-primary">Business Sectors</span>
               </h2>
               <div className="w-24 h-1 bg-gradient-to-r from-brand-primary to-brand-secondary mx-auto mb-8"></div>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto font-body">
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto font-body">
                 Our active sectors, each specializing in delivering excellence within their respective industries
               </p>
             </div>
@@ -168,7 +168,7 @@ export default function SectorsPage() {
               {fallbackSectors.map((sector, index) => (
                 <div
                   key={sector.id}
-                  className="group bg-gray-900 rounded-2xl overflow-hidden shadow-2xl hover:shadow-brand-primary/20 transition-all duration-500 transform hover:-translate-y-2 hover-lift-3d hover-glow animate-bounce-in"
+                  className="group bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover-lift-3d hover-glow animate-bounce-in border border-gray-200"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   {/* Sector Header with Background */}
@@ -200,14 +200,14 @@ export default function SectorsPage() {
 
                   {/* Sector Content */}
                   <div className="p-6">
-                    <p className="text-gray-300 text-sm leading-relaxed mb-6 font-body">
+                    <p className="text-gray-600 text-sm leading-relaxed mb-6 font-body">
                       {sector.description}
                     </p>
 
                     {/* Features List */}
                     <div className="space-y-3 mb-6">
                       {sector.features.map((feature, featureIndex) => (
-                        <div key={featureIndex} className="flex items-center text-sm text-gray-400">
+                        <div key={featureIndex} className="flex items-center text-sm text-gray-500">
                           <span className="w-1.5 h-1.5 bg-brand-primary rounded-full mr-3"></span>
                           {feature}
                         </div>
@@ -217,7 +217,7 @@ export default function SectorsPage() {
                     {/* Learn More Button */}
                     <a 
                       href={`/sectors/${sector.title.toLowerCase().replace(/\s+/g, '-')}`}
-                      className="group/btn w-full bg-gray-800 text-white py-3 px-4 rounded-lg text-sm font-semibold hover:bg-brand-primary transition-all duration-300 flex items-center justify-center"
+                      className="group/btn w-full bg-brand-primary text-white py-3 px-4 rounded-lg text-sm font-semibold hover:bg-brand-secondary transition-all duration-300 flex items-center justify-center"
                     >
                       Learn More
                       <svg className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -242,14 +242,14 @@ export default function SectorsPage() {
         addDivider={true}
         addGradientOverlay={true}
       >
-        <div id="impact-section" className="py-20 bg-gradient-to-r from-gray-900 to-black">
+        <div id="impact-section" className="py-20 bg-gradient-to-r from-gray-50 to-blue-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 font-heading">
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 font-heading">
                 Our <span className="text-brand-primary">Impact</span>
               </h2>
               <div className="w-24 h-1 bg-gradient-to-r from-brand-primary to-brand-secondary mx-auto mb-8"></div>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto font-body">
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto font-body">
                 Statistics showcasing HASCO Group's achievements across all sectors
               </p>
             </div>
@@ -266,7 +266,7 @@ export default function SectorsPage() {
                     />
                     <div className="absolute -top-2 -left-2 w-2 h-2 bg-cyan-400 rounded-full opacity-60 group-hover:opacity-100 transition-opacity duration-300"></div>
                   </div>
-                  <div className="text-gray-300 text-sm md:text-base">Years of Excellence</div>
+                  <div className="text-gray-600 text-sm md:text-base">Years of Excellence</div>
                 </div>
                 
                 <div className="text-center">
@@ -275,7 +275,7 @@ export default function SectorsPage() {
                     className="text-4xl md:text-5xl font-bold text-brand-primary mb-2"
                     duration={1500}
                   />
-                  <div className="text-gray-300 text-sm md:text-base">Core Sectors</div>
+                  <div className="text-gray-600 text-sm md:text-base">Core Sectors</div>
                 </div>
                 
                 <div className="text-center">
@@ -285,7 +285,7 @@ export default function SectorsPage() {
                     className="text-4xl md:text-5xl font-bold text-brand-primary mb-2"
                     duration={2500}
                   />
-                  <div className="text-gray-300 text-sm md:text-base">Projects Completed</div>
+                  <div className="text-gray-600 text-sm md:text-base">Projects Completed</div>
                 </div>
                 
                 <div className="text-center">
@@ -295,7 +295,7 @@ export default function SectorsPage() {
                     className="text-4xl md:text-5xl font-bold text-brand-primary mb-2"
                     duration={1800}
                   />
-                  <div className="text-gray-300 text-sm md:text-base">Client Satisfaction</div>
+                  <div className="text-gray-600 text-sm md:text-base">Client Satisfaction</div>
                 </div>
               </div>
             </div>
@@ -319,7 +319,7 @@ export default function SectorsPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
-                href="/#contact"
+                href="/contact"
                 className="bg-white text-brand-primary px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300 apple-btn"
               >
                 Start a Project

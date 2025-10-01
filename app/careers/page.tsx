@@ -225,7 +225,7 @@ export default function CareersPage() {
   ]
 
   return (
-    <main className="min-h-screen bg-black">
+    <main className="min-h-screen bg-white">
       <AdvancedParticleSystem />
       <CustomCursor />
       <Header />
@@ -235,18 +235,18 @@ export default function CareersPage() {
         transitionType="reveal" 
         addGradientOverlay={true}
       >
-        <div id="careers-hero" className="pt-24 pb-20 bg-gradient-to-br from-gray-900 via-blue-900 to-black relative overflow-hidden">
-          <div className="absolute inset-0 bg-black/40"></div>
+        <div id="careers-hero" className="pt-24 pb-20 bg-gradient-to-br from-gray-50 via-blue-50 to-gray-100 relative overflow-hidden">
+          <div className="absolute inset-0 bg-white/80"></div>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
               <div className="text-center">
-                <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 font-heading">
-                  Join Our <span className="text-white font-bold">Team</span>
+                <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6 font-heading">
+                  Join Our <span className="text-brand-primary font-bold">Team</span>
                 </h1>
                 <div className="w-32 h-1 bg-gradient-to-r from-brand-primary to-brand-secondary mx-auto mb-8"></div>
-                <p className="text-xl md:text-2xl text-white max-w-4xl mx-auto font-body leading-relaxed">
+                <p className="text-xl md:text-2xl text-gray-700 max-w-4xl mx-auto font-body leading-relaxed">
                   Be part of a dynamic team that's shaping the future of integrated solutions. 
-                  <span className="text-brand-secondary font-semibold"> Explore exciting career opportunities with HASCO Group</span>
+                  <span className="text-brand-primary font-semibold"> Explore exciting career opportunities with HASCO Group</span>
                 </p>
               </div>
             </div>
@@ -261,17 +261,17 @@ export default function CareersPage() {
         addDivider={true}
         addGradientOverlay={true}
       >
-        <div className="py-20 bg-black">
+        <div className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Tab Navigation */}
             <div className="flex justify-center mb-12">
-              <div className="bg-gray-900 rounded-lg p-1">
+              <div className="bg-gray-200 rounded-lg p-1">
                 <button
                   onClick={() => setActiveTab('openings')}
                   className={`px-8 py-3 rounded-md font-semibold transition-all duration-300 ${
                     activeTab === 'openings'
                       ? 'bg-brand-primary text-white'
-                      : 'text-gray-400 hover:text-white'
+                      : 'text-gray-600 hover:text-gray-900'
                   }`}
                 >
                   Job Openings
@@ -281,7 +281,7 @@ export default function CareersPage() {
                   className={`px-8 py-3 rounded-md font-semibold transition-all duration-300 ${
                     activeTab === 'apply'
                       ? 'bg-brand-primary text-white'
-                      : 'text-gray-400 hover:text-white'
+                      : 'text-gray-600 hover:text-gray-900'
                   }`}
                 >
                   Apply Now
@@ -291,7 +291,7 @@ export default function CareersPage() {
                   className={`px-8 py-3 rounded-md font-semibold transition-all duration-300 ${
                     activeTab === 'benefits'
                       ? 'bg-brand-primary text-white'
-                      : 'text-gray-400 hover:text-white'
+                      : 'text-gray-600 hover:text-gray-900'
                   }`}
                 >
                   Benefits
@@ -303,19 +303,19 @@ export default function CareersPage() {
             {activeTab === 'openings' && (
               <div className="space-y-8">
                 <div className="text-center mb-12">
-                  <h2 className="text-4xl font-bold text-white mb-4 font-heading">Current Openings</h2>
-                  <p className="text-xl text-gray-300 max-w-3xl mx-auto font-body">
+                  <h2 className="text-4xl font-bold text-gray-900 mb-4 font-heading">Current Openings</h2>
+                  <p className="text-xl text-gray-600 max-w-3xl mx-auto font-body">
                     Discover exciting career opportunities across our various departments
                   </p>
                 </div>
 
                 <div className="grid gap-8">
                   {jobOpenings.map((job) => (
-                    <div key={job.id} className="bg-gray-900 rounded-2xl p-8 hover:bg-gray-800 transition-colors duration-300">
+                    <div key={job.id} className="bg-white rounded-2xl p-8 hover:bg-gray-50 transition-colors duration-300 border border-gray-200 shadow-lg">
                       <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6">
                         <div>
-                          <h3 className="text-2xl font-bold text-white mb-2 font-heading">{job.title}</h3>
-                          <div className="flex flex-wrap gap-4 text-sm text-gray-400">
+                          <h3 className="text-2xl font-bold text-gray-900 mb-2 font-heading">{job.title}</h3>
+                          <div className="flex flex-wrap gap-4 text-sm text-gray-600">
                             <span className="flex items-center">
                               <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
@@ -349,12 +349,12 @@ export default function CareersPage() {
                           Apply Now
                         </button>
                       </div>
-                      <p className="text-gray-300 mb-4 font-body">{job.description}</p>
+                      <p className="text-gray-600 mb-4 font-body">{job.description}</p>
                       <div>
-                        <h4 className="text-lg font-semibold text-white mb-3 font-heading">Requirements:</h4>
+                        <h4 className="text-lg font-semibold text-gray-900 mb-3 font-heading">Requirements:</h4>
                         <ul className="space-y-2">
                           {job.requirements.map((req, index) => (
-                            <li key={index} className="flex items-start text-gray-300">
+                            <li key={index} className="flex items-start text-gray-600">
                               <span className="w-2 h-2 bg-brand-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
                               {req}
                             </li>
@@ -370,13 +370,13 @@ export default function CareersPage() {
             {activeTab === 'apply' && (
               <div className="max-w-4xl mx-auto">
                 <div className="text-center mb-12">
-                  <h2 className="text-4xl font-bold text-white mb-4 font-heading">Apply for a Position</h2>
-                  <p className="text-xl text-gray-300 font-body">
+                  <h2 className="text-4xl font-bold text-gray-900 mb-4 font-heading">Apply for a Position</h2>
+                  <p className="text-xl text-gray-600 font-body">
                     Fill out the form below and we'll get back to you soon
                   </p>
                 </div>
 
-                <div className="bg-gray-900 rounded-2xl p-8 shadow-2xl">
+                <div className="bg-gray-50 rounded-2xl p-8 shadow-xl border border-gray-200">
                   {submitStatus === 'success' && (
                     <div className="mb-6 p-4 bg-green-500/20 border border-green-500/30 rounded-lg">
                       <p className="text-green-400 font-semibold">Thank you! Your application has been submitted successfully. We'll review it and get back to you soon.</p>
@@ -392,7 +392,7 @@ export default function CareersPage() {
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid md:grid-cols-2 gap-6">
                       <div>
-                        <label htmlFor="firstName" className="block text-sm font-semibold text-gray-300 mb-2">
+                        <label htmlFor="firstName" className="block text-sm font-semibold text-gray-700 mb-2">
                           First Name *
                         </label>
                         <input
@@ -402,12 +402,12 @@ export default function CareersPage() {
                           value={formData.firstName}
                           onChange={handleInputChange}
                           required
-                          className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-brand-primary focus:ring-1 focus:ring-brand-primary transition-colors duration-300"
+                          className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:border-brand-primary focus:ring-1 focus:ring-brand-primary transition-colors duration-300"
                           placeholder="Your first name"
                         />
                       </div>
                       <div>
-                        <label htmlFor="lastName" className="block text-sm font-semibold text-gray-300 mb-2">
+                        <label htmlFor="lastName" className="block text-sm font-semibold text-gray-700 mb-2">
                           Last Name *
                         </label>
                         <input
@@ -417,7 +417,7 @@ export default function CareersPage() {
                           value={formData.lastName}
                           onChange={handleInputChange}
                           required
-                          className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-brand-primary focus:ring-1 focus:ring-brand-primary transition-colors duration-300"
+                          className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:border-brand-primary focus:ring-1 focus:ring-brand-primary transition-colors duration-300"
                           placeholder="Your last name"
                         />
                       </div>
@@ -425,7 +425,7 @@ export default function CareersPage() {
 
                     <div className="grid md:grid-cols-2 gap-6">
                       <div>
-                        <label htmlFor="email" className="block text-sm font-semibold text-gray-300 mb-2">
+                        <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-2">
                           Email Address *
                         </label>
                         <input
@@ -435,12 +435,12 @@ export default function CareersPage() {
                           value={formData.email}
                           onChange={handleInputChange}
                           required
-                          className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-brand-primary focus:ring-1 focus:ring-brand-primary transition-colors duration-300"
+                          className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:border-brand-primary focus:ring-1 focus:ring-brand-primary transition-colors duration-300"
                           placeholder="your.email@example.com"
                         />
                       </div>
                       <div>
-                        <label htmlFor="phone" className="block text-sm font-semibold text-gray-300 mb-2">
+                        <label htmlFor="phone" className="block text-sm font-semibold text-gray-700 mb-2">
                           Phone Number *
                         </label>
                         <input
@@ -450,7 +450,7 @@ export default function CareersPage() {
                           value={formData.phone}
                           onChange={handleInputChange}
                           required
-                          className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-brand-primary focus:ring-1 focus:ring-brand-primary transition-colors duration-300"
+                          className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:border-brand-primary focus:ring-1 focus:ring-brand-primary transition-colors duration-300"
                           placeholder="+966 XX XXX XXXX"
                         />
                       </div>
@@ -458,7 +458,7 @@ export default function CareersPage() {
 
                     <div className="grid md:grid-cols-2 gap-6">
                       <div>
-                        <label htmlFor="position" className="block text-sm font-semibold text-gray-300 mb-2">
+                        <label htmlFor="position" className="block text-sm font-semibold text-gray-700 mb-2">
                           Position Applied For *
                         </label>
                         <select
@@ -467,7 +467,7 @@ export default function CareersPage() {
                           value={formData.position}
                           onChange={handleInputChange}
                           required
-                          className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-brand-primary focus:ring-1 focus:ring-brand-primary transition-colors duration-300"
+                          className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg text-gray-900 focus:outline-none focus:border-brand-primary focus:ring-1 focus:ring-brand-primary transition-colors duration-300"
                         >
                           <option value="">Select a position</option>
                           {jobOpenings.map((job) => (
@@ -476,7 +476,7 @@ export default function CareersPage() {
                         </select>
                       </div>
                       <div>
-                        <label htmlFor="experience" className="block text-sm font-semibold text-gray-300 mb-2">
+                        <label htmlFor="experience" className="block text-sm font-semibold text-gray-700 mb-2">
                           Years of Experience *
                         </label>
                         <select
@@ -485,7 +485,7 @@ export default function CareersPage() {
                           value={formData.experience}
                           onChange={handleInputChange}
                           required
-                          className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-brand-primary focus:ring-1 focus:ring-brand-primary transition-colors duration-300"
+                          className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg text-gray-900 focus:outline-none focus:border-brand-primary focus:ring-1 focus:ring-brand-primary transition-colors duration-300"
                         >
                           <option value="">Select experience level</option>
                           <option value="0-1">0-1 years</option>
@@ -498,7 +498,7 @@ export default function CareersPage() {
                     </div>
 
                     <div>
-                      <label htmlFor="education" className="block text-sm font-semibold text-gray-300 mb-2">
+                      <label htmlFor="education" className="block text-sm font-semibold text-gray-700 mb-2">
                         Education *
                       </label>
                       <input
@@ -508,13 +508,13 @@ export default function CareersPage() {
                         value={formData.education}
                         onChange={handleInputChange}
                         required
-                        className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-brand-primary focus:ring-1 focus:ring-brand-primary transition-colors duration-300"
+                        className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:border-brand-primary focus:ring-1 focus:ring-brand-primary transition-colors duration-300"
                         placeholder="e.g., Bachelor's in Engineering, Master's in Business Administration"
                       />
                     </div>
 
                     <div>
-                      <label htmlFor="coverLetter" className="block text-sm font-semibold text-gray-300 mb-2">
+                      <label htmlFor="coverLetter" className="block text-sm font-semibold text-gray-700 mb-2">
                         Cover Letter *
                       </label>
                       <textarea
@@ -524,14 +524,14 @@ export default function CareersPage() {
                         onChange={handleInputChange}
                         required
                         rows={6}
-                        className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-brand-primary focus:ring-1 focus:ring-brand-primary transition-colors duration-300 resize-none"
+                        className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:border-brand-primary focus:ring-1 focus:ring-brand-primary transition-colors duration-300 resize-none"
                         placeholder="Tell us why you're interested in this position and what makes you a great fit..."
                       />
                     </div>
 
                     <div className="grid md:grid-cols-2 gap-6">
                       <div>
-                        <label htmlFor="resume" className="block text-sm font-semibold text-gray-300 mb-2">
+                        <label htmlFor="resume" className="block text-sm font-semibold text-gray-700 mb-2">
                           Resume/CV *
                         </label>
                         <input
@@ -541,12 +541,12 @@ export default function CareersPage() {
                           onChange={handleFileChange}
                           accept=".pdf,.doc,.docx"
                           required
-                          className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-brand-primary focus:ring-1 focus:ring-brand-primary transition-colors duration-300 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-brand-primary file:text-white hover:file:bg-brand-secondary"
+                          className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg text-gray-900 focus:outline-none focus:border-brand-primary focus:ring-1 focus:ring-brand-primary transition-colors duration-300 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-brand-primary file:text-white hover:file:bg-brand-secondary"
                         />
                         <p className="text-xs text-gray-400 mt-1">PDF, DOC, or DOCX files only (Max 5MB)</p>
                       </div>
                       <div>
-                        <label htmlFor="portfolio" className="block text-sm font-semibold text-gray-300 mb-2">
+                        <label htmlFor="portfolio" className="block text-sm font-semibold text-gray-700 mb-2">
                           Portfolio (Optional)
                         </label>
                         <input
@@ -555,7 +555,7 @@ export default function CareersPage() {
                           name="portfolio"
                           onChange={handleFileChange}
                           accept=".pdf,.doc,.docx,.zip"
-                          className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-brand-primary focus:ring-1 focus:ring-brand-primary transition-colors duration-300 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-brand-primary file:text-white hover:file:bg-brand-secondary"
+                          className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg text-gray-900 focus:outline-none focus:border-brand-primary focus:ring-1 focus:ring-brand-primary transition-colors duration-300 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-brand-primary file:text-white hover:file:bg-brand-secondary"
                         />
                         <p className="text-xs text-gray-400 mt-1">PDF, DOC, DOCX, or ZIP files only (Max 10MB)</p>
                       </div>
@@ -583,59 +583,59 @@ export default function CareersPage() {
             {activeTab === 'benefits' && (
               <div className="max-w-6xl mx-auto">
                 <div className="text-center mb-12">
-                  <h2 className="text-4xl font-bold text-white mb-4 font-heading">Why Work With Us?</h2>
-                  <p className="text-xl text-gray-300 font-body">
+                  <h2 className="text-4xl font-bold text-gray-900 mb-4 font-heading">Why Work With Us?</h2>
+                  <p className="text-xl text-gray-600 font-body">
                     We offer comprehensive benefits and a supportive work environment
                   </p>
                 </div>
 
                 <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                   {benefits.map((benefit, index) => (
-                    <div key={index} className="bg-gray-900 rounded-2xl p-6 text-center hover:bg-gray-800 transition-colors duration-300">
+                    <div key={index} className="bg-white rounded-2xl p-6 text-center hover:bg-gray-50 transition-colors duration-300 border border-gray-200 shadow-lg">
                       <div className="w-16 h-16 bg-gradient-to-br from-brand-primary to-brand-secondary rounded-full flex items-center justify-center text-white mx-auto mb-4">
                         {benefit.icon}
                       </div>
-                      <h3 className="text-xl font-semibold text-white mb-3 font-heading">{benefit.title}</h3>
-                      <p className="text-gray-300 font-body">{benefit.description}</p>
+                      <h3 className="text-xl font-semibold text-gray-900 mb-3 font-heading">{benefit.title}</h3>
+                      <p className="text-gray-600 font-body">{benefit.description}</p>
                     </div>
                   ))}
                 </div>
 
-                <div className="mt-16 bg-gray-900 rounded-2xl p-8">
-                  <h3 className="text-2xl font-bold text-white mb-6 font-heading">Additional Benefits</h3>
+                <div className="mt-16 bg-gray-50 rounded-2xl p-8 border border-gray-200">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-6 font-heading">Additional Benefits</h3>
                   <div className="grid md:grid-cols-2 gap-6">
                     <ul className="space-y-3">
-                      <li className="flex items-center text-gray-300">
+                      <li className="flex items-center text-gray-600">
                         <span className="w-2 h-2 bg-brand-primary rounded-full mr-3"></span>
                         Annual performance bonuses
                       </li>
-                      <li className="flex items-center text-gray-300">
+                      <li className="flex items-center text-gray-600">
                         <span className="w-2 h-2 bg-brand-primary rounded-full mr-3"></span>
                         Transportation allowance
                       </li>
-                      <li className="flex items-center text-gray-300">
+                      <li className="flex items-center text-gray-600">
                         <span className="w-2 h-2 bg-brand-primary rounded-full mr-3"></span>
                         Meal vouchers
                       </li>
-                      <li className="flex items-center text-gray-300">
+                      <li className="flex items-center text-gray-600">
                         <span className="w-2 h-2 bg-brand-primary rounded-full mr-3"></span>
                         Employee recognition programs
                       </li>
                     </ul>
                     <ul className="space-y-3">
-                      <li className="flex items-center text-gray-300">
+                      <li className="flex items-center text-gray-600">
                         <span className="w-2 h-2 bg-brand-primary rounded-full mr-3"></span>
                         Flexible working arrangements
                       </li>
-                      <li className="flex items-center text-gray-300">
+                      <li className="flex items-center text-gray-600">
                         <span className="w-2 h-2 bg-brand-primary rounded-full mr-3"></span>
                         Team building activities
                       </li>
-                      <li className="flex items-center text-gray-300">
+                      <li className="flex items-center text-gray-600">
                         <span className="w-2 h-2 bg-brand-primary rounded-full mr-3"></span>
                         Modern office facilities
                       </li>
-                      <li className="flex items-center text-gray-300">
+                      <li className="flex items-center text-gray-600">
                         <span className="w-2 h-2 bg-brand-primary rounded-full mr-3"></span>
                         Career advancement opportunities
                       </li>
