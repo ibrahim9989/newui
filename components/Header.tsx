@@ -54,7 +54,7 @@ export default function Header() {
               <a
                 key={item.href}
                 href={item.href}
-                className="group relative text-gray-700 hover:text-brand-primary transition-all duration-500 font-medium font-heading hover-lift-3d"
+                className="group relative text-gray-700 hover:text-brand-primary transition-all duration-500 font-medium font-heading text-body-md hover-lift-3d"
               >
                 <span className="relative z-10 group-hover:animate-bounce-in">{item.label}</span>
                 <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-brand-primary to-brand-secondary group-hover:w-full transition-all duration-500"></div>
@@ -101,7 +101,7 @@ export default function Header() {
                 <a
                   key={item.href}
                   href={item.href}
-                  className="text-gray-700 hover:text-brand-primary transition-colors duration-300 font-medium font-heading py-2 border-l-2 border-transparent hover:border-brand-primary pl-4"
+                  className="text-gray-700 hover:text-brand-primary transition-colors duration-300 font-medium font-heading text-body-md py-2 border-l-2 border-transparent hover:border-brand-primary pl-4"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.label}

@@ -32,11 +32,18 @@ export default function HeroSection() {
   }, [])
 
   return (
-    <section className="relative bg-gray-900 min-h-screen flex items-center overflow-hidden" style={{ backgroundColor: '#2a1a1a' }}>
+    <section className="relative min-h-screen flex items-center overflow-hidden bg-black">
       {/* Premium background effects */}
       <div className="absolute inset-0">
-        {/* Animated gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-brand-primary/20 to-brand-secondary/30 animate-pulse"></div>
+        {/* Subtle overlay for depth without color */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
+        
+        {/* Animated geometric patterns */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute top-20 left-20 w-32 h-32 border border-white/20 rotate-45 animate-spin" style={{ animationDuration: '20s' }}></div>
+          <div className="absolute bottom-20 right-20 w-24 h-24 border border-white/20 rotate-12 animate-pulse" style={{ animationDuration: '3s' }}></div>
+          <div className="absolute top-1/2 left-10 w-16 h-16 border border-white/20 rounded-full animate-bounce" style={{ animationDuration: '4s' }}></div>
+        </div>
         
         {/* Advanced floating particles with mouse interaction */}
         <div className="absolute inset-0">
@@ -99,8 +106,8 @@ export default function HeroSection() {
               }}
             />
           </div>
-        </div>
-        
+      </div>
+
         {/* Premium jumping person with parallax */}
         <div 
           className="absolute bottom-0 right-0 w-80 h-96 opacity-20"
@@ -157,8 +164,8 @@ export default function HeroSection() {
               className="absolute bottom-0 right-22 w-2 h-16 bg-white rounded-t-full shadow-sm"
               style={{ boxShadow: '0 0 8px rgba(255, 255, 255, 0.2)' }}
             ></div>
+            </div>
           </div>
-        </div>
 
         {/* Premium iMac monitor with parallax */}
         <div 

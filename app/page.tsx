@@ -1,14 +1,11 @@
 import Header from '@/components/Header'
 import SectorCarousel from '@/components/SectorCarousel'
-import AboutHASCOGroup from '@/components/AboutHASCOGroup'
-import OurServices from '@/components/OurServices'
-import StatisticsSection from '@/components/StatisticsSection'
-import HASCOOperationOffices from '@/components/HASCOOperationOffices'
-import ProjectsShowcase from '@/components/ProjectsShowcase'
-import WhyHASCO from '@/components/WhyHASCO'
+import HASCOSnapshot from '@/components/HASCOSnapshot'
+import SectorsOverview from '@/components/SectorsOverview'
 import OurClientsSection from '@/components/OurClientsSection'
-import OurDivisions from '@/components/OurDivisions'
-import ContactUsSection from '@/components/ContactUsSection'
+import StatsSection from '@/components/StatsSection'
+import FeaturedProjects from '@/components/FeaturedProjects'
+import ClosingCTA from '@/components/ClosingCTA'
 import ConditionalFooter from '@/components/ConditionalFooter'
 import AdvancedParticleSystem from '@/components/AdvancedParticleSystem'
 import CustomCursor from '@/components/CustomCursor'
@@ -21,7 +18,7 @@ export default function Home() {
       <CustomCursor />
       <Header />
       
-      {/* Section 1: Hero Section (SectorCarousel) */}
+      {/* Section 1: Hero Section */}
       <SectionTransition 
         transitionType="reveal" 
         addGradientOverlay={true}
@@ -31,79 +28,32 @@ export default function Home() {
         </div>
       </SectionTransition>
       
-      {/* Section 2: About HASCO Group */}
+      {/* Section 2: HASCO Snapshot */}
       <SectionTransition 
         transitionType="slide-up" 
         delay={200}
         addDivider={true}
-        addGradientOverlay={true}
       >
-        <div id="about">
-          <AboutHASCOGroup />
+        <div id="hasco-snapshot">
+          <HASCOSnapshot />
         </div>
       </SectionTransition>
       
-      {/* Section 3: Our Services */}
+      {/* Section 3: Sectors Overview */}
       <SectionTransition 
         transitionType="fade-in" 
         delay={300}
         addDivider={true}
       >
-        <div id="services">
-          <OurServices />
+        <div id="sectors-overview">
+          <SectorsOverview />
         </div>
       </SectionTransition>
       
-      {/* Section 4: Statistics */}
-      <SectionTransition 
-        transitionType="slide-up" 
-        delay={350}
-        addDivider={true}
-      >
-        <div id="statistics">
-          <StatisticsSection />
-        </div>
-      </SectionTransition>
-      
-      {/* Section 5: HASCO Operation Offices */}
-      <SectionTransition 
-        transitionType="scale-in" 
-        delay={400}
-        addDivider={true}
-        addGradientOverlay={true}
-      >
-        <div id="offices">
-          <HASCOOperationOffices />
-        </div>
-      </SectionTransition>
-      
-      {/* Section 6: Projects Showcase */}
-      <SectionTransition 
-        transitionType="slide-up" 
-        delay={500}
-        addDivider={true}
-      >
-        <div id="projects">
-          <ProjectsShowcase />
-        </div>
-      </SectionTransition>
-      
-      {/* Section 7: Why HASCO */}
-      <SectionTransition 
-        transitionType="fade-in" 
-        delay={600}
-        addDivider={true}
-        addGradientOverlay={true}
-      >
-        <div id="why-hasco">
-          <WhyHASCO />
-        </div>
-      </SectionTransition>
-      
-      {/* Section 8: Our Clients */}
+      {/* Section 4: Clients & Partners Showcase */}
       <SectionTransition 
         transitionType="reveal" 
-        delay={700}
+        delay={400}
         addDivider={true}
       >
         <div id="clients">
@@ -111,26 +61,36 @@ export default function Home() {
         </div>
       </SectionTransition>
       
-      {/* Section 9: Our Divisions */}
+      {/* Section 5: Stats Section */}
       <SectionTransition 
-        transitionType="scale-in" 
-        delay={800}
+        transitionType="fade-in" 
+        delay={450}
         addDivider={true}
-        addGradientOverlay={true}
       >
-        <div id="divisions">
-          <OurDivisions />
+        <div id="stats-section">
+          <StatsSection />
         </div>
       </SectionTransition>
       
-      {/* Contact Section */}
+      {/* Section 6: Featured Projects */}
       <SectionTransition 
         transitionType="slide-up" 
-        delay={900}
+        delay={500}
         addDivider={true}
       >
-        <div id="contact">
-          <ContactUsSection />
+        <div id="featured-projects">
+          <FeaturedProjects />
+        </div>
+      </SectionTransition>
+      
+      {/* Section 7: Closing CTA */}
+      <SectionTransition 
+        transitionType="fade-in" 
+        delay={600}
+        addDivider={true}
+      >
+        <div id="closing-cta">
+          <ClosingCTA />
         </div>
       </SectionTransition>
       

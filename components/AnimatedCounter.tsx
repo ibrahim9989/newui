@@ -5,6 +5,7 @@ import { useState, useEffect, useRef } from 'react'
 interface AnimatedCounterProps {
   end: number
   duration?: number
+  delay?: number
   suffix?: string
   prefix?: string
   className?: string
@@ -14,6 +15,7 @@ interface AnimatedCounterProps {
 export default function AnimatedCounter({ 
   end, 
   duration = 2000, 
+  delay = 0,
   suffix = '', 
   prefix = '', 
   className = '',
@@ -45,30 +47,43 @@ export default function AnimatedCounter({
 
     let startTime: number
     let animationFrame: number
+    let timeoutId: NodeJS.Timeout
 
-    const animate = (currentTime: number) => {
-      if (!startTime) startTime = currentTime
-      const progress = Math.min((currentTime - startTime) / duration, 1)
-      
-      // Easing function for smooth animation
-      const easeOutQuart = 1 - Math.pow(1 - progress, 4)
-      const currentCount = end * easeOutQuart
-      
-      setCount(currentCount)
+    const startAnimation = () => {
+      const animate = (currentTime: number) => {
+        if (!startTime) startTime = currentTime
+        const progress = Math.min((currentTime - startTime) / duration, 1)
+        
+        // Easing function for smooth animation
+        const easeOutQuart = 1 - Math.pow(1 - progress, 4)
+        const currentCount = end * easeOutQuart
+        
+        setCount(currentCount)
 
-      if (progress < 1) {
-        animationFrame = requestAnimationFrame(animate)
+        if (progress < 1) {
+          animationFrame = requestAnimationFrame(animate)
+        }
       }
+
+      animationFrame = requestAnimationFrame(animate)
     }
 
-    animationFrame = requestAnimationFrame(animate)
+    // Add delay before starting animation
+    if (delay > 0) {
+      timeoutId = setTimeout(startAnimation, delay)
+    } else {
+      startAnimation()
+    }
 
     return () => {
       if (animationFrame) {
         cancelAnimationFrame(animationFrame)
       }
+      if (timeoutId) {
+        clearTimeout(timeoutId)
+      }
     }
-  }, [isVisible, end, duration])
+  }, [isVisible, end, duration, delay])
 
   const formatNumber = (num: number) => {
     if (decimals > 0) {
