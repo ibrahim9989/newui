@@ -79,10 +79,10 @@ export default function OurClientsSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Title */}
         <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <h2 className="text-title-md md:text-title-lg font-bold text-brand-dark mb-4 font-heading">
-            Trusted <span>Partnerships</span>
+          <h2 className="text-title-md md:text-title-lg font-light text-brand-dark mb-4 font-heading">
+            Trusted <span className="font-medium text-blue-600">Partnerships</span>
           </h2>
-          <p className="text-body-md text-gray-600 max-w-3xl mx-auto font-body mb-4">
+          <p className="text-subtitle-md md:text-subtitle-lg text-gray-600 max-w-3xl mx-auto font-body mb-4">
             From NEOM to AMAALA, The Red Sea Development, and Saudi Cruise, HASCO has been a trusted partner in some of the Kingdom's most ambitious projects.
           </p>
           <div className={`w-24 h-1 bg-brand-primary mx-auto transition-all duration-1000 delay-300 ${isVisible ? 'scale-x-100' : 'scale-x-0'}`}></div>
@@ -109,10 +109,10 @@ export default function OurClientsSection() {
                 {/* Hover shine effect */}
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-brand-primary/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
               </div>
-              <div className="text-title-sm font-bold text-brand-dark group-hover:text-brand-primary transition-colors duration-300 mb-3">
+              <div className="text-subtitle-md font-semibold text-brand-dark group-hover:text-brand-primary transition-colors duration-300 mb-3 font-heading">
                 {client.logo}
               </div>
-              <div className="text-body-md text-gray-600 group-hover:text-gray-800 transition-colors duration-300">
+              <div className="text-body-md text-gray-600 group-hover:text-gray-800 transition-colors duration-300 font-body">
                 {client.description}
               </div>
               {/* Enhanced bottom border effect */}
@@ -133,12 +133,12 @@ export default function OurClientsSection() {
               }`}
               style={{ animationDelay: `${(index + 4) * 0.1}s` }}
             >
-              <h3 className="text-title-sm font-bold text-brand-dark mb-4 group-hover:text-brand-primary transition-colors duration-300 relative">
+              <h3 className="text-subtitle-md font-semibold text-brand-dark mb-4 group-hover:text-brand-primary transition-colors duration-300 relative font-heading">
                 {info.title}
                 {/* Underline effect */}
                 <div className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-brand-primary group-hover:w-full transition-all duration-300"></div>
               </h3>
-              <p className="text-body-md text-gray-600 leading-relaxed group-hover:text-gray-800 transition-colors duration-300">
+              <p className="text-body-md text-gray-600 leading-relaxed group-hover:text-gray-800 transition-colors duration-300 font-body">
                 {info.description}
               </p>
             </div>

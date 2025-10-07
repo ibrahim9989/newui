@@ -80,7 +80,7 @@ export default function SectorCarousel() {
               
               {/* Elegant description */}
               <div className="max-w-2xl">
-                <p className="text-body-md md:text-body-lg text-slate-300 leading-relaxed font-light font-body animate-slide-in-up stagger-3">
+                <p className="text-subtitle-md md:text-subtitle-lg text-slate-300 leading-relaxed font-light font-body animate-slide-in-up stagger-3">
                   From marine expertise to logistics, construction, tourism, and beyond — HASCO delivers world-class solutions that power the Kingdom's growth and global ambitions.
                 </p>
               </div>

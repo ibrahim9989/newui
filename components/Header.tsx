@@ -6,34 +6,47 @@ import Image from 'next/image'
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
+  const [isOnDarkBackground, setIsOnDarkBackground] = useState(true)
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10)
+      
+      // Determine if we're on a dark or light background based on scroll position
+      // Hero section (dark) is typically 0-100vh, then white sections follow
+      const heroHeight = window.innerHeight
+      const isInHeroSection = window.scrollY < heroHeight * 0.8
+      setIsOnDarkBackground(isInHeroSection)
     }
+    
+    // Initial check
+    handleScroll()
+    
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+    <header className={`fixed top-4 left-4 right-4 z-50 transition-all duration-300 rounded-full ${
       isScrolled 
-        ? 'bg-white/95 backdrop-blur-lg shadow-2xl border-b border-gray-200' 
-        : 'bg-white/90 backdrop-blur-md border-b border-gray-100'
+        ? isOnDarkBackground 
+          ? 'bg-black/20 backdrop-blur-lg shadow-2xl border border-white/20' 
+          : 'bg-transparent backdrop-blur-sm'
+        : 'bg-transparent backdrop-blur-md'
     }`}>
 
       {/* Main navigation */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-full pl-0 pr-8">
         <div className="flex justify-between items-center">
           {/* Logo Section */}
-          <div className="flex items-center">
+          <div className="flex items-center pl-8">
             <a href="/" className="flex items-center">
-              <div className="w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center">
+              <div className="w-24 h-24 sm:w-28 sm:h-28 lg:w-32 lg:h-32 flex items-center justify-center">
                 <Image
                   src="/logo.png"
                   alt="HASCO Group Logo"
-                  width={96}
-                  height={96}
+                  width={160}
+                  height={160}
                   className="object-contain"
                   priority
                 />
@@ -54,20 +67,29 @@ export default function Header() {
               <a
                 key={item.href}
                 href={item.href}
-                className="group relative text-gray-700 hover:text-brand-primary transition-all duration-500 font-medium font-heading text-body-md hover-lift-3d"
+                className={`group relative transition-all duration-300 font-medium font-heading text-subtitle-md ${
+                  isOnDarkBackground 
+                    ? 'text-white hover:text-blue-300 drop-shadow-lg' 
+                    : 'text-blue-600 hover:text-blue-800'
+                }`}
               >
-                <span className="relative z-10 group-hover:animate-bounce-in">{item.label}</span>
-                <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-brand-primary to-brand-secondary group-hover:w-full transition-all duration-500"></div>
-                <div className="absolute -bottom-1 left-0 w-full h-0.5 bg-gray-200 opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-                {/* Hover glow effect */}
-                <div className="absolute inset-0 bg-brand-primary/5 rounded-lg scale-0 group-hover:scale-100 transition-transform duration-300 -z-10"></div>
+                <span className="relative z-10">{item.label}</span>
+                <div className={`absolute -bottom-1 left-0 w-0 h-0.5 group-hover:w-full transition-all duration-300 ${
+                  isOnDarkBackground 
+                    ? 'bg-blue-300' 
+                    : 'bg-blue-600'
+                }`}></div>
               </a>
             ))}
           </nav>
 
           {/* Mobile menu button */}
           <button
-            className="lg:hidden relative w-10 h-10 flex items-center justify-center text-gray-700 hover:text-brand-primary transition-colors duration-300"
+            className={`lg:hidden relative w-10 h-10 flex items-center justify-center transition-colors duration-300 ${
+              isOnDarkBackground 
+                ? 'text-white hover:text-blue-300 drop-shadow-lg' 
+                : 'text-blue-600 hover:text-blue-800'
+            }`}
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             <div className="relative w-6 h-6">
@@ -88,7 +110,11 @@ export default function Header() {
         <div className={`lg:hidden overflow-hidden transition-all duration-300 ${
           isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
         }`}>
-          <div className="pt-4 pb-6 border-t border-gray-200 mt-4">
+          <div className={`pt-4 pb-6 border-t mt-4 backdrop-blur-md rounded-b-full ${
+            isOnDarkBackground 
+              ? 'border-white/20 bg-black/20' 
+              : 'border-transparent bg-transparent'
+          }`}>
             <nav className="flex flex-col space-y-4">
               {[
                 { href: '/', label: 'Home' },
@@ -101,7 +127,11 @@ export default function Header() {
                 <a
                   key={item.href}
                   href={item.href}
-                  className="text-gray-700 hover:text-brand-primary transition-colors duration-300 font-medium font-heading text-body-md py-2 border-l-2 border-transparent hover:border-brand-primary pl-4"
+                  className={`transition-colors duration-300 font-medium font-heading text-subtitle-md py-2 border-l-2 border-transparent pl-4 ${
+                    isOnDarkBackground 
+                      ? 'text-white hover:text-blue-300 hover:border-blue-300 drop-shadow-lg' 
+                      : 'text-blue-600 hover:text-blue-800 hover:border-blue-600'
+                  }`}
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.label}

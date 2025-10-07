@@ -22,16 +22,16 @@ module.exports = {
         secondary: ['Helvetica', 'Arial', 'sans-serif'],
       },
       fontSize: {
-        // Title hierarchy
-        'title-xl': ['4rem', { lineHeight: '1.1', fontWeight: '300' }], // 64px - Main hero titles
-        'title-lg': ['3rem', { lineHeight: '1.2', fontWeight: '300' }], // 48px - Section titles
-        'title-md': ['2.25rem', { lineHeight: '1.3', fontWeight: '300' }], // 36px - Subsection titles
-        'title-sm': ['1.875rem', { lineHeight: '1.3', fontWeight: '300' }], // 30px - Card titles
+        // Title hierarchy - Reduced sizes
+        'title-xl': ['3rem', { lineHeight: '1.1', fontWeight: '300' }], // 48px - Main hero titles (was 64px)
+        'title-lg': ['2.5rem', { lineHeight: '1.2', fontWeight: '300' }], // 40px - Section titles (was 48px)
+        'title-md': ['2rem', { lineHeight: '1.3', fontWeight: '300' }], // 32px - Subsection titles (was 36px)
+        'title-sm': ['1.75rem', { lineHeight: '1.3', fontWeight: '300' }], // 28px - Card titles (was 30px)
         
-        // Subtitle hierarchy
-        'subtitle-lg': ['1.5rem', { lineHeight: '1.4', fontWeight: '400' }], // 24px - Large subtitles
-        'subtitle-md': ['1.25rem', { lineHeight: '1.4', fontWeight: '400' }], // 20px - Medium subtitles
-        'subtitle-sm': ['1.125rem', { lineHeight: '1.4', fontWeight: '400' }], // 18px - Small subtitles
+        // Subtitle hierarchy - Increased sizes
+        'subtitle-lg': ['1.75rem', { lineHeight: '1.4', fontWeight: '400' }], // 28px - Large subtitles (was 24px)
+        'subtitle-md': ['1.5rem', { lineHeight: '1.4', fontWeight: '400' }], // 24px - Medium subtitles (was 20px)
+        'subtitle-sm': ['1.25rem', { lineHeight: '1.4', fontWeight: '400' }], // 20px - Small subtitles (was 18px)
         
         // Button hierarchy
         'button-lg': ['1rem', { lineHeight: '1.5', fontWeight: '500' }], // 16px - Large buttons
