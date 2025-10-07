@@ -30,9 +30,9 @@ export default function Header() {
     <header className={`fixed top-4 left-4 right-4 z-50 transition-all duration-300 rounded-full ${
       isScrolled 
         ? isOnDarkBackground 
-          ? 'bg-black/20 backdrop-blur-lg shadow-2xl border border-white/20' 
-          : 'bg-transparent backdrop-blur-sm'
-        : 'bg-transparent backdrop-blur-md'
+          ? 'bg-black/15 backdrop-blur-lg shadow-2xl border border-white/20' 
+          : 'bg-white/10 backdrop-blur-lg shadow-lg border border-gray-200/30'
+        : 'bg-white/3 backdrop-blur-md border border-white/10'
     }`}>
 
       {/* Main navigation */}
@@ -112,8 +112,8 @@ export default function Header() {
         }`}>
           <div className={`pt-4 pb-6 border-t mt-4 backdrop-blur-md rounded-b-full ${
             isOnDarkBackground 
-              ? 'border-white/20 bg-black/20' 
-              : 'border-transparent bg-transparent'
+              ? 'border-white/20 bg-black/15' 
+              : 'border-gray-200/30 bg-white/10'
           }`}>
             <nav className="flex flex-col space-y-4">
               {[
