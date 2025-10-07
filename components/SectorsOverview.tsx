@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import Image from 'next/image'
 
 export default function SectorsOverview() {
   const [isVisible, setIsVisible] = useState(false)
@@ -31,32 +32,32 @@ export default function SectorsOverview() {
     {
       title: "Marine Operations",
       description: "Comprehensive marine services including consultancy, operations, construction, and professional diving services.",
-      icon: "🌊"
+      icon: "/images/cruise.png" // Marine operations icon
     },
     {
       title: "Logistics & Supply Chain",
       description: "Integrated logistics solutions with freight forwarding, transportation, and supply chain management.",
-      icon: "🚚"
+      icon: "/images/truck.png" // Placeholder for logistics icon
     },
     {
       title: "Construction",
       description: "General construction projects with focus on safety, quality, and sustainability.",
-      icon: "🏗️"
+      icon: "/images/construction-site.png" // Placeholder for construction icon
     },
     {
       title: "Hospitality & Events",
       description: "High-quality hospitality, catering, and event management services.",
-      icon: "🏨"
+      icon: "/images/reception.png" // Placeholder for hospitality icon
     },
     {
       title: "Tourism",
       description: "Tourism development and management services for the Kingdom's growing tourism sector.",
-      icon: "✈️"
+      icon: "/images/flight.png" // Placeholder for tourism icon
     },
     {
       title: "Consultancy",
       description: "Professional consultancy services across various sectors and industries.",
-      icon: "💼"
+      icon: "/images/talk.png" // Placeholder for consultancy icon
     }
   ]
 
@@ -81,8 +82,23 @@ export default function SectorsOverview() {
               style={{ transitionDelay: `${index * 100}ms` }}
             >
               <div className="relative z-10">
-                <div className="text-5xl mb-6 group-hover:scale-110 transition-transform duration-500">
-                  {sector.icon}
+                {/* Icon - Image or Placeholder */}
+                <div className="w-16 h-16 mb-6 group-hover:scale-110 transition-transform duration-500">
+                  {sector.icon.startsWith('/images/') ? (
+                    <Image
+                      src={sector.icon}
+                      alt={sector.title}
+                      width={64}
+                      height={64}
+                      className="w-full h-full object-contain"
+                    />
+                  ) : (
+                    <div className="w-full h-full bg-gray-100 rounded-lg flex items-center justify-center border-2 border-dashed border-gray-300">
+                      <span className="text-gray-400 text-sm font-medium">
+                        {sector.icon}
+                      </span>
+                    </div>
+                  )}
                 </div>
                 
                 <h3 className="text-title-sm font-semibold text-gray-900 mb-4 font-heading group-hover:text-blue-600 transition-colors duration-300">
