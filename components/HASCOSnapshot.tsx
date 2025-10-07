@@ -59,14 +59,9 @@ export default function HASCOSnapshot() {
           {/* Company Introduction */}
           <div className="space-y-8 text-center">
             <div className={`space-y-6 transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-              <h2 className="text-title-md md:text-title-lg font-light text-gray-900 leading-tight font-heading">
-                <span className="block font-extralight">Established</span>
-                <span className="block font-medium text-blue-600">2005</span>
-              </h2>
-              
               <div className="space-y-4">
                 <p className="text-body-md text-gray-700 leading-relaxed font-body">
-                  Established in 2005, HASCO has grown from a focused logistics provider into a diversified holding group. Based in the Kingdom of Saudi Arabia, we operate across Marine, Logistics, Construction, Shipping, Tourism, Hospitality, and Consultancy, supporting the nation's transformation under Vision 2030.
+                  HASCO has grown from a focused logistics provider into a diversified holding group. Based in the Kingdom of Saudi Arabia, we operate across Marine, Logistics, Construction, Shipping, Tourism, Hospitality, and Consultancy, supporting the nation's transformation under Vision 2030.
                 </p>
               </div>
             </div>
