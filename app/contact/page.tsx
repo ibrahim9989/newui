@@ -9,6 +9,8 @@ import SectionTransition from '@/components/SectionTransition'
 
 export default function ContactPage() {
   const [isVisible, setIsVisible] = useState(false)
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
+  const [isClient, setIsClient] = useState(false)
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -20,6 +22,24 @@ export default function ContactPage() {
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
+
+  useEffect(() => {
+    setIsClient(true)
+  }, [])
+
+  useEffect(() => {
+    if (!isClient) return
+    
+    const handleMouseMove = (e: MouseEvent) => {
+      setMousePosition({ x: e.clientX, y: e.clientY })
+    }
+
+    window.addEventListener('mousemove', handleMouseMove)
+
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove)
+    }
+  }, [isClient])
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -126,18 +146,55 @@ export default function ContactPage() {
         transitionType="reveal" 
         addGradientOverlay={true}
       >
-        <div id="contact-hero" className="pt-24 pb-20 bg-gradient-to-br from-gray-50 via-blue-50 to-gray-100 relative overflow-hidden">
-          <div className="absolute inset-0 bg-white/80"></div>
+        <div id="contact-hero" className="pt-48 pb-20 bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 relative overflow-hidden">
+          <div className="absolute inset-0 bg-black/20"></div>
+          
+          {/* Premium background effects - matching homepage */}
+          <div className="absolute inset-0">
+            {/* Subtle overlay for depth without color */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
+            
+            {/* Animated geometric patterns */}
+            <div className="absolute inset-0 opacity-5">
+              <div className="absolute top-20 left-20 w-32 h-32 border border-white/20 rotate-45 animate-spin" style={{ animationDuration: '20s' }}></div>
+              <div className="absolute bottom-20 right-20 w-24 h-24 border border-white/20 rotate-12 animate-pulse" style={{ animationDuration: '3s' }}></div>
+              <div className="absolute top-1/2 left-10 w-16 h-16 border border-white/20 rounded-full animate-bounce" style={{ animationDuration: '4s' }}></div>
+            </div>
+            
+            {/* Advanced floating particles with mouse interaction */}
+            <div className="absolute inset-0">
+              {Array.from({ length: 30 }).map((_, i) => {
+                if (!isClient) return null
+                return (
+                  <div
+                    key={i}
+                    className="absolute w-1 h-1 bg-white/20 rounded-full animate-pulse"
+                    style={{
+                      left: `${Math.random() * 100}%`,
+                      top: `${Math.random() * 100}%`,
+                      animationDelay: `${Math.random() * 3}s`,
+                      animationDuration: `${2 + Math.random() * 2}s`,
+                      transform: `translate(${(mousePosition.x - (typeof window !== 'undefined' ? window.innerWidth / 2 : 0)) * (i % 3) * 0.01}px, ${(mousePosition.y - (typeof window !== 'undefined' ? window.innerHeight / 2 : 0)) * (i % 3) * 0.01}px)`,
+                      transition: 'transform 0.1s ease-out'
+                    }}
+                  />
+                )
+              })}
+            </div>
+            
+            {/* Mouse-following glow effect */}
+            <div className="absolute w-96 h-96 bg-brand-primary/10 rounded-full blur-3xl pointer-events-none transition-all duration-300"></div>
+          </div>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
               <div className="text-center">
-                <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6 font-heading">
-                  Contact <span className="text-brand-primary font-bold">Us</span>
+                <h1 className="text-5xl md:text-7xl font-light text-white mb-6 font-heading apple-fade-in">
+                  <span className="font-extralight">Contact </span><span className="font-extralight text-white">Us</span>
                 </h1>
-                <div className="w-32 h-1 bg-gradient-to-r from-brand-primary to-brand-secondary mx-auto mb-8"></div>
-                <p className="text-xl md:text-2xl text-gray-700 max-w-4xl mx-auto font-body leading-relaxed">
+                <div className="w-32 h-1 bg-gradient-to-r from-brand-primary to-brand-secondary mx-auto mb-8 apple-scale-in apple-stagger-1"></div>
+                <p className="text-subtitle-md md:text-subtitle-lg text-white max-w-4xl mx-auto font-body leading-relaxed apple-slide-up apple-stagger-2">
                   Ready to start your project? Get in touch with our team of experts and let's discuss how 
-                  <span className="text-brand-primary font-semibold"> HASCO Group can help you achieve your goals</span>
+                  <span className="text-brand-secondary font-extralight"> HASCO Group can help you achieve your goals</span>
                 </p>
               </div>
             </div>
@@ -149,15 +206,27 @@ export default function ContactPage() {
       <SectionTransition 
         transitionType="slide-up" 
         delay={200}
-        addDivider={true}
+        addDivider={false}
         addGradientOverlay={true}
       >
-        <div className="py-20 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="py-24 bg-white relative overflow-hidden">
+          {/* Enhanced Background Effects - matching homepage */}
+          <div className="absolute inset-0">
+            {/* Subtle pattern overlay */}
+            <div className="absolute inset-0 opacity-5">
+              <div className="absolute top-20 left-20 w-24 h-24 border border-gray-300 rotate-45 animate-pulse" style={{ animationDuration: '6s' }}></div>
+              <div className="absolute bottom-20 right-20 w-20 h-20 border border-gray-300 rotate-12 animate-pulse" style={{ animationDuration: '4s', animationDelay: '2s' }}></div>
+            </div>
+            
+            {/* Gradient overlays */}
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-50/20 to-transparent"></div>
+          </div>
+          
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="grid lg:grid-cols-2 gap-16">
               {/* Contact Form */}
-              <div className="bg-gray-50 rounded-2xl p-8 shadow-xl border border-gray-200">
-                <h2 className="text-3xl font-bold text-gray-900 mb-6 font-heading">Send us a Message</h2>
+              <div className="apple-card bg-gray-50 rounded-2xl p-8 shadow-lg border border-gray-200 apple-hover-lift apple-scale-in">
+                <h2 className="text-3xl font-light text-gray-900 mb-6 font-heading apple-fade-in"><span className="font-extralight">Send us a </span><span className="font-extralight text-gray-900">Message</span></h2>
                 
                 {submitStatus === 'success' && (
                   <div className="mb-6 p-4 bg-green-500/20 border border-green-500/30 rounded-lg">
@@ -184,7 +253,7 @@ export default function ContactPage() {
                         value={formData.name}
                         onChange={handleInputChange}
                         required
-                        className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:border-brand-primary focus:ring-1 focus:ring-brand-primary transition-colors duration-300"
+                        className="w-full px-4 py-3 bg-white border border-gray-300 rounded-xl text-gray-900 placeholder-gray-500 focus:outline-none focus:border-brand-primary focus:ring-1 focus:ring-brand-primary transition-colors duration-300"
                         placeholder="Your full name"
                       />
                     </div>
@@ -199,7 +268,7 @@ export default function ContactPage() {
                         value={formData.email}
                         onChange={handleInputChange}
                         required
-                        className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:border-brand-primary focus:ring-1 focus:ring-brand-primary transition-colors duration-300"
+                        className="w-full px-4 py-3 bg-white border border-gray-300 rounded-xl text-gray-900 placeholder-gray-500 focus:outline-none focus:border-brand-primary focus:ring-1 focus:ring-brand-primary transition-colors duration-300"
                         placeholder="your.email@example.com"
                       />
                     </div>
@@ -216,7 +285,7 @@ export default function ContactPage() {
                         name="phone"
                         value={formData.phone}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:border-brand-primary focus:ring-1 focus:ring-brand-primary transition-colors duration-300"
+                        className="w-full px-4 py-3 bg-white border border-gray-300 rounded-xl text-gray-900 placeholder-gray-500 focus:outline-none focus:border-brand-primary focus:ring-1 focus:ring-brand-primary transition-colors duration-300"
                         placeholder="+966 XX XXX XXXX"
                       />
                     </div>
@@ -230,7 +299,7 @@ export default function ContactPage() {
                         name="company"
                         value={formData.company}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:border-brand-primary focus:ring-1 focus:ring-brand-primary transition-colors duration-300"
+                        className="w-full px-4 py-3 bg-white border border-gray-300 rounded-xl text-gray-900 placeholder-gray-500 focus:outline-none focus:border-brand-primary focus:ring-1 focus:ring-brand-primary transition-colors duration-300"
                         placeholder="Your company name"
                       />
                     </div>
@@ -245,7 +314,7 @@ export default function ContactPage() {
                       name="service"
                       value={formData.service}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg text-gray-900 focus:outline-none focus:border-brand-primary focus:ring-1 focus:ring-brand-primary transition-colors duration-300"
+                      className="w-full px-4 py-3 bg-white border border-gray-300 rounded-xl text-gray-900 focus:outline-none focus:border-brand-primary focus:ring-1 focus:ring-brand-primary transition-colors duration-300"
                     >
                       <option value="">Select a service</option>
                       <option value="marine-operations">Marine Operations</option>
@@ -269,7 +338,7 @@ export default function ContactPage() {
                       value={formData.subject}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-brand-primary focus:ring-1 focus:ring-brand-primary transition-colors duration-300"
+                      className="w-full px-4 py-3 bg-white border border-gray-300 rounded-xl text-gray-900 placeholder-gray-500 focus:outline-none focus:border-brand-primary focus:ring-1 focus:ring-brand-primary transition-colors duration-300"
                       placeholder="What's this about?"
                     />
                   </div>
@@ -285,7 +354,7 @@ export default function ContactPage() {
                       onChange={handleInputChange}
                       required
                       rows={6}
-                      className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:border-brand-primary focus:ring-1 focus:ring-brand-primary transition-colors duration-300 resize-none"
+                      className="w-full px-4 py-3 bg-white border border-gray-300 rounded-xl text-gray-900 placeholder-gray-500 focus:outline-none focus:border-brand-primary focus:ring-1 focus:ring-brand-primary transition-colors duration-300 resize-none"
                       placeholder="Tell us about your project or inquiry..."
                     />
                   </div>
@@ -293,7 +362,7 @@ export default function ContactPage() {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full bg-gradient-to-r from-brand-primary to-brand-secondary text-white py-4 px-8 rounded-lg font-semibold hover:from-brand-secondary hover:to-brand-primary transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed apple-btn"
+                    className="apple-btn w-full bg-gradient-to-r from-brand-primary to-brand-secondary text-white py-4 px-8 rounded-xl text-button-lg font-semibold hover:from-brand-secondary hover:to-brand-primary transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-xl transform hover:scale-105"
                   >
                     {isSubmitting ? (
                       <div className="flex items-center justify-center">
@@ -310,15 +379,15 @@ export default function ContactPage() {
               {/* Contact Information */}
               <div className="space-y-8">
                 <div>
-                  <h2 className="text-3xl font-bold text-gray-900 mb-6 font-heading">Get in Touch</h2>
-                  <p className="text-gray-600 text-lg leading-relaxed mb-8 font-body">
+                  <h2 className="text-3xl font-light text-gray-900 mb-6 font-heading apple-fade-in"><span className="font-extralight">Get in </span><span className="font-extralight text-gray-900">Touch</span></h2>
+                  <p className="text-subtitle-md md:text-subtitle-lg text-gray-600 leading-relaxed mb-8 font-body apple-slide-up apple-stagger-1">
                     We're here to help you with your project needs. Reach out to us through any of the channels below, and our team will respond promptly.
                   </p>
                 </div>
 
                 <div className="space-y-6">
                   {contactInfo.map((info, index) => (
-                    <div key={index} className="bg-gray-50 rounded-xl p-6 hover:bg-gray-100 transition-colors duration-300 border border-gray-200">
+                    <div key={index} className="apple-card bg-gray-50 rounded-xl p-6 hover:bg-gray-100 transition-colors duration-300 border border-gray-200 apple-hover-lift apple-scale-in" style={{ animationDelay: `${index * 0.1}s` }}>
                       <div className="flex items-start space-x-4">
                         <div className="w-12 h-12 bg-gradient-to-br from-brand-primary to-brand-secondary rounded-lg flex items-center justify-center text-white flex-shrink-0">
                           {info.icon}
@@ -332,6 +401,9 @@ export default function ContactPage() {
                           </div>
                         </div>
                       </div>
+                      
+                      {/* Shine effect */}
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
                     </div>
                   ))}
                 </div>
@@ -340,7 +412,7 @@ export default function ContactPage() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <a
                     href="tel:+966131234567"
-                    className="bg-brand-primary hover:bg-brand-secondary text-white py-4 px-6 rounded-lg font-semibold transition-colors duration-300 flex items-center justify-center space-x-2"
+                    className="apple-btn bg-brand-primary hover:bg-brand-secondary text-white py-4 px-6 rounded-xl text-button-lg font-semibold transition-colors duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xl transform hover:scale-105"
                   >
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
@@ -349,7 +421,7 @@ export default function ContactPage() {
                   </a>
                   <a
                     href="mailto:info@hascogroup.com"
-                    className="bg-gray-600 hover:bg-gray-700 text-white py-4 px-6 rounded-lg font-semibold transition-colors duration-300 flex items-center justify-center space-x-2"
+                    className="apple-btn bg-gray-600 hover:bg-gray-700 text-white py-4 px-6 rounded-xl text-button-lg font-semibold transition-colors duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xl transform hover:scale-105"
                   >
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />

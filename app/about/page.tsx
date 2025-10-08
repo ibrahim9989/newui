@@ -113,6 +113,26 @@ const divisions = [
 
 export default function AboutPage() {
   const [isVisible, setIsVisible] = useState(false)
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
+  const [isClient, setIsClient] = useState(false)
+
+  useEffect(() => {
+    setIsClient(true)
+  }, [])
+
+  useEffect(() => {
+    if (!isClient) return
+    
+    const handleMouseMove = (e: MouseEvent) => {
+      setMousePosition({ x: e.clientX, y: e.clientY })
+    }
+
+    window.addEventListener('mousemove', handleMouseMove)
+
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove)
+    }
+  }, [isClient])
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -147,18 +167,55 @@ export default function AboutPage() {
         transitionType="reveal" 
         addGradientOverlay={true}
       >
-        <div id="about-hero" className="pt-24 pb-20 bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 relative overflow-hidden">
+        <div id="about-hero" className="pt-48 pb-20 bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 relative overflow-hidden">
           <div className="absolute inset-0 bg-black/20"></div>
+          
+          {/* Premium background effects - matching homepage */}
+          <div className="absolute inset-0">
+            {/* Subtle overlay for depth without color */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
+            
+            {/* Animated geometric patterns */}
+            <div className="absolute inset-0 opacity-5">
+              <div className="absolute top-20 left-20 w-32 h-32 border border-white/20 rotate-45 animate-spin" style={{ animationDuration: '20s' }}></div>
+              <div className="absolute bottom-20 right-20 w-24 h-24 border border-white/20 rotate-12 animate-pulse" style={{ animationDuration: '3s' }}></div>
+              <div className="absolute top-1/2 left-10 w-16 h-16 border border-white/20 rounded-full animate-bounce" style={{ animationDuration: '4s' }}></div>
+            </div>
+            
+            {/* Advanced floating particles with mouse interaction */}
+            <div className="absolute inset-0">
+              {Array.from({ length: 30 }).map((_, i) => {
+                if (!isClient) return null
+                return (
+                  <div
+                    key={i}
+                    className="absolute w-1 h-1 bg-white/20 rounded-full animate-pulse"
+                    style={{
+                      left: `${Math.random() * 100}%`,
+                      top: `${Math.random() * 100}%`,
+                      animationDelay: `${Math.random() * 3}s`,
+                      animationDuration: `${2 + Math.random() * 2}s`,
+                      transform: `translate(${(mousePosition.x - (typeof window !== 'undefined' ? window.innerWidth / 2 : 0)) * (i % 3) * 0.01}px, ${(mousePosition.y - (typeof window !== 'undefined' ? window.innerHeight / 2 : 0)) * (i % 3) * 0.01}px)`,
+                      transition: 'transform 0.1s ease-out'
+                    }}
+                  />
+                )
+              })}
+            </div>
+            
+            {/* Mouse-following glow effect */}
+            <div className="absolute w-96 h-96 bg-brand-primary/10 rounded-full blur-3xl pointer-events-none transition-all duration-300"></div>
+          </div>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
               <div className="text-center">
-                <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 font-heading">
-                  About <span className="text-white font-bold">HASCO Group</span>
+                <h1 className="text-5xl md:text-7xl font-light text-white mb-6 font-heading apple-fade-in">
+                  <span className="font-extralight">About </span><span className="font-extralight text-white">HASCO Group</span>
                 </h1>
-                <div className="w-32 h-1 bg-gradient-to-r from-brand-primary to-brand-secondary mx-auto mb-8"></div>
-                <p className="text-xl md:text-2xl text-white max-w-4xl mx-auto font-body leading-relaxed">
+                <div className="w-32 h-1 bg-gradient-to-r from-brand-primary to-brand-secondary mx-auto mb-8 apple-scale-in apple-stagger-1"></div>
+                <p className="text-subtitle-md md:text-subtitle-lg text-white max-w-4xl mx-auto font-body leading-relaxed apple-slide-up apple-stagger-2">
                   Excellence in integrated solutions across marine, logistics, and development sectors with 
-                  <span className="text-brand-secondary font-semibold"> 19+ years of proven expertise</span>
+                  <span className="text-brand-secondary font-extralight"> 19+ years of proven expertise</span>
                 </p>
               </div>
             </div>
@@ -170,15 +227,49 @@ export default function AboutPage() {
       <SectionTransition 
         transitionType="slide-up" 
         delay={200}
-        addDivider={true}
+        addDivider={false}
         addGradientOverlay={true}
       >
-        <div className="py-20 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="py-24 bg-gray-50 relative overflow-hidden">
+          {/* Enhanced Background Effects - matching homepage */}
+          <div className="absolute inset-0">
+            {/* Background Image */}
+            <div 
+              className="absolute top-0 right-0 w-1/2 h-full bg-cover bg-center bg-no-repeat opacity-20 animate-gentle-pulse"
+              style={{
+                backgroundImage: 'url(/images/Slide5.jpeg)'
+              }}
+            ></div>
+            
+            {/* Subtle gradient overlay */}
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/50 to-transparent"></div>
+            
+            {/* Floating geometric elements */}
+            <div className="absolute inset-0 opacity-5">
+              <div className="absolute top-20 left-20 w-32 h-32 border border-blue-200 rotate-45 bg-element-float" style={{ animationDuration: '4s' }}></div>
+              <div className="absolute bottom-20 right-20 w-24 h-24 border border-blue-200 rotate-12 bg-element-rotate" style={{ animationDuration: '3s', animationDelay: '1s' }}></div>
+            </div>
+            
+            {/* Floating tech elements */}
+            {Array.from({ length: 12 }).map((_, i) => (
+              <div
+                key={i}
+                className="absolute w-1 h-1 bg-white/30 rounded-full animate-float"
+                style={{
+                  left: `${Math.random() * 100}%`,
+                  top: `${Math.random() * 100}%`,
+                  animationDelay: `${Math.random() * 3}s`,
+                  animationDuration: `${2 + Math.random() * 2}s`
+                }}
+              />
+            ))}
+          </div>
+          
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="grid lg:grid-cols-2 gap-16 items-start">
               {/* Our Story */}
               <div className="apple-card rounded-2xl p-8 shadow-xl apple-hover-lift">
-                <h2 className="text-3xl font-bold text-gray-900 mb-6 font-heading">Our Story</h2>
+                <h2 className="text-3xl font-light text-gray-900 mb-6 font-heading"><span className="font-extralight">Our </span><span className="font-extralight text-gray-900">Story</span></h2>
                 <div className="space-y-6 text-gray-600 leading-relaxed font-body">
                   <p>
                     Established in 2005, HASCO Group was founded with a vision to practice integrated supply chain & logistics solutions. Over the past 19+ years, we have created an active ecosystem of maritime and logistics services that has become a leading force in the Middle East.
@@ -244,7 +335,7 @@ export default function AboutPage() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                   <div className="absolute bottom-6 left-6 text-white">
-                    <h3 className="text-2xl font-bold mb-2">HASCO Group Headquarters</h3>
+                    <h3 className="text-2xl font-semibold mb-2">HASCO Group Headquarters</h3>
                     <p className="text-gray-200">Dammam, Saudi Arabia</p>
                   </div>
                 </div>
@@ -258,16 +349,28 @@ export default function AboutPage() {
       <SectionTransition 
         transitionType="fade-in" 
         delay={300}
-        addDivider={true}
+        addDivider={false}
       >
-        <div className="py-20 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="py-24 bg-white relative overflow-hidden">
+          {/* Enhanced Background Effects - matching homepage */}
+          <div className="absolute inset-0">
+            {/* Subtle pattern overlay */}
+            <div className="absolute inset-0 opacity-5">
+              <div className="absolute top-20 left-20 w-24 h-24 border border-gray-300 rotate-45 animate-pulse" style={{ animationDuration: '6s' }}></div>
+              <div className="absolute bottom-20 right-20 w-20 h-20 border border-gray-300 rotate-12 animate-pulse" style={{ animationDuration: '4s', animationDelay: '2s' }}></div>
+            </div>
+            
+            {/* Gradient overlays */}
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-50/20 to-transparent"></div>
+          </div>
+          
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 font-heading">
-                Our <span className="text-brand-primary">Core Services</span>
+              <h2 className="text-4xl md:text-5xl font-light text-gray-900 mb-6 font-heading apple-fade-in">
+                <span className="font-extralight">Our </span><span className="font-extralight text-gray-900">Core Services</span>
               </h2>
-              <div className="w-24 h-1 bg-gradient-to-r from-brand-primary to-brand-secondary mx-auto mb-8"></div>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto font-body">
+              <div className="w-24 h-1 bg-gradient-to-r from-brand-primary to-brand-secondary mx-auto mb-8 apple-scale-in apple-stagger-1"></div>
+              <p className="text-subtitle-md md:text-subtitle-lg text-gray-600 max-w-3xl mx-auto font-body apple-slide-up apple-stagger-2">
                 Four main service areas that form the foundation of our integrated solutions
               </p>
             </div>
@@ -284,7 +387,7 @@ export default function AboutPage() {
                       src={service.image}
                       alt={service.title}
                       fill
-                      className="object-cover apple-img-hover"
+                      className="object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                     <div className="absolute top-4 left-4">
@@ -292,9 +395,12 @@ export default function AboutPage() {
                         {service.stats}
                       </div>
                     </div>
+                    
+                    {/* Hover Effect Overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-brand-primary/5 to-brand-secondary/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
                   </div>
                   <div className="p-6">
-                    <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-brand-primary transition-colors duration-500 font-heading">
+                    <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-brand-primary transition-colors duration-500 font-heading">
                       {service.title}
                     </h3>
                     <p className="text-gray-600 text-sm leading-relaxed font-body group-hover:text-gray-800 transition-colors duration-300">
@@ -312,16 +418,50 @@ export default function AboutPage() {
       <SectionTransition 
         transitionType="slide-up" 
         delay={400}
-        addDivider={true}
+        addDivider={false}
         addGradientOverlay={true}
       >
-        <div className="py-20 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="py-24 bg-gray-50 relative overflow-hidden">
+          {/* Enhanced Background Effects - matching homepage */}
+          <div className="absolute inset-0">
+            {/* Background Image */}
+            <div 
+              className="absolute top-0 right-0 w-1/2 h-full bg-cover bg-center bg-no-repeat opacity-20 animate-gentle-pulse"
+              style={{
+                backgroundImage: 'url(/images/Slide5.jpeg)'
+              }}
+            ></div>
+            
+            {/* Subtle gradient overlay */}
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/50 to-transparent"></div>
+            
+            {/* Floating geometric elements */}
+            <div className="absolute inset-0 opacity-5">
+              <div className="absolute top-20 left-20 w-32 h-32 border border-blue-200 rotate-45 bg-element-float" style={{ animationDuration: '4s' }}></div>
+              <div className="absolute bottom-20 right-20 w-24 h-24 border border-blue-200 rotate-12 bg-element-rotate" style={{ animationDuration: '3s', animationDelay: '1s' }}></div>
+            </div>
+            
+            {/* Floating tech elements */}
+            {Array.from({ length: 12 }).map((_, i) => (
+              <div
+                key={i}
+                className="absolute w-1 h-1 bg-white/30 rounded-full animate-float"
+                style={{
+                  left: `${Math.random() * 100}%`,
+                  top: `${Math.random() * 100}%`,
+                  animationDelay: `${Math.random() * 3}s`,
+                  animationDuration: `${2 + Math.random() * 2}s`
+                }}
+              />
+            ))}
+          </div>
+          
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 font-heading">
-                Mission & <span className="text-brand-primary">Vision</span>
+              <h2 className="text-4xl md:text-5xl font-light text-gray-900 mb-6 font-heading apple-fade-in">
+                <span className="font-extralight">Mission & </span><span className="font-extralight text-gray-900">Vision</span>
               </h2>
-              <div className="w-24 h-1 bg-gradient-to-r from-brand-primary to-brand-secondary mx-auto mb-8"></div>
+              <div className="w-24 h-1 bg-gradient-to-r from-brand-primary to-brand-secondary mx-auto mb-8 apple-scale-in apple-stagger-1"></div>
             </div>
 
             <div className="grid md:grid-cols-2 gap-8">
@@ -331,7 +471,7 @@ export default function AboutPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4 apple-text-shimmer">Our Mission</h3>
+                    <h3 className="text-2xl font-semibold text-gray-900 mb-4 apple-text-shimmer">Our Mission</h3>
                 <p className="text-gray-600 leading-relaxed font-body">
                   To deliver exceptional integrated solutions across marine, logistics, and development sectors, fostering sustainable growth and innovation. We are committed to maintaining the highest standards of quality, safety, and environmental responsibility while creating lasting value for our clients and communities.
                 </p>
@@ -343,7 +483,7 @@ export default function AboutPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                   </svg>
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4 apple-text-shimmer">Our Vision</h3>
+                <h3 className="text-2xl font-semibold text-gray-900 mb-4 apple-text-shimmer">Our Vision</h3>
                 <p className="text-gray-600 leading-relaxed font-body">
                   To be the leading integrated solutions provider in the Middle East, recognized for excellence, innovation, and sustainable development. We aim to be the preferred partner for organizations seeking comprehensive solutions that drive growth and success in an ever-evolving business landscape.
                 </p>
@@ -357,17 +497,29 @@ export default function AboutPage() {
       <SectionTransition 
         transitionType="scale-in" 
         delay={500}
-        addDivider={true}
+        addDivider={false}
         addGradientOverlay={true}
       >
-        <div className="py-20 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="py-24 bg-white relative overflow-hidden">
+          {/* Enhanced Background Effects - matching homepage */}
+          <div className="absolute inset-0">
+            {/* Subtle pattern overlay */}
+            <div className="absolute inset-0 opacity-5">
+              <div className="absolute top-20 left-20 w-24 h-24 border border-gray-300 rotate-45 animate-pulse" style={{ animationDuration: '6s' }}></div>
+              <div className="absolute bottom-20 right-20 w-20 h-20 border border-gray-300 rotate-12 animate-pulse" style={{ animationDuration: '4s', animationDelay: '2s' }}></div>
+            </div>
+            
+            {/* Gradient overlays */}
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-50/20 to-transparent"></div>
+          </div>
+          
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 font-heading">
-                Our <span className="text-brand-primary">Divisions</span>
+              <h2 className="text-4xl md:text-5xl font-light text-gray-900 mb-6 font-heading apple-fade-in">
+                <span className="font-extralight">Our </span><span className="font-extralight text-gray-900">Divisions</span>
               </h2>
-              <div className="w-24 h-1 bg-gradient-to-r from-brand-primary to-brand-secondary mx-auto mb-8"></div>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto font-body">
+              <div className="w-24 h-1 bg-gradient-to-r from-brand-primary to-brand-secondary mx-auto mb-8 apple-scale-in apple-stagger-1"></div>
+              <p className="text-subtitle-md md:text-subtitle-lg text-gray-600 max-w-3xl mx-auto font-body apple-slide-up apple-stagger-2">
                 Dynamic display of our active divisions, each specializing in delivering excellence within their respective sectors
               </p>
             </div>
@@ -376,7 +528,7 @@ export default function AboutPage() {
               {divisions.slice(0, 9).map((division, index) => (
                 <div
                   key={index}
-                  className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover-lift-3d hover-glow animate-bounce-in"
+                  className="group apple-card rounded-2xl overflow-hidden shadow-lg apple-hover-lift apple-scale-in"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   {/* Division Header with Background */}
@@ -391,7 +543,7 @@ export default function AboutPage() {
                     </div>
                     <div className="absolute inset-0 bg-black/40"></div>
                     <div className="absolute top-4 left-4">
-                      <div className="text-white font-bold text-lg font-heading">
+                      <div className="text-white font-semibold text-lg font-heading">
                         {division.title}
                       </div>
                     </div>
@@ -430,13 +582,16 @@ export default function AboutPage() {
                     </div>
 
                     {/* Action Button */}
-                    <button className="w-full bg-gray-100 text-gray-700 py-2 px-4 rounded-lg text-sm font-semibold hover:bg-brand-primary hover:text-white transition-colors duration-300">
+                    <button className="w-full bg-gray-100 text-gray-700 py-2 px-4 rounded-xl text-button-lg font-semibold hover:bg-brand-primary hover:text-white transition-colors duration-300">
                       Learn More
                     </button>
                   </div>
 
                   {/* Hover Effect Overlay */}
                   <div className="absolute inset-0 bg-gradient-to-br from-brand-primary/5 to-brand-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+                  
+                  {/* Shine effect */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
                 </div>
               ))}
             </div>
@@ -448,28 +603,28 @@ export default function AboutPage() {
       <SectionTransition 
         transitionType="slide-up" 
         delay={600}
-        addDivider={true}
+        addDivider={false}
       >
-        <div className="py-20 bg-gradient-to-r from-brand-primary to-brand-secondary">
+        <div className="py-24 bg-gradient-to-r from-brand-primary to-brand-secondary">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 font-heading">
-              Ready to Work With Us?
+            <h2 className="text-4xl md:text-5xl font-light text-white mb-6 font-heading apple-fade-in">
+              <span className="font-extralight">Ready to Work With </span><span className="font-extralight text-white">Us?</span>
             </h2>
-            <p className="text-xl text-white/90 max-w-3xl mx-auto mb-8 font-body">
+            <p className="text-subtitle-md md:text-subtitle-lg text-white/90 max-w-3xl mx-auto mb-8 font-body apple-slide-up apple-stagger-1">
               Let's discuss your project and discover how our integrated solutions can drive your success
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
                 href="/#contact"
-                className="bg-white text-brand-primary px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300 apple-btn"
+                className="apple-btn bg-white text-brand-primary px-8 py-4 rounded-xl text-button-lg font-semibold hover:bg-gray-100 transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
               >
-                Get In Touch
+                <span className="relative z-10 tracking-wide">Get In Touch</span>
               </a>
               <a 
                 href="/#services"
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-brand-primary transition-colors duration-300"
+                className="apple-btn border-2 border-white text-white px-8 py-4 rounded-xl text-button-lg font-semibold hover:bg-white hover:text-brand-primary transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
               >
-                View Our Services
+                <span className="relative z-10 tracking-wide">View Our Services</span>
               </a>
             </div>
           </div>
