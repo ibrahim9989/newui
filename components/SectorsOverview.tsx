@@ -123,7 +123,7 @@ export default function SectorsOverview() {
         </div>
 
         <div className={`text-center mt-16 transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <button className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-8 py-4 text-button-lg font-medium font-heading hover:from-blue-700 hover:to-blue-800 rounded-lg shadow-lg hover:shadow-xl hover:shadow-blue-500/25 transform hover:scale-105 transition-all duration-300">
+          <button className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-8 py-4 text-button-lg font-medium font-heading hover:from-blue-700 hover:to-blue-800 rounded-xl shadow-lg hover:shadow-xl hover:shadow-blue-500/25 transform hover:scale-105 transition-all duration-300">
             Explore All Sectors
           </button>
         </div>

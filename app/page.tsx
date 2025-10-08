@@ -43,7 +43,7 @@ export default function Home() {
       <SectionTransition 
         transitionType="fade-in" 
         delay={300}
-        addDivider={true}
+        addDivider={false}
       >
         <div id="sectors-overview">
           <SectorsOverview />
@@ -76,7 +76,7 @@ export default function Home() {
       <SectionTransition 
         transitionType="slide-up" 
         delay={500}
-        addDivider={true}
+        addDivider={false}
       >
         <div id="featured-projects">
           <FeaturedProjects />

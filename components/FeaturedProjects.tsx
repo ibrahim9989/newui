@@ -146,7 +146,7 @@ export default function FeaturedProjects() {
                       </div>
 
                       <div className="pt-4">
-                        <button className="group relative bg-gradient-to-r from-blue-600 to-blue-700 text-white px-8 py-4 text-button-lg font-medium font-heading hover:from-blue-700 hover:to-blue-800 rounded-lg shadow-lg hover:shadow-xl hover:shadow-blue-500/25 transform hover:scale-105 transition-all duration-300 overflow-hidden">
+                        <button className="group relative bg-gradient-to-r from-blue-600 to-blue-700 text-white px-8 py-4 text-button-lg font-medium font-heading hover:from-blue-700 hover:to-blue-800 rounded-xl shadow-lg hover:shadow-xl hover:shadow-blue-500/25 transform hover:scale-105 transition-all duration-300 overflow-hidden">
                           <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
                           <span className="relative z-10 tracking-wide">Learn More</span>
                         </button>
