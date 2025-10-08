@@ -81,9 +81,9 @@ export default function FeaturedProjects() {
         <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <h2 className="text-title-lg md:text-title-xl font-light text-gray-900 leading-tight font-heading mb-6">
             <span className="font-extralight">Featured </span>
-            <span className="font-medium text-blue-600">Projects</span>
+            <span className="font-extralight text-gray-900">Projects</span>
           </h2>
-          <p className="text-body-lg text-gray-600 max-w-3xl mx-auto font-body">
+          <p className="text-subtitle-md md:text-subtitle-lg text-gray-600 max-w-3xl mx-auto font-body">
             Discover how HASCO is contributing to Saudi Arabia's most ambitious development projects, delivering world-class solutions across multiple sectors.
           </p>
         </div>
@@ -123,7 +123,7 @@ export default function FeaturedProjects() {
                     {/* Project Content */}
                     <div className="space-y-8">
                       <div className="space-y-6">
-                        <h3 className="text-title-md md:text-title-lg font-light text-gray-900 leading-tight font-heading">
+                        <h3 className="text-title-md md:text-title-lg font-semibold text-gray-900 leading-tight font-heading">
                           {project.title}
                         </h3>
                         

@@ -81,7 +81,7 @@ export default function ClosingCTA() {
           <div className={`space-y-6 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             <h2 className="text-title-md md:text-title-lg lg:text-title-xl font-light text-white leading-tight font-heading">
               <span className="block font-extralight">Partner with HASCO</span>
-              <span className="block font-medium text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600">
+              <span className="block font-extralight text-white">
                 — where experience, innovation, and vision meet
               </span>
             </h2>
@@ -89,7 +89,7 @@ export default function ClosingCTA() {
 
           {/* Description */}
           <div className={`max-w-3xl mx-auto transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-            <p className="text-body-md md:text-body-lg text-gray-300 leading-relaxed font-body">
+            <p className="text-subtitle-md md:text-subtitle-lg text-gray-300 leading-relaxed font-body">
               Join us in shaping the future of Saudi Arabia. Whether you're planning a mega-project, need specialized marine services, or require comprehensive logistics solutions, HASCO delivers the expertise and reliability you need.
             </p>
           </div>

@@ -32,7 +32,7 @@ export default function Home() {
       <SectionTransition 
         transitionType="slide-up" 
         delay={200}
-        addDivider={true}
+        addDivider={false}
       >
         <div id="hasco-snapshot">
           <HASCOSnapshot />
@@ -54,7 +54,7 @@ export default function Home() {
       <SectionTransition 
         transitionType="reveal" 
         delay={400}
-        addDivider={true}
+        addDivider={false}
       >
         <div id="clients">
           <OurClientsSection />
@@ -65,7 +65,7 @@ export default function Home() {
       <SectionTransition 
         transitionType="fade-in" 
         delay={450}
-        addDivider={true}
+        addDivider={false}
       >
         <div id="stats-section">
           <StatsSection />
@@ -87,7 +87,7 @@ export default function Home() {
       <SectionTransition 
         transitionType="fade-in" 
         delay={600}
-        addDivider={true}
+        addDivider={false}
       >
         <div id="closing-cta">
           <ClosingCTA />

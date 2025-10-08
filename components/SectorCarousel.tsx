@@ -72,7 +72,7 @@ export default function SectorCarousel() {
                   <span className="block font-extralight animate-slide-in-left stagger-1">
                     Diversified Strength.
                   </span>
-                  <span className="block font-medium text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 animate-slide-in-right stagger-2">
+                  <span className="block font-extralight text-white animate-slide-in-right stagger-2">
                     Unified Vision.
                   </span>
                 </h1>

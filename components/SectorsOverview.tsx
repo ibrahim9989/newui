@@ -67,7 +67,7 @@ export default function SectorsOverview() {
         <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <h2 className="text-title-md md:text-title-lg font-light text-gray-900 leading-tight font-heading mb-4">
             <span className="font-extralight">Sectors at a </span>
-            <span className="font-medium text-blue-600">Glance</span>
+            <span className="font-extralight text-gray-900">Glance</span>
           </h2>
           <div className={`w-24 h-1 bg-blue-600 mx-auto rounded-full transition-all duration-1000 delay-300 ${isVisible ? 'scale-x-100' : 'scale-x-0'}`}></div>
         </div>

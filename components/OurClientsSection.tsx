@@ -80,7 +80,7 @@ export default function OurClientsSection() {
         {/* Section Title */}
         <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <h2 className="text-title-md md:text-title-lg font-light text-brand-dark mb-4 font-heading">
-            Trusted <span className="font-medium text-blue-600">Partnerships</span>
+            Trusted <span className="font-extralight text-brand-dark">Partnerships</span>
           </h2>
           <p className="text-subtitle-md md:text-subtitle-lg text-gray-600 max-w-3xl mx-auto font-body mb-4">
             From NEOM to AMAALA, The Red Sea Development, and Saudi Cruise, HASCO has been a trusted partner in some of the Kingdom's most ambitious projects.
