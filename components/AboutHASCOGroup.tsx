@@ -61,11 +61,11 @@ export default function AboutHASCOGroup() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 section-content-stagger">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 font-heading apple-fade-in">
-            About <span className="apple-text-shimmer">HASCO Group</span>
+          <h2 className="text-4xl md:text-5xl font-light text-gray-900 mb-6 font-heading apple-fade-in">
+            <span className="font-extralight">About </span><span className="font-extralight text-gray-900">HASCO Group</span>
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-brand-primary to-brand-secondary mx-auto mb-8 apple-scale-in apple-stagger-1"></div>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto font-body apple-slide-up apple-stagger-2">
+          <p className="text-subtitle-md md:text-subtitle-lg text-gray-600 max-w-3xl mx-auto font-body apple-slide-up apple-stagger-2">
             Pioneering excellence in integrated solutions across marine, logistics, and development sectors with 
             <span className="text-brand-primary font-semibold"> 19+ years of proven expertise</span>
           </p>

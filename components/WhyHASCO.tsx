@@ -73,11 +73,11 @@ export default function WhyHASCO() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 font-heading">
-            Why <span className="text-brand-primary">HASCO?</span>
+          <h2 className="text-4xl md:text-5xl font-light text-gray-900 mb-6 font-heading">
+            <span className="font-extralight">Why </span><span className="font-extralight text-gray-900">HASCO?</span>
           </h2>
           <div className="w-24 h-1 bg-brand-primary mx-auto mb-8"></div>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto font-body">
+          <p className="text-subtitle-md md:text-subtitle-lg text-gray-600 max-w-3xl mx-auto font-body">
             With over 19 years of excellence in integrated supply chain and logistics solutions, we deliver unmatched value and expertise
           </p>
         </div>
