@@ -93,7 +93,7 @@ export default function OurClientsSection() {
           {clients.map((client, index) => (
             <div 
               key={index} 
-              className={`group bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl text-center transition-all duration-500 transform hover:-translate-y-3 hover-lift-3d hover-glow border border-gray-100 ${
+              className={`group bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl text-center transition-all duration-300 border border-gray-100 hover:border-blue-200 ${
                 isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
               }`}
               style={{ transitionDelay: `${index * 150}ms` }}
@@ -104,10 +104,8 @@ export default function OurClientsSection() {
                   alt={client.logo}
                   width={200}
                   height={100}
-                  className="object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300 max-h-20 img-gentle-hover"
+                  className="object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300 max-h-20"
                 />
-                {/* Hover shine effect */}
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-brand-primary/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
               </div>
               <div className="text-subtitle-sm font-semibold text-brand-dark group-hover:text-brand-primary transition-colors duration-300 mb-3 font-heading">
                 {client.logo}
@@ -115,49 +113,13 @@ export default function OurClientsSection() {
               <div className="text-body-sm text-gray-600 group-hover:text-gray-800 transition-colors duration-300 font-body">
                 {client.description}
               </div>
-              {/* Enhanced bottom border effect */}
-              <div className="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-brand-primary to-brand-secondary group-hover:w-full transition-all duration-500 rounded-full"></div>
-              {/* Subtle background gradient on hover */}
-              <div className="absolute inset-0 bg-gradient-to-br from-brand-primary/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              {/* Simple bottom border effect */}
+              <div className="absolute bottom-0 left-0 w-0 h-1 bg-blue-600 group-hover:w-full transition-all duration-300 rounded-full"></div>
             </div>
           ))}
         </div>
 
-        {/* Premium Client Information Blocks */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-          {clientInfo.map((info, index) => (
-            <div 
-              key={index} 
-              className={`text-center group hover-lift ${
-                isVisible ? 'animate-fade-in-up' : 'opacity-0'
-              }`}
-              style={{ animationDelay: `${(index + 4) * 0.1}s` }}
-            >
-              <h3 className="text-subtitle-sm font-semibold text-brand-dark mb-4 group-hover:text-brand-primary transition-colors duration-300 relative font-heading">
-                {info.title}
-                {/* Underline effect */}
-                <div className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-brand-primary group-hover:w-full transition-all duration-300"></div>
-              </h3>
-              <p className="text-body-sm text-gray-600 leading-relaxed group-hover:text-gray-800 transition-colors duration-300 font-body">
-                {info.description}
-              </p>
-            </div>
-          ))}
-        </div>
 
-        {/* Premium Pagination Dots */}
-        <div className="flex justify-center space-x-2">
-          {[1, 2, 3].map((dot, index) => (
-            <div 
-              key={dot} 
-              className={`w-3 h-3 rounded-full transition-all duration-300 cursor-pointer hover:scale-125 ${
-                index === 0 
-                  ? 'bg-brand-primary shadow-lg shadow-brand-primary/50' 
-                  : 'bg-brand-dark/50 hover:bg-brand-primary hover:shadow-lg hover:shadow-brand-primary/50'
-              }`}
-            ></div>
-          ))}
-        </div>
       </div>
     </div>
   )

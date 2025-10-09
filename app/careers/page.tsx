@@ -337,9 +337,9 @@ export default function CareersPage() {
               <div className="bg-gray-200 rounded-xl p-1">
                 <button
                   onClick={() => setActiveTab('openings')}
-                  className={`apple-btn px-8 py-3 rounded-xl text-button-md font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 ${
+                  className={`apple-btn px-8 py-3 rounded-xl text-button-md font-medium font-heading transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 ${
                     activeTab === 'openings'
-                      ? 'bg-brand-primary text-white'
+                      ? 'bg-gradient-to-r from-blue-600 to-blue-700 text-white hover:from-blue-700 hover:to-blue-800 hover:shadow-blue-500/25'
                       : 'text-gray-600 hover:text-gray-900'
                   }`}
                 >
@@ -347,9 +347,9 @@ export default function CareersPage() {
                 </button>
                 <button
                   onClick={() => setActiveTab('apply')}
-                  className={`apple-btn px-8 py-3 rounded-xl text-button-md font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 ${
+                  className={`apple-btn px-8 py-3 rounded-xl text-button-md font-medium font-heading transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 ${
                     activeTab === 'apply'
-                      ? 'bg-brand-primary text-white'
+                      ? 'bg-gradient-to-r from-blue-600 to-blue-700 text-white hover:from-blue-700 hover:to-blue-800 hover:shadow-blue-500/25'
                       : 'text-gray-600 hover:text-gray-900'
                   }`}
                 >
@@ -357,9 +357,9 @@ export default function CareersPage() {
                 </button>
                 <button
                   onClick={() => setActiveTab('benefits')}
-                  className={`apple-btn px-8 py-3 rounded-xl text-button-md font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 ${
+                  className={`apple-btn px-8 py-3 rounded-xl text-button-md font-medium font-heading transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 ${
                     activeTab === 'benefits'
-                      ? 'bg-brand-primary text-white'
+                      ? 'bg-gradient-to-r from-blue-600 to-blue-700 text-white hover:from-blue-700 hover:to-blue-800 hover:shadow-blue-500/25'
                       : 'text-gray-600 hover:text-gray-900'
                   }`}
                 >
@@ -413,7 +413,7 @@ export default function CareersPage() {
                         </div>
                         <button
                           onClick={() => setActiveTab('apply')}
-                          className="apple-btn mt-4 lg:mt-0 bg-brand-primary text-white px-6 py-3 rounded-xl text-button-md font-semibold hover:bg-brand-secondary transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+                          className="apple-btn mt-4 lg:mt-0 bg-gradient-to-r from-blue-600 to-blue-700 text-white px-6 py-3 rounded-xl text-button-md font-medium font-heading hover:from-blue-700 hover:to-blue-800 hover:shadow-blue-500/25 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
                         >
                           Apply Now
                         </button>
@@ -636,7 +636,7 @@ export default function CareersPage() {
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="apple-btn w-full bg-gradient-to-r from-brand-primary to-brand-secondary text-white py-4 px-8 rounded-xl text-button-md font-semibold hover:from-brand-secondary hover:to-brand-primary transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-xl transform hover:scale-105"
+                      className="apple-btn w-full bg-gradient-to-r from-blue-600 to-blue-700 text-white py-4 px-8 rounded-xl text-button-md font-medium font-heading hover:from-blue-700 hover:to-blue-800 hover:shadow-blue-500/25 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-xl transform hover:scale-105"
                     >
                       {isSubmitting ? (
                         <div className="flex items-center justify-center">
