@@ -303,13 +303,8 @@ export default function ClientsPage() {
                   {/* Sector Header */}
                   <div className={`h-24 bg-gradient-to-br ${sector.color} relative overflow-hidden`}>
                     <div className="absolute inset-0 bg-black/30"></div>
-                    <div className="absolute top-4 left-6">
-                      <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
-                        <span className="text-xl font-bold text-white font-heading">{sector.icon}</span>
-                      </div>
-                    </div>
                     <div className="absolute bottom-4 left-6 right-6">
-                      <h3 className="text-xl font-bold text-white font-heading">
+                      <h3 className="text-subtitle-sm font-bold text-white font-heading">
                         {sector.division}
                       </h3>
                     </div>
@@ -325,10 +320,10 @@ export default function ClientsPage() {
                         >
                           <div className="flex items-center">
                             <div className="min-w-0 flex-1">
-                              <p className="text-sm font-semibold text-gray-900 truncate font-heading">
+                              <p className="text-body-sm font-semibold text-gray-900 truncate font-heading">
                                 {client.name}
                               </p>
-                              <p className="text-xs text-gray-600 truncate">
+                              <p className="text-body-xs text-gray-600 truncate">
                                 {client.type}
                               </p>
                             </div>
@@ -420,7 +415,7 @@ export default function ClientsPage() {
                   </div>
 
                   {/* Quote */}
-                  <blockquote className="text-gray-600 leading-relaxed mb-6 font-body italic">
+                  <blockquote className="text-body-sm text-gray-600 leading-relaxed mb-6 font-body italic">
                     "{testimonial.quote}"
                   </blockquote>
 
@@ -430,9 +425,9 @@ export default function ClientsPage() {
                       <span className="text-lg font-bold text-white font-heading">{testimonial.avatar}</span>
                     </div>
                     <div>
-                      <p className="font-semibold text-gray-900 font-heading">{testimonial.name}</p>
-                      <p className="text-sm text-gray-600">{testimonial.position}</p>
-                      <p className="text-sm text-brand-primary font-semibold">{testimonial.company}</p>
+                      <p className="text-body-sm font-semibold text-gray-900 font-heading">{testimonial.name}</p>
+                      <p className="text-body-xs text-gray-600">{testimonial.position}</p>
+                      <p className="text-body-xs text-brand-primary font-semibold">{testimonial.company}</p>
                     </div>
                   </div>
                 </div>
@@ -485,7 +480,7 @@ export default function ClientsPage() {
                     />
                     <div className="absolute -top-2 -left-2 w-2 h-2 bg-cyan-400 rounded-full opacity-60 group-hover:opacity-100 transition-opacity duration-300"></div>
                   </div>
-                  <div className="text-gray-600 text-sm md:text-base">Client Retention Rate</div>
+                  <div className="text-body-sm text-gray-600">Client Retention Rate</div>
                 </div>
                 
                 <div className="text-center">
@@ -497,7 +492,7 @@ export default function ClientsPage() {
                     />
                     <span className="text-2xl text-gray-500">/5</span>
                   </div>
-                  <div className="text-gray-600 text-sm md:text-base">Average Rating</div>
+                  <div className="text-body-sm text-gray-600">Average Rating</div>
                 </div>
                 
                 <div className="text-center">
@@ -507,7 +502,7 @@ export default function ClientsPage() {
                     className="text-4xl md:text-5xl font-bold text-brand-primary mb-2"
                     duration={2200}
                   />
-                  <div className="text-gray-600 text-sm md:text-base">On-Time Delivery</div>
+                  <div className="text-body-sm text-gray-600">On-Time Delivery</div>
                 </div>
                 
                 <div className="text-center">
@@ -517,7 +512,7 @@ export default function ClientsPage() {
                     className="text-4xl md:text-5xl font-bold text-brand-primary mb-2"
                     duration={2500}
                   />
-                  <div className="text-gray-600 text-sm md:text-base">Happy Clients</div>
+                  <div className="text-body-sm text-gray-600">Happy Clients</div>
                 </div>
               </div>
             </div>
@@ -531,7 +526,7 @@ export default function ClientsPage() {
         delay={600}
         addDivider={false}
       >
-        <div className="py-24 bg-gradient-to-r from-brand-primary to-brand-secondary">
+        <div id="become-partner" className="py-24 bg-gradient-to-r from-brand-primary to-brand-secondary">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-4xl md:text-5xl font-light text-white mb-6 font-heading apple-fade-in">
               <span className="font-extralight">Become Our </span><span className="font-extralight text-white">Partner</span>
@@ -542,13 +537,13 @@ export default function ClientsPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
                 href="/contact"
-                className="apple-btn bg-white text-brand-primary px-8 py-4 rounded-xl text-button-lg font-semibold hover:bg-gray-100 transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+                className="apple-btn bg-white text-brand-primary px-8 py-4 rounded-xl text-button-md font-semibold hover:bg-gray-100 transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
               >
                 <span className="relative z-10 tracking-wide">Get in Touch</span>
               </a>
               <a 
                 href="/sectors"
-                className="apple-btn border-2 border-white text-white px-8 py-4 rounded-xl text-button-lg font-semibold hover:bg-white hover:text-brand-primary transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+                className="apple-btn border-2 border-white text-white px-8 py-4 rounded-xl text-button-md font-semibold hover:bg-white hover:text-brand-primary transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
               >
                 <span className="relative z-10 tracking-wide">Explore Our Services</span>
               </a>

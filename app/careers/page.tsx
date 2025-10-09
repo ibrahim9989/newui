@@ -337,7 +337,7 @@ export default function CareersPage() {
               <div className="bg-gray-200 rounded-xl p-1">
                 <button
                   onClick={() => setActiveTab('openings')}
-                  className={`apple-btn px-8 py-3 rounded-xl text-button-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 ${
+                  className={`apple-btn px-8 py-3 rounded-xl text-button-md font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 ${
                     activeTab === 'openings'
                       ? 'bg-brand-primary text-white'
                       : 'text-gray-600 hover:text-gray-900'
@@ -347,7 +347,7 @@ export default function CareersPage() {
                 </button>
                 <button
                   onClick={() => setActiveTab('apply')}
-                  className={`apple-btn px-8 py-3 rounded-xl text-button-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 ${
+                  className={`apple-btn px-8 py-3 rounded-xl text-button-md font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 ${
                     activeTab === 'apply'
                       ? 'bg-brand-primary text-white'
                       : 'text-gray-600 hover:text-gray-900'
@@ -357,7 +357,7 @@ export default function CareersPage() {
                 </button>
                 <button
                   onClick={() => setActiveTab('benefits')}
-                  className={`apple-btn px-8 py-3 rounded-xl text-button-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 ${
+                  className={`apple-btn px-8 py-3 rounded-xl text-button-md font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 ${
                     activeTab === 'benefits'
                       ? 'bg-brand-primary text-white'
                       : 'text-gray-600 hover:text-gray-900'
@@ -372,7 +372,7 @@ export default function CareersPage() {
             {activeTab === 'openings' && (
               <div className="space-y-8">
                 <div className="text-center mb-12">
-                  <h2 className="text-4xl font-light text-gray-900 mb-4 font-heading apple-fade-in"><span className="font-extralight">Current </span><span className="font-extralight text-gray-900">Openings</span></h2>
+                  <h2 className="text-title-sm font-light text-gray-900 mb-4 font-heading apple-fade-in"><span className="font-extralight">Current </span><span className="font-extralight text-gray-900">Openings</span></h2>
                   <p className="text-subtitle-md md:text-subtitle-lg text-gray-600 max-w-3xl mx-auto font-body apple-slide-up apple-stagger-1">
                     Discover exciting career opportunities across our various departments
                   </p>
@@ -383,8 +383,8 @@ export default function CareersPage() {
                     <div key={job.id} className="apple-card bg-white rounded-2xl p-8 hover:bg-gray-50 transition-colors duration-300 border border-gray-200 shadow-lg apple-hover-lift apple-scale-in" style={{ animationDelay: `${job.id * 0.1}s` }}>
                       <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6">
                         <div>
-                          <h3 className="text-2xl font-bold text-gray-900 mb-2 font-heading">{job.title}</h3>
-                          <div className="flex flex-wrap gap-4 text-sm text-gray-600">
+                          <h3 className="text-subtitle-sm font-bold text-gray-900 mb-2 font-heading">{job.title}</h3>
+                          <div className="flex flex-wrap gap-4 text-body-sm text-gray-600">
                             <span className="flex items-center">
                               <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
@@ -413,17 +413,17 @@ export default function CareersPage() {
                         </div>
                         <button
                           onClick={() => setActiveTab('apply')}
-                          className="apple-btn mt-4 lg:mt-0 bg-brand-primary text-white px-6 py-3 rounded-xl text-button-lg font-semibold hover:bg-brand-secondary transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+                          className="apple-btn mt-4 lg:mt-0 bg-brand-primary text-white px-6 py-3 rounded-xl text-button-md font-semibold hover:bg-brand-secondary transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
                         >
                           Apply Now
                         </button>
                       </div>
-                      <p className="text-gray-600 mb-4 font-body">{job.description}</p>
+                      <p className="text-body-sm text-gray-600 mb-4 font-body">{job.description}</p>
                       <div>
-                        <h4 className="text-lg font-semibold text-gray-900 mb-3 font-heading">Requirements:</h4>
+                        <h4 className="text-subtitle-sm font-semibold text-gray-900 mb-3 font-heading">Requirements:</h4>
                         <ul className="space-y-2">
                           {job.requirements.map((req, index) => (
-                            <li key={index} className="flex items-start text-gray-600">
+                            <li key={index} className="flex items-start text-body-sm text-gray-600">
                               <span className="w-2 h-2 bg-brand-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
                               {req}
                             </li>
@@ -442,7 +442,7 @@ export default function CareersPage() {
             {activeTab === 'apply' && (
               <div className="max-w-4xl mx-auto">
                 <div className="text-center mb-12">
-                  <h2 className="text-4xl font-light text-gray-900 mb-4 font-heading apple-fade-in"><span className="font-extralight">Apply for a </span><span className="font-extralight text-gray-900">Position</span></h2>
+                  <h2 className="text-title-sm font-light text-gray-900 mb-4 font-heading apple-fade-in"><span className="font-extralight">Apply for a </span><span className="font-extralight text-gray-900">Position</span></h2>
                   <p className="text-subtitle-md md:text-subtitle-lg text-gray-600 font-body apple-slide-up apple-stagger-1">
                     Fill out the form below and we'll get back to you soon
                   </p>
@@ -464,7 +464,7 @@ export default function CareersPage() {
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid md:grid-cols-2 gap-6">
                       <div>
-                        <label htmlFor="firstName" className="block text-sm font-semibold text-gray-700 mb-2">
+                        <label htmlFor="firstName" className="block text-body-sm font-semibold text-gray-700 mb-2">
                           First Name *
                         </label>
                         <input
@@ -479,7 +479,7 @@ export default function CareersPage() {
                         />
                       </div>
                       <div>
-                        <label htmlFor="lastName" className="block text-sm font-semibold text-gray-700 mb-2">
+                        <label htmlFor="lastName" className="block text-body-sm font-semibold text-gray-700 mb-2">
                           Last Name *
                         </label>
                         <input
@@ -497,7 +497,7 @@ export default function CareersPage() {
 
                     <div className="grid md:grid-cols-2 gap-6">
                       <div>
-                        <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-2">
+                        <label htmlFor="email" className="block text-body-sm font-semibold text-gray-700 mb-2">
                           Email Address *
                         </label>
                         <input
@@ -512,7 +512,7 @@ export default function CareersPage() {
                         />
                       </div>
                       <div>
-                        <label htmlFor="phone" className="block text-sm font-semibold text-gray-700 mb-2">
+                        <label htmlFor="phone" className="block text-body-sm font-semibold text-gray-700 mb-2">
                           Phone Number *
                         </label>
                         <input
@@ -530,7 +530,7 @@ export default function CareersPage() {
 
                     <div className="grid md:grid-cols-2 gap-6">
                       <div>
-                        <label htmlFor="position" className="block text-sm font-semibold text-gray-700 mb-2">
+                        <label htmlFor="position" className="block text-body-sm font-semibold text-gray-700 mb-2">
                           Position Applied For *
                         </label>
                         <select
@@ -548,7 +548,7 @@ export default function CareersPage() {
                         </select>
                       </div>
                       <div>
-                        <label htmlFor="experience" className="block text-sm font-semibold text-gray-700 mb-2">
+                        <label htmlFor="experience" className="block text-body-sm font-semibold text-gray-700 mb-2">
                           Years of Experience *
                         </label>
                         <select
@@ -570,7 +570,7 @@ export default function CareersPage() {
                     </div>
 
                     <div>
-                      <label htmlFor="education" className="block text-sm font-semibold text-gray-700 mb-2">
+                      <label htmlFor="education" className="block text-body-sm font-semibold text-gray-700 mb-2">
                         Education *
                       </label>
                       <input
@@ -586,7 +586,7 @@ export default function CareersPage() {
                     </div>
 
                     <div>
-                      <label htmlFor="coverLetter" className="block text-sm font-semibold text-gray-700 mb-2">
+                      <label htmlFor="coverLetter" className="block text-body-sm font-semibold text-gray-700 mb-2">
                         Cover Letter *
                       </label>
                       <textarea
@@ -603,7 +603,7 @@ export default function CareersPage() {
 
                     <div className="grid md:grid-cols-2 gap-6">
                       <div>
-                        <label htmlFor="resume" className="block text-sm font-semibold text-gray-700 mb-2">
+                        <label htmlFor="resume" className="block text-body-sm font-semibold text-gray-700 mb-2">
                           Resume/CV *
                         </label>
                         <input
@@ -615,10 +615,10 @@ export default function CareersPage() {
                           required
                           className="w-full px-4 py-3 bg-white border border-gray-300 rounded-xl text-gray-900 focus:outline-none focus:border-brand-primary focus:ring-1 focus:ring-brand-primary transition-colors duration-300 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-brand-primary file:text-white hover:file:bg-brand-secondary"
                         />
-                        <p className="text-xs text-gray-400 mt-1">PDF, DOC, or DOCX files only (Max 5MB)</p>
+                        <p className="text-body-xs text-gray-400 mt-1">PDF, DOC, or DOCX files only (Max 5MB)</p>
                       </div>
                       <div>
-                        <label htmlFor="portfolio" className="block text-sm font-semibold text-gray-700 mb-2">
+                        <label htmlFor="portfolio" className="block text-body-sm font-semibold text-gray-700 mb-2">
                           Portfolio (Optional)
                         </label>
                         <input
@@ -629,14 +629,14 @@ export default function CareersPage() {
                           accept=".pdf,.doc,.docx,.zip"
                           className="w-full px-4 py-3 bg-white border border-gray-300 rounded-xl text-gray-900 focus:outline-none focus:border-brand-primary focus:ring-1 focus:ring-brand-primary transition-colors duration-300 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-brand-primary file:text-white hover:file:bg-brand-secondary"
                         />
-                        <p className="text-xs text-gray-400 mt-1">PDF, DOC, DOCX, or ZIP files only (Max 10MB)</p>
+                        <p className="text-body-xs text-gray-400 mt-1">PDF, DOC, DOCX, or ZIP files only (Max 10MB)</p>
                       </div>
                     </div>
 
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="apple-btn w-full bg-gradient-to-r from-brand-primary to-brand-secondary text-white py-4 px-8 rounded-xl text-button-lg font-semibold hover:from-brand-secondary hover:to-brand-primary transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-xl transform hover:scale-105"
+                      className="apple-btn w-full bg-gradient-to-r from-brand-primary to-brand-secondary text-white py-4 px-8 rounded-xl text-button-md font-semibold hover:from-brand-secondary hover:to-brand-primary transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-xl transform hover:scale-105"
                     >
                       {isSubmitting ? (
                         <div className="flex items-center justify-center">
@@ -655,7 +655,7 @@ export default function CareersPage() {
             {activeTab === 'benefits' && (
               <div className="max-w-6xl mx-auto">
                 <div className="text-center mb-12">
-                  <h2 className="text-4xl font-light text-gray-900 mb-4 font-heading apple-fade-in"><span className="font-extralight">Why Work With </span><span className="font-extralight text-gray-900">Us?</span></h2>
+                  <h2 className="text-title-sm font-light text-gray-900 mb-4 font-heading apple-fade-in"><span className="font-extralight">Why Work With </span><span className="font-extralight text-gray-900">Us?</span></h2>
                   <p className="text-subtitle-md md:text-subtitle-lg text-gray-600 font-body apple-slide-up apple-stagger-1">
                     We offer comprehensive benefits and a supportive work environment
                   </p>
@@ -667,47 +667,47 @@ export default function CareersPage() {
                       <div className="w-16 h-16 bg-gradient-to-br from-brand-primary to-brand-secondary rounded-full flex items-center justify-center text-white mx-auto mb-4">
                         {benefit.icon}
                       </div>
-                      <h3 className="text-xl font-semibold text-gray-900 mb-3 font-heading">{benefit.title}</h3>
-                      <p className="text-gray-600 font-body">{benefit.description}</p>
+                      <h3 className="text-subtitle-sm font-semibold text-gray-900 mb-3 font-heading">{benefit.title}</h3>
+                      <p className="text-body-sm text-gray-600 font-body">{benefit.description}</p>
                     </div>
                   ))}
                 </div>
 
                 <div className="mt-16 bg-gray-50 rounded-2xl p-8 border border-gray-200">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-6 font-heading">Additional Benefits</h3>
+                  <h3 className="text-subtitle-sm font-bold text-gray-900 mb-6 font-heading">Additional Benefits</h3>
                   <div className="grid md:grid-cols-2 gap-6">
                     <ul className="space-y-3">
-                      <li className="flex items-center text-gray-600">
+                      <li className="flex items-center text-body-sm text-gray-600">
                         <span className="w-2 h-2 bg-brand-primary rounded-full mr-3"></span>
                         Annual performance bonuses
                       </li>
-                      <li className="flex items-center text-gray-600">
+                      <li className="flex items-center text-body-sm text-gray-600">
                         <span className="w-2 h-2 bg-brand-primary rounded-full mr-3"></span>
                         Transportation allowance
                       </li>
-                      <li className="flex items-center text-gray-600">
+                      <li className="flex items-center text-body-sm text-gray-600">
                         <span className="w-2 h-2 bg-brand-primary rounded-full mr-3"></span>
                         Meal vouchers
                       </li>
-                      <li className="flex items-center text-gray-600">
+                      <li className="flex items-center text-body-sm text-gray-600">
                         <span className="w-2 h-2 bg-brand-primary rounded-full mr-3"></span>
                         Employee recognition programs
                       </li>
                     </ul>
                     <ul className="space-y-3">
-                      <li className="flex items-center text-gray-600">
+                      <li className="flex items-center text-body-sm text-gray-600">
                         <span className="w-2 h-2 bg-brand-primary rounded-full mr-3"></span>
                         Flexible working arrangements
                       </li>
-                      <li className="flex items-center text-gray-600">
+                      <li className="flex items-center text-body-sm text-gray-600">
                         <span className="w-2 h-2 bg-brand-primary rounded-full mr-3"></span>
                         Team building activities
                       </li>
-                      <li className="flex items-center text-gray-600">
+                      <li className="flex items-center text-body-sm text-gray-600">
                         <span className="w-2 h-2 bg-brand-primary rounded-full mr-3"></span>
                         Modern office facilities
                       </li>
-                      <li className="flex items-center text-gray-600">
+                      <li className="flex items-center text-body-sm text-gray-600">
                         <span className="w-2 h-2 bg-brand-primary rounded-full mr-3"></span>
                         Career advancement opportunities
                       </li>

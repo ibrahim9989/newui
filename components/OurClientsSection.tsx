@@ -109,10 +109,10 @@ export default function OurClientsSection() {
                 {/* Hover shine effect */}
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-brand-primary/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
               </div>
-              <div className="text-subtitle-md font-semibold text-brand-dark group-hover:text-brand-primary transition-colors duration-300 mb-3 font-heading">
+              <div className="text-subtitle-sm font-semibold text-brand-dark group-hover:text-brand-primary transition-colors duration-300 mb-3 font-heading">
                 {client.logo}
               </div>
-              <div className="text-body-md text-gray-600 group-hover:text-gray-800 transition-colors duration-300 font-body">
+              <div className="text-body-sm text-gray-600 group-hover:text-gray-800 transition-colors duration-300 font-body">
                 {client.description}
               </div>
               {/* Enhanced bottom border effect */}
@@ -133,12 +133,12 @@ export default function OurClientsSection() {
               }`}
               style={{ animationDelay: `${(index + 4) * 0.1}s` }}
             >
-              <h3 className="text-subtitle-md font-semibold text-brand-dark mb-4 group-hover:text-brand-primary transition-colors duration-300 relative font-heading">
+              <h3 className="text-subtitle-sm font-semibold text-brand-dark mb-4 group-hover:text-brand-primary transition-colors duration-300 relative font-heading">
                 {info.title}
                 {/* Underline effect */}
                 <div className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-brand-primary group-hover:w-full transition-all duration-300"></div>
               </h3>
-              <p className="text-body-md text-gray-600 leading-relaxed group-hover:text-gray-800 transition-colors duration-300 font-body">
+              <p className="text-body-sm text-gray-600 leading-relaxed group-hover:text-gray-800 transition-colors duration-300 font-body">
                 {info.description}
               </p>
             </div>

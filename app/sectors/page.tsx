@@ -261,7 +261,7 @@ export default function SectorsPage() {
                     
                     {/* Title */}
                     <div className="absolute bottom-6 left-6 right-6">
-                      <h3 className="text-2xl font-bold text-white mb-2 font-heading">
+                      <h3 className="text-subtitle-sm font-bold text-white mb-2 font-heading">
                         {sector.title}
                       </h3>
                     </div>
@@ -269,14 +269,14 @@ export default function SectorsPage() {
 
                   {/* Sector Content */}
                   <div className="p-6">
-                    <p className="text-gray-600 text-sm leading-relaxed mb-6 font-body">
+                    <p className="text-body-sm text-gray-600 leading-relaxed mb-6 font-body">
                       {sector.description}
                     </p>
 
                     {/* Features List */}
                     <div className="space-y-3 mb-6">
                       {sector.features.map((feature, featureIndex) => (
-                        <div key={featureIndex} className="flex items-center text-sm text-gray-500">
+                        <div key={featureIndex} className="flex items-center text-body-xs text-gray-500">
                           <span className="w-1.5 h-1.5 bg-brand-primary rounded-full mr-3"></span>
                           {feature}
                         </div>
@@ -286,7 +286,7 @@ export default function SectorsPage() {
                     {/* Learn More Button */}
                     <a 
                       href={`/sectors/${sector.title.toLowerCase().replace(/\s+/g, '-')}`}
-                      className="apple-btn group/btn w-full bg-brand-primary text-white py-3 px-4 rounded-xl text-button-lg font-semibold hover:bg-brand-secondary transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-xl transform hover:scale-105"
+                      className="apple-btn group/btn w-full bg-brand-primary text-white py-3 px-4 rounded-xl text-button-md font-semibold hover:bg-brand-secondary transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-xl transform hover:scale-105"
                     >
                       Learn More
                       <svg className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -372,7 +372,7 @@ export default function SectorsPage() {
                     />
                     <div className="absolute -top-2 -left-2 w-2 h-2 bg-cyan-400 rounded-full opacity-60 group-hover:opacity-100 transition-opacity duration-300"></div>
                   </div>
-                  <div className="text-gray-600 text-sm md:text-base">Years of Excellence</div>
+                  <div className="text-body-sm text-gray-600">Years of Excellence</div>
                 </div>
                 
                 <div className="text-center">
@@ -381,7 +381,7 @@ export default function SectorsPage() {
                     className="text-4xl md:text-5xl font-bold text-brand-primary mb-2"
                     duration={1500}
                   />
-                  <div className="text-gray-600 text-sm md:text-base">Core Sectors</div>
+                  <div className="text-body-sm text-gray-600">Core Sectors</div>
                 </div>
                 
                 <div className="text-center">
@@ -391,7 +391,7 @@ export default function SectorsPage() {
                     className="text-4xl md:text-5xl font-bold text-brand-primary mb-2"
                     duration={2500}
                   />
-                  <div className="text-gray-600 text-sm md:text-base">Projects Completed</div>
+                  <div className="text-body-sm text-gray-600">Projects Completed</div>
                 </div>
                 
                 <div className="text-center">
@@ -401,7 +401,7 @@ export default function SectorsPage() {
                     className="text-4xl md:text-5xl font-bold text-brand-primary mb-2"
                     duration={1800}
                   />
-                  <div className="text-gray-600 text-sm md:text-base">Client Satisfaction</div>
+                  <div className="text-body-sm text-gray-600">Client Satisfaction</div>
                 </div>
               </div>
             </div>
@@ -415,7 +415,7 @@ export default function SectorsPage() {
         delay={600}
         addDivider={false}
       >
-        <div className="py-24 bg-gradient-to-r from-brand-primary to-brand-secondary">
+        <div id="ready-to-work" className="py-24 bg-gradient-to-r from-brand-primary to-brand-secondary">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-4xl md:text-5xl font-light text-white mb-6 font-heading apple-fade-in">
               <span className="font-extralight">Ready to Work </span><span className="font-extralight text-white">Together?</span>
@@ -426,13 +426,13 @@ export default function SectorsPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
                 href="/contact"
-                className="apple-btn bg-white text-brand-primary px-8 py-4 rounded-xl text-button-lg font-semibold hover:bg-gray-100 transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+                className="apple-btn bg-white text-brand-primary px-8 py-4 rounded-xl text-button-md font-semibold hover:bg-gray-100 transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
               >
                 <span className="relative z-10 tracking-wide">Start a Project</span>
               </a>
               <a 
                 href="/about"
-                className="apple-btn border-2 border-white text-white px-8 py-4 rounded-xl text-button-lg font-semibold hover:bg-white hover:text-brand-primary transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+                className="apple-btn border-2 border-white text-white px-8 py-4 rounded-xl text-button-md font-semibold hover:bg-white hover:text-brand-primary transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
               >
                 <span className="relative z-10 tracking-wide">Learn More About Us</span>
               </a>

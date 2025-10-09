@@ -13,10 +13,49 @@ export default function Header() {
       setIsScrolled(window.scrollY > 10)
       
       // Determine if we're on a dark or light background based on scroll position
-      // Hero section (dark) is typically 0-100vh, then white sections follow
       const heroHeight = window.innerHeight
       const isInHeroSection = window.scrollY < heroHeight * 0.8
-      setIsOnDarkBackground(isInHeroSection)
+      
+      // Check if we're in dark or light blue background sections
+      const darkSections = ['closing-cta', 'become-partner', 'ready-to-work', 'ready-to-work-about']
+      const lightBlueSections = ['impact-section'] // Add more light blue section IDs as needed
+      let isInDarkOrLightBlueSection = false
+      
+      // Check dark sections
+      for (const sectionId of darkSections) {
+        const section = document.getElementById(sectionId)
+        if (section) {
+          const rect = section.getBoundingClientRect()
+          const sectionTop = rect.top + window.scrollY
+          const sectionBottom = sectionTop + rect.height
+          const currentScroll = window.scrollY + window.innerHeight / 2 // Check middle of viewport
+          
+          if (currentScroll >= sectionTop && currentScroll <= sectionBottom) {
+            isInDarkOrLightBlueSection = true
+            break
+          }
+        }
+      }
+      
+      // Check light blue sections
+      if (!isInDarkOrLightBlueSection) {
+        for (const sectionId of lightBlueSections) {
+          const section = document.getElementById(sectionId)
+          if (section) {
+            const rect = section.getBoundingClientRect()
+            const sectionTop = rect.top + window.scrollY
+            const sectionBottom = sectionTop + rect.height
+            const currentScroll = window.scrollY + window.innerHeight / 2 // Check middle of viewport
+            
+            if (currentScroll >= sectionTop && currentScroll <= sectionBottom) {
+              isInDarkOrLightBlueSection = true
+              break
+            }
+          }
+        }
+      }
+      
+      setIsOnDarkBackground(isInHeroSection || isInDarkOrLightBlueSection)
     }
     
     // Initial check
@@ -43,7 +82,7 @@ export default function Header() {
             <a href="/" className="flex items-center">
               <div className="w-24 h-24 sm:w-28 sm:h-28 lg:w-32 lg:h-32 flex items-center justify-center">
                 <Image
-                  src="/logo.png"
+                  src={isOnDarkBackground ? "/images/hasco-white-logo.png" : "/logo.png"}
                   alt="HASCO Group Logo"
                   width={160}
                   height={160}

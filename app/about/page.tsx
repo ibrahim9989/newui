@@ -400,10 +400,10 @@ export default function AboutPage() {
                     <div className="absolute inset-0 bg-gradient-to-br from-brand-primary/5 to-brand-secondary/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
                   </div>
                   <div className="p-6">
-                    <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-brand-primary transition-colors duration-500 font-heading">
+                    <h3 className="text-subtitle-sm font-semibold text-gray-900 mb-3 group-hover:text-brand-primary transition-colors duration-500 font-heading">
                       {service.title}
                     </h3>
-                    <p className="text-gray-600 text-sm leading-relaxed font-body group-hover:text-gray-800 transition-colors duration-300">
+                    <p className="text-body-sm text-gray-600 leading-relaxed font-body group-hover:text-gray-800 transition-colors duration-300">
                       {service.description}
                     </p>
                   </div>
@@ -471,8 +471,8 @@ export default function AboutPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
-                    <h3 className="text-2xl font-semibold text-gray-900 mb-4 apple-text-shimmer">Our Mission</h3>
-                <p className="text-gray-600 leading-relaxed font-body">
+                    <h3 className="text-subtitle-sm font-semibold text-gray-900 mb-4 apple-text-shimmer font-heading">Our Mission</h3>
+                <p className="text-body-sm text-gray-600 leading-relaxed font-body">
                   To deliver exceptional integrated solutions across marine, logistics, and development sectors, fostering sustainable growth and innovation. We are committed to maintaining the highest standards of quality, safety, and environmental responsibility while creating lasting value for our clients and communities.
                 </p>
               </div>
@@ -483,8 +483,8 @@ export default function AboutPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                   </svg>
                 </div>
-                <h3 className="text-2xl font-semibold text-gray-900 mb-4 apple-text-shimmer">Our Vision</h3>
-                <p className="text-gray-600 leading-relaxed font-body">
+                <h3 className="text-subtitle-sm font-semibold text-gray-900 mb-4 apple-text-shimmer font-heading">Our Vision</h3>
+                <p className="text-body-sm text-gray-600 leading-relaxed font-body">
                   To be the leading integrated solutions provider in the Middle East, recognized for excellence, innovation, and sustainable development. We aim to be the preferred partner for organizations seeking comprehensive solutions that drive growth and success in an ever-evolving business landscape.
                 </p>
               </div>
@@ -543,7 +543,7 @@ export default function AboutPage() {
                     </div>
                     <div className="absolute inset-0 bg-black/40"></div>
                     <div className="absolute top-4 left-4">
-                      <div className="text-white font-semibold text-lg font-heading">
+                      <div className="text-white font-semibold text-subtitle-sm font-heading">
                         {division.title}
                       </div>
                     </div>
@@ -560,7 +560,7 @@ export default function AboutPage() {
                       <div className="text-xs text-brand-primary font-semibold mb-2 uppercase tracking-wide font-heading">
                         {division.category}
                       </div>
-                      <p className="text-gray-600 text-sm leading-relaxed font-body">
+                      <p className="text-body-sm text-gray-600 leading-relaxed font-body">
                         {division.description}
                       </p>
                     </div>
@@ -582,7 +582,7 @@ export default function AboutPage() {
                     </div>
 
                     {/* Action Button */}
-                    <button className="w-full bg-gray-100 text-gray-700 py-2 px-4 rounded-xl text-button-lg font-semibold hover:bg-brand-primary hover:text-white transition-colors duration-300">
+                    <button className="w-full bg-gray-100 text-gray-700 py-2 px-4 rounded-xl text-button-md font-semibold hover:bg-brand-primary hover:text-white transition-colors duration-300">
                       Learn More
                     </button>
                   </div>
@@ -605,7 +605,7 @@ export default function AboutPage() {
         delay={600}
         addDivider={false}
       >
-        <div className="py-24 bg-gradient-to-r from-brand-primary to-brand-secondary">
+        <div id="ready-to-work-about" className="py-24 bg-gradient-to-r from-brand-primary to-brand-secondary">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-4xl md:text-5xl font-light text-white mb-6 font-heading apple-fade-in">
               <span className="font-extralight">Ready to Work With </span><span className="font-extralight text-white">Us?</span>
