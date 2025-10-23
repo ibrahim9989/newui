@@ -44,12 +44,11 @@ export default function ClosingCTA() {
   return (
     <section 
       id="closing-cta" 
-      className="py-24 bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 relative overflow-hidden"
+      className="py-24 bg-[#004A81] relative overflow-hidden"
     >
       {/* Enhanced Background Effects */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-600/10 to-transparent"></div>
-        <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
+        <div className="absolute inset-0"></div>
         
         {/* Floating particles */}
         <div className="absolute inset-0">
@@ -94,11 +93,44 @@ export default function ClosingCTA() {
             </p>
           </div>
 
-          {/* CTA Button */}
+          {/* Contact Form */}
           <div className={`pt-8 transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-            <button className="apple-btn bg-gradient-to-r from-blue-600 to-blue-700 text-white px-8 py-4 text-base font-medium font-heading hover:from-blue-700 hover:to-blue-800 rounded-xl shadow-lg hover:shadow-xl hover:shadow-blue-500/25 transform hover:scale-105 transition-all duration-300">
-              <span className="relative z-10 tracking-wide">Contact Us</span>
-            </button>
+            <form className="max-w-2xl mx-auto grid grid-cols-1 gap-4 text-left">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Your Name"
+                  className="w-full px-4 py-3 rounded-lg border border-[#66AADD] bg-white text-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#66AADD]"
+                  required
+                />
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Email"
+                  className="w-full px-4 py-3 rounded-lg border border-[#66AADD] bg-white text-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#66AADD]"
+                  required
+                />
+              </div>
+              <input
+                type="text"
+                name="subject"
+                placeholder="Subject"
+                className="w-full px-4 py-3 rounded-lg border border-[#66AADD] bg-white text-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#66AADD]"
+              />
+              <textarea
+                name="message"
+                placeholder="Message"
+                rows={5}
+                className="w-full px-4 py-3 rounded-lg border border-[#66AADD] bg-white text-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#66AADD]"
+                required
+              />
+              <div className="flex justify-center">
+                <button type="submit" className="bg-white text-[#004A81] border border-[#004A81] hover:bg-[#004A81] hover:text-white px-8 py-3 rounded-lg font-medium transition-colors">
+                  Send Message
+                </button>
+              </div>
+            </form>
           </div>
 
         </div>

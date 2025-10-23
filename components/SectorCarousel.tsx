@@ -44,13 +44,13 @@ export default function SectorCarousel() {
       <div className="absolute inset-0">
         {/* Dark overlay for content readability */}
         <div className="absolute inset-0 bg-black/40"></div>
-        {/* Subtle gradient overlay for depth */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
+        {/* Solid overlay for depth (no gradients) */}
+        <div className="absolute inset-0 bg-black/30"></div>
         
 
         {/* Subtle mouse-following effect */}
         <div 
-          className="absolute w-64 h-64 bg-gradient-to-r from-white/5 to-white/5 rounded-full blur-3xl pointer-events-none transition-all duration-500 animate-gentle-pulse"
+          className="absolute w-64 h-64 bg-white/10 rounded-full blur-3xl pointer-events-none transition-all duration-500 animate-gentle-pulse"
           style={{
             left: mousePosition.x - 128,
             top: mousePosition.y - 128,
@@ -87,7 +87,7 @@ export default function SectorCarousel() {
 
               {/* Professional buttons */}
               <div className="flex flex-col sm:flex-row gap-6 animate-bounce-in stagger-4 justify-start">
-                <button className="apple-btn bg-gradient-to-r from-blue-600 to-blue-700 text-white px-6 py-3 text-button-lg font-medium font-heading hover:from-blue-700 hover:to-blue-800 rounded-xl shadow-lg hover:shadow-xl hover:shadow-blue-500/25 transform hover:scale-105 transition-all duration-300">
+                <button className="apple-btn bg-[#004A81] text-white px-6 py-3 text-button-lg font-medium font-heading hover:bg-[#66AADD] rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
                   <span className="relative z-10 tracking-wide">Explore Our Sectors</span>
                 </button>
               </div>

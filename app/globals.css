@@ -9,6 +9,11 @@
   --font-helvetica: 'Helvetica', 'Arial', sans-serif;
 }
 
+/* Force ONLY Helvetica within a scoped container (homepage) */
+.helvetica-scope, .helvetica-scope * {
+  font-family: 'Helvetica' !important;
+}
+
 /* Typography Classes */
 .font-heading {
   font-family: var(--font-montserrat);

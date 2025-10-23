@@ -65,7 +65,7 @@ export default function OurClientsSection() {
         {Array.from({ length: 8 }).map((_, i) => (
           <div
             key={i}
-            className="absolute w-2 h-2 bg-brand-primary/20 rounded-full animate-float"
+            className="absolute w-2 h-2 bg-[#004A81]/20 rounded-full animate-float"
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
@@ -85,7 +85,7 @@ export default function OurClientsSection() {
           <p className="text-subtitle-md md:text-subtitle-lg text-gray-600 max-w-3xl mx-auto font-body mb-4">
             From NEOM to AMAALA, The Red Sea Development, and Saudi Cruise, HASCO has been a trusted partner in some of the Kingdom's most ambitious projects.
           </p>
-          <div className={`w-24 h-1 bg-brand-primary mx-auto transition-all duration-1000 delay-300 ${isVisible ? 'scale-x-100' : 'scale-x-0'}`}></div>
+          <div className={`w-24 h-1 bg-[#004A81] mx-auto transition-all duration-1000 delay-300 ${isVisible ? 'scale-x-100' : 'scale-x-0'}`}></div>
         </div>
 
         {/* Premium Client Logos */}
@@ -93,7 +93,7 @@ export default function OurClientsSection() {
           {clients.map((client, index) => (
             <div 
               key={index} 
-              className={`group bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl text-center transition-all duration-300 border border-gray-100 hover:border-blue-200 ${
+              className={`group bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl text-center transition-all duration-300 border border-gray-100 hover:border-[#66AADD] ${
                 isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
               }`}
               style={{ transitionDelay: `${index * 150}ms` }}
@@ -107,14 +107,14 @@ export default function OurClientsSection() {
                   className="object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300 max-h-20"
                 />
               </div>
-              <div className="text-subtitle-sm font-semibold text-brand-dark group-hover:text-brand-primary transition-colors duration-300 mb-3 font-heading">
+              <div className="text-subtitle-sm font-semibold text-brand-dark group-hover:text-[#004A81] transition-colors duration-300 mb-3 font-heading">
                 {client.logo}
               </div>
               <div className="text-body-sm text-gray-600 group-hover:text-gray-800 transition-colors duration-300 font-body">
                 {client.description}
               </div>
               {/* Simple bottom border effect */}
-              <div className="absolute bottom-0 left-0 w-0 h-1 bg-blue-600 group-hover:w-full transition-all duration-300 rounded-full"></div>
+              <div className="absolute bottom-0 left-0 w-0 h-1 bg-[#004A81] group-hover:w-full transition-all duration-300 rounded-full"></div>
             </div>
           ))}
         </div>

@@ -7,15 +7,11 @@ import StatsSection from '@/components/StatsSection'
 import FeaturedProjects from '@/components/FeaturedProjects'
 import ClosingCTA from '@/components/ClosingCTA'
 import ConditionalFooter from '@/components/ConditionalFooter'
-import AdvancedParticleSystem from '@/components/AdvancedParticleSystem'
-import CustomCursor from '@/components/CustomCursor'
 import SectionTransition from '@/components/SectionTransition'
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
-      <AdvancedParticleSystem />
-      <CustomCursor />
+    <main className="min-h-screen helvetica-scope">
       <Header />
       
       {/* Section 1: Hero Section */}
