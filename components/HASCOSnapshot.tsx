@@ -52,7 +52,7 @@ export default function HASCOSnapshot() {
             <span className="font-extralight">About </span>
             <span className="font-extralight text-gray-900">HASCO</span>
           </h2>
-          <div className={`w-24 h-1 bg-blue-600 mx-auto rounded-full transition-all duration-1000 delay-300 ${isVisible ? 'scale-x-100' : 'scale-x-0'}`}></div>
+          <div className={`w-24 h-1 bg-brand-primary mx-auto rounded-full transition-all duration-1000 delay-300 ${isVisible ? 'scale-x-100' : 'scale-x-0'}`}></div>
         </div>
         
         <div className="max-w-4xl mx-auto">
@@ -67,7 +67,7 @@ export default function HASCOSnapshot() {
             </div>
 
             <div className={`pt-4 transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-              <button className="apple-btn bg-gradient-to-r from-blue-600 to-blue-700 text-white px-6 py-3 text-button-lg font-medium font-heading hover:from-blue-700 hover:to-blue-800 rounded-xl shadow-lg hover:shadow-xl hover:shadow-blue-500/25 transform hover:scale-105 transition-all duration-300">
+              <button className="apple-btn bg-brand-primary text-white px-6 py-3 text-button-lg font-medium font-heading hover:bg-brand-secondary rounded-xl shadow-lg hover:shadow-xl hover:shadow-brand-primary/25 transform hover:scale-105 transition-all duration-300">
                 <span className="relative z-10 tracking-wide">Learn More About Us</span>
               </button>
             </div>

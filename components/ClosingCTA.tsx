@@ -78,7 +78,7 @@ export default function ClosingCTA() {
         <div className="max-w-4xl mx-auto space-y-8">
           {/* Main Headline */}
           <div className={`space-y-6 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-            <h2 className="text-title-md md:text-title-lg lg:text-title-xl font-light text-white leading-tight font-heading">
+            <h2 className="text-title-lg md:text-title-xl font-light text-white leading-tight font-heading">
               <span className="block font-extralight">Partner with HASCO</span>
               <span className="block font-extralight text-white">
                 — where experience, innovation, and vision meet
