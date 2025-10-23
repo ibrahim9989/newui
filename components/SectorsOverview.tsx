@@ -65,7 +65,7 @@ export default function SectorsOverview() {
     <section id="sectors-overview" className="py-20 bg-white relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <h2 className="text-title-md md:text-title-lg font-light text-gray-900 leading-tight font-heading mb-4">
+          <h2 className="text-title-lg md:text-title-xl font-light text-gray-900 leading-tight font-heading mb-4">
             <span className="font-extralight">Sectors at a </span>
             <span className="font-extralight text-gray-900">Glance</span>
           </h2>
@@ -105,7 +105,7 @@ export default function SectorsOverview() {
                   {sector.title}
                 </h3>
                 
-                <p className="text-gray-600 text-body-sm leading-relaxed font-body mb-6">
+                <p className="text-gray-600 text-body-md leading-relaxed font-body mb-6">
                   {sector.description}
                 </p>
                 

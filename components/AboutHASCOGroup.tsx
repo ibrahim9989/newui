@@ -61,7 +61,7 @@ export default function AboutHASCOGroup() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 section-content-stagger">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-light text-gray-900 mb-6 font-heading apple-fade-in">
+          <h2 className="text-title-lg md:text-title-xl font-light text-gray-900 mb-6 font-heading apple-fade-in">
             <span className="font-extralight">About </span><span className="font-extralight text-gray-900">HASCO Group</span>
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-brand-primary to-brand-secondary mx-auto mb-8 apple-scale-in apple-stagger-1"></div>
@@ -75,11 +75,11 @@ export default function AboutHASCOGroup() {
           {/* Company Story */}
           <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
             <div className="apple-card rounded-2xl p-8 shadow-xl apple-hover-lift">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6 font-heading apple-slide-up apple-stagger-3">Our Story</h3>
-              <p className="text-gray-600 leading-relaxed mb-6 font-body">
+              <h3 className="text-title-md md:text-title-lg font-semibold text-gray-900 mb-6 font-heading apple-slide-up apple-stagger-3">Our Story</h3>
+              <p className="text-gray-600 leading-relaxed mb-6 text-body-md font-body">
                 Established in 2005, HASCO Group was founded with a vision to provide integrated supply chain and logistics solutions. Over the past 19+ years, we have grown from a small marine services company to a comprehensive group of companies that has become a leading force in the maritime and logistics sector of the Middle East.
               </p>
-              <p className="text-gray-600 leading-relaxed mb-8 font-body">
+              <p className="text-gray-600 leading-relaxed mb-8 text-body-md font-body">
                 Our commitment to excellence and innovation has enabled us to serve clients across multiple sectors, from marine operations to hospitality, creating value through integrated solutions that drive sustainable growth.
               </p>
               

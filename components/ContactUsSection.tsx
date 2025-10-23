@@ -74,7 +74,7 @@ export default function ContactUsSection() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Premium Section Title */}
         <div className={`text-center mb-12 ${isVisible ? 'animate-fade-in-up' : 'opacity-0'}`}>
-          <h2 className="text-4xl md:text-5xl font-light text-brand-dark mb-4 text-shadow-lg font-heading animate-slide-in-down">
+          <h2 className="text-title-lg md:text-title-xl font-light text-brand-dark mb-4 text-shadow-lg font-heading animate-slide-in-down">
             <span className="font-extralight">Contact </span><span className="font-extralight text-brand-dark">us</span>
           </h2>
           <div className="w-24 h-1 bg-brand-primary mx-auto shadow-lg shadow-brand-primary/50"></div>

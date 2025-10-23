@@ -108,7 +108,7 @@ export default function OurDivisions() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 section-content-stagger">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-light text-gray-900 mb-6 font-heading animate-slide-in-down">
+          <h2 className="text-title-lg md:text-title-xl font-light text-gray-900 mb-6 font-heading animate-slide-in-down">
             <span className="font-extralight">Our </span><span className="font-extralight text-gray-900">Divisions</span>
           </h2>
           <div className="w-24 h-1 bg-brand-primary mx-auto mb-8"></div>
@@ -156,7 +156,7 @@ export default function OurDivisions() {
                 </div>
                 <div className="absolute inset-0 bg-black/40"></div>
                 <div className="absolute top-4 left-4">
-                  <div className="text-white font-bold text-lg font-heading">
+                  <div className="text-white font-bold text-title-sm font-heading">
                     {division.title}
                   </div>
                 </div>
@@ -250,8 +250,8 @@ export default function OurDivisions() {
         {/* Call to Action */}
         <div className="text-center mt-16">
           <div className="bg-gradient-to-r from-brand-primary to-brand-secondary rounded-2xl p-8 text-white">
-            <h3 className="text-2xl font-bold mb-4">Ready to Work Together?</h3>
-            <p className="text-lg mb-6 opacity-90">
+            <h3 className="text-title-md md:text-title-lg font-semibold mb-4 font-heading">Ready to Work Together?</h3>
+            <p className="text-body-lg mb-6 opacity-90 font-body">
               Explore our comprehensive range of services and discover how we can support your project
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

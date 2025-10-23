@@ -131,7 +131,7 @@ export default function FeaturesIconSection() {
               </div>
               
               {/* Enhanced title with glow */}
-              <h3 className="text-xl font-bold text-white mb-4 group-hover:text-glow transition-all duration-300 relative">
+              <h3 className="text-title-sm font-semibold text-white mb-4 group-hover:text-glow transition-all duration-300 relative font-heading">
                 {feature.title}
                 {/* Underline effect */}
                 <div className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-300"></div>

@@ -297,7 +297,7 @@ export default function CareersPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
               <div className="text-center">
-                <h1 className="text-5xl md:text-7xl font-light text-white mb-6 font-heading apple-fade-in">
+                <h1 className="text-title-lg md:text-title-xl font-light text-white mb-6 font-heading apple-fade-in">
                   <span className="font-extralight">Join Our </span><span className="font-extralight text-white">Team</span>
                 </h1>
                 <div className="w-32 h-1 bg-gradient-to-r from-brand-primary to-brand-secondary mx-auto mb-8 apple-scale-in apple-stagger-1"></div>

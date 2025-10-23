@@ -73,7 +73,7 @@ export default function WhyHASCO() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-light text-gray-900 mb-6 font-heading">
+          <h2 className="text-title-lg md:text-title-xl font-light text-gray-900 mb-6 font-heading">
             <span className="font-extralight">Why </span><span className="font-extralight text-gray-900">HASCO?</span>
           </h2>
           <div className="w-24 h-1 bg-brand-primary mx-auto mb-8"></div>
@@ -86,7 +86,7 @@ export default function WhyHASCO() {
         <div className={`mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="bg-white rounded-2xl p-8 shadow-xl">
             <div className="text-center mb-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Foundation of Excellence</h3>
+              <h3 className="text-title-md md:text-title-lg font-semibold text-gray-900 mb-4 font-heading">Foundation of Excellence</h3>
               <p className="text-gray-600 leading-relaxed max-w-4xl mx-auto">
                 Since 2005, HASCO Group has been at the forefront of integrated solutions in the Middle East. Our journey from a small marine services company to a comprehensive group of companies reflects our unwavering commitment to excellence, innovation, and client satisfaction. We have built our reputation on trust, reliability, and the ability to deliver complex projects that drive sustainable growth.
               </p>
@@ -96,7 +96,7 @@ export default function WhyHASCO() {
 
         {/* Key Differentiators */}
         <div className="mb-16">
-          <h3 className="text-3xl font-bold text-gray-900 text-center mb-12">Key Differentiators</h3>
+          <h3 className="text-title-md md:text-title-lg font-semibold text-gray-900 text-center mb-12 font-heading">Key Differentiators</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {differentiators.map((item, index) => (
               <div
@@ -109,7 +109,7 @@ export default function WhyHASCO() {
                 <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">
                   {item.icon}
                 </div>
-                <h4 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-brand-primary transition-colors duration-300">
+                <h4 className="text-title-sm font-semibold text-gray-900 mb-3 group-hover:text-brand-primary transition-colors duration-300 font-heading">
                   {item.title}
                 </h4>
                 <p className="text-gray-600 leading-relaxed mb-4">

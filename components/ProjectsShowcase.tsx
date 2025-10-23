@@ -98,7 +98,7 @@ export default function ProjectsShowcase() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 section-content-stagger">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-light text-gray-900 mb-6 font-heading animate-slide-in-down">
+          <h2 className="text-title-lg md:text-title-xl font-light text-gray-900 mb-6 font-heading animate-slide-in-down">
             <span className="font-extralight">Featured </span><span className="font-extralight text-gray-900">Projects</span>
           </h2>
           <div className="w-24 h-1 bg-brand-primary mx-auto mb-8"></div>
@@ -124,7 +124,7 @@ export default function ProjectsShowcase() {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                     <div className="absolute bottom-4 left-4 right-4">
                       <div className="bg-white rounded-xl p-4 shadow-lg">
-                        <h3 className="text-lg font-bold text-gray-900 mb-2">
+                        <h3 className="text-title-sm font-semibold text-gray-900 mb-2 font-heading">
                           {projects[currentProject].category}
                         </h3>
                         <div className="flex justify-center space-x-4 text-sm text-gray-600">
@@ -168,10 +168,10 @@ export default function ProjectsShowcase() {
               {/* Project Details */}
               <div className="space-y-6">
                 <div>
-                  <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                  <h3 className="text-title-md md:text-title-lg font-semibold text-gray-900 mb-4 font-heading">
                     {projects[currentProject].title}
                   </h3>
-                  <p className="text-gray-600 leading-relaxed text-lg">
+                  <p className="text-gray-600 leading-relaxed text-body-lg font-body">
                     {projects[currentProject].description}
                   </p>
                 </div>

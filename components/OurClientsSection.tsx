@@ -79,7 +79,7 @@ export default function OurClientsSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Title */}
         <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <h2 className="text-title-md md:text-title-lg font-light text-brand-dark mb-4 font-heading">
+          <h2 className="text-title-lg md:text-title-xl font-light text-brand-dark mb-4 font-heading">
             Trusted <span className="font-extralight text-brand-dark">Partnerships</span>
           </h2>
           <p className="text-subtitle-md md:text-subtitle-lg text-gray-600 max-w-3xl mx-auto font-body mb-4">
@@ -110,7 +110,7 @@ export default function OurClientsSection() {
               <div className="text-subtitle-sm font-semibold text-brand-dark group-hover:text-[#004A81] transition-colors duration-300 mb-3 font-heading">
                 {client.logo}
               </div>
-              <div className="text-body-sm text-gray-600 group-hover:text-gray-800 transition-colors duration-300 font-body">
+              <div className="text-body-md text-gray-600 group-hover:text-gray-800 transition-colors duration-300 font-body">
                 {client.description}
               </div>
               {/* Simple bottom border effect */}

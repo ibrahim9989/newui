@@ -127,7 +127,7 @@ export default function FeaturedProjects() {
                           {project.title}
                         </h3>
                         
-                        <p className="text-body-lg text-gray-700 leading-relaxed font-body">
+                        <p className="text-body-md text-gray-700 leading-relaxed font-body">
                           {project.description}
                         </p>
                         
@@ -137,7 +137,7 @@ export default function FeaturedProjects() {
                               <span className="text-white text-sm font-bold">💡</span>
                             </div>
                             <div>
-                              <p className="text-blue-800 font-medium font-body text-body-md leading-relaxed">
+                              <p className="text-gray-800 font-medium font-body text-body-md leading-relaxed">
                                 <span className="font-semibold">Impact:</span> {project.impact}
                               </p>
                             </div>

@@ -34,11 +34,11 @@ export default function HASCOOperationOffices() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-title-lg md:text-title-xl font-light text-gray-900 mb-6 font-heading">
             HASCO <span className="text-brand-primary">Operation Offices</span>
           </h2>
           <div className="w-24 h-1 bg-brand-primary mx-auto mb-8"></div>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-subtitle-md md:text-subtitle-lg text-gray-600 max-w-3xl mx-auto font-body">
             Strategic presence across Saudi Arabia, ensuring comprehensive coverage and local expertise in every region
           </p>
         </div>
@@ -47,7 +47,7 @@ export default function HASCOOperationOffices() {
           {/* Interactive Map */}
           <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
             <div className="relative bg-white rounded-2xl p-8 shadow-xl">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Our Geographic Presence</h3>
+              <h3 className="text-title-md md:text-title-lg font-semibold text-gray-900 mb-6 font-heading">Our Geographic Presence</h3>
               
               {/* Map Container */}
               <div className="relative rounded-xl h-96 border-2 border-gray-200 overflow-hidden">
@@ -65,13 +65,13 @@ export default function HASCOOperationOffices() {
           {/* Office Details */}
           <div className={`transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
             <div className="bg-white rounded-2xl p-8 shadow-xl">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Office Information</h3>
+              <h3 className="text-title-md md:text-title-lg font-semibold text-gray-900 mb-6 font-heading">Office Information</h3>
               
               {/* Office Details */}
               <div className="space-y-6">
                 <div className="bg-gray-50 rounded-lg p-6">
-                  <h4 className="text-lg font-semibold text-gray-900 mb-4">Our Network</h4>
-                  <p className="text-gray-600 leading-relaxed mb-4">
+                  <h4 className="text-title-sm font-semibold text-gray-900 mb-4 font-heading">Our Network</h4>
+                  <p className="text-gray-600 leading-relaxed mb-4 text-body-md font-body">
                     HASCO Group operates across multiple strategic locations throughout Saudi Arabia, ensuring comprehensive coverage and local expertise in every region we serve.
                   </p>
                   <div className="grid grid-cols-2 gap-4 text-sm">

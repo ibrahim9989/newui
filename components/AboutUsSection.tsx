@@ -4,7 +4,7 @@ export default function AboutUsSection() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Section Title */}
         <div className="mb-12">
-          <h2 className="text-4xl md:text-5xl font-light text-brand-dark mb-4">
+          <h2 className="text-title-lg md:text-title-xl font-light text-brand-dark mb-4 font-heading">
             <span className="font-extralight">About </span><span className="font-extralight text-brand-dark">us</span>
           </h2>
           <div className="w-24 h-1 bg-brand-primary mx-auto"></div>

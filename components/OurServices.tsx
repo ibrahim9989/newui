@@ -100,7 +100,7 @@ export default function OurServices() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 section-content-stagger">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-light text-gray-900 mb-6 font-heading animate-slide-in-down">
+          <h2 className="text-title-lg md:text-title-xl font-light text-gray-900 mb-6 font-heading animate-slide-in-down">
             <span className="font-extralight">Our </span><span className="font-extralight text-gray-900">Services</span>
           </h2>
           <div className="w-24 h-1 bg-brand-primary mx-auto mb-8"></div>
@@ -154,10 +154,10 @@ export default function OurServices() {
 
               {/* Service Content */}
               <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-brand-primary transition-colors duration-300">
+                <h3 className="text-title-sm font-semibold text-gray-900 mb-3 group-hover:text-brand-primary transition-colors duration-300 font-heading">
                   {service.title}
                 </h3>
-                <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                <p className="text-gray-600 text-body-md leading-relaxed mb-4 font-body">
                   {service.description}
                 </p>
                 <div className="text-brand-primary font-semibold text-sm">

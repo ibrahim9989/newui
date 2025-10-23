@@ -90,7 +90,7 @@ export default function FeaturedServicesSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Title */}
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-light text-white mb-4 font-primary">
+          <h2 className="text-title-lg md:text-title-xl font-light text-white mb-4 font-primary">
             <span className="font-extralight">Our </span><span className="font-extralight text-white">Services</span>
           </h2>
           <div className="w-24 h-1 bg-white mx-auto"></div>
@@ -133,10 +133,10 @@ export default function FeaturedServicesSection() {
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
               </div>
               <div className="p-6 relative">
-                <h3 className="text-lg font-bold text-gray-800 mb-2 group-hover:text-brand-primary transition-colors duration-300">
+                <h3 className="text-title-sm font-semibold text-gray-800 mb-2 group-hover:text-brand-primary transition-colors duration-300 font-heading">
                   {service.title}
                 </h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
+                <p className="text-gray-600 text-body-md leading-relaxed font-body">
                   {service.description}
                 </p>
                 {/* Premium border effect */}
