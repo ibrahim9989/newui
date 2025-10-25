@@ -74,7 +74,7 @@ export default function FeaturedProjects() {
         </div>
         
         {/* Gradient overlays */}
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-50/20 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-brand-primary/20 to-transparent"></div>
       </div>
       
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
@@ -111,13 +111,13 @@ export default function FeaturedProjects() {
                       
                       {/* Enhanced Sector Badge */}
                       <div className="absolute top-6 left-6">
-                        <span className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-6 py-3 rounded-full text-body-sm font-medium font-heading shadow-lg">
+                        <span className="bg-gradient-to-r from-brand-primary to-brand-secondary text-white px-6 py-3 rounded-full text-body-sm font-medium font-heading shadow-lg">
                           {project.sector}
                         </span>
                       </div>
                       
                       {/* Hover overlay */}
-                      <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                      <div className="absolute inset-0 bg-gradient-to-br from-brand-primary/20 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                     </div>
 
                     {/* Project Content */}
@@ -131,9 +131,9 @@ export default function FeaturedProjects() {
                           {project.description}
                         </p>
                         
-                        <div className="bg-gradient-to-r from-blue-50 to-blue-100 p-8 rounded-2xl border border-blue-200 shadow-lg">
+                        <div className="bg-gradient-to-r from-brand-primary/10 to-brand-secondary/10 p-8 rounded-2xl border border-brand-primary/20 shadow-lg">
                           <div className="flex items-start space-x-4">
-                            <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                            <div className="w-8 h-8 bg-brand-primary rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                               <span className="text-white text-sm font-bold">💡</span>
                             </div>
                             <div>
@@ -146,7 +146,7 @@ export default function FeaturedProjects() {
                       </div>
 
                       <div className="pt-4">
-                        <button className="group relative bg-gradient-to-r from-blue-600 to-blue-700 text-white px-8 py-4 text-button-lg font-medium font-heading hover:from-blue-700 hover:to-blue-800 rounded-xl shadow-lg hover:shadow-xl hover:shadow-blue-500/25 transform hover:scale-105 transition-all duration-300 overflow-hidden">
+                        <button className="group relative bg-gradient-to-r from-brand-primary to-brand-secondary text-white px-8 py-4 text-button-lg font-medium font-heading hover:from-brand-secondary hover:to-brand-primary rounded-xl shadow-lg hover:shadow-xl hover:shadow-brand-primary/25 transform hover:scale-105 transition-all duration-300 overflow-hidden">
                           <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
                           <span className="relative z-10 tracking-wide">Learn More</span>
                         </button>
@@ -166,7 +166,7 @@ export default function FeaturedProjects() {
                 onClick={() => setCurrentProject(index)}
                 className={`w-3 h-3 rounded-full transition-all duration-300 ${
                   index === currentProject 
-                    ? 'bg-blue-600 scale-125' 
+                    ? 'bg-brand-primary scale-125' 
                     : 'bg-gray-300 hover:bg-gray-400'
                 }`}
               />

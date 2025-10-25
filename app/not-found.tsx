@@ -7,7 +7,7 @@ export default function NotFound() {
     <main className="min-h-screen">
       <Header />
       
-      <div className="pt-24 pb-20 bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 relative overflow-hidden">
+      <div className="pt-24 pb-20 bg-gradient-to-br from-gray-900 via-brand-primary to-gray-900 relative overflow-hidden">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center">

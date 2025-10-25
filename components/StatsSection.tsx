@@ -33,7 +33,7 @@ export default function StatsSection() {
   return (
     <section 
       id="stats-section" 
-      className="py-24 bg-[#004A81]"
+      className="py-24 bg-brand-primary"
     >
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">

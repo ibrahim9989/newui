@@ -40,8 +40,8 @@ export default function HASCOSnapshot() {
         
         {/* Floating geometric elements */}
         <div className="absolute inset-0 opacity-5">
-          <div className="absolute top-20 left-20 w-32 h-32 border border-blue-200 rotate-45 bg-element-float" style={{ animationDuration: '4s' }}></div>
-          <div className="absolute bottom-20 right-20 w-24 h-24 border border-blue-200 rotate-12 bg-element-rotate" style={{ animationDuration: '3s', animationDelay: '1s' }}></div>
+          <div className="absolute top-20 left-20 w-32 h-32 border border-brand-primary/30 rotate-45 bg-element-float" style={{ animationDuration: '4s' }}></div>
+          <div className="absolute bottom-20 right-20 w-24 h-24 border border-brand-primary/30 rotate-12 bg-element-rotate" style={{ animationDuration: '3s', animationDelay: '1s' }}></div>
         </div>
       </div>
       

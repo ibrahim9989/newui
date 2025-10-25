@@ -41,17 +41,17 @@ export default function Header() {
               <a
                 key={item.href}
                 href={item.href}
-                className={`group relative transition-all duration-300 font-medium font-heading text-base md:text-lg text-gray-800 hover:text-[#004A81]`}
+                className={`group relative transition-all duration-300 font-medium font-heading text-base md:text-lg text-gray-800 hover:text-brand-primary`}
               >
                 <span className="relative z-10">{item.label}</span>
-                <div className={`absolute -bottom-1 left-0 w-0 h-0.5 group-hover:w-full transition-all duration-300 bg-[#004A81]`}></div>
+                <div className={`absolute -bottom-1 left-0 w-0 h-0.5 group-hover:w-full transition-all duration-300 bg-brand-primary`}></div>
               </a>
             ))}
           </nav>
 
           {/* Mobile menu button */}
           <button
-            className={`lg:hidden relative w-10 h-10 flex items-center justify-center transition-colors duration-300 text-gray-800 hover:text-[#004A81]`}
+            className={`lg:hidden relative w-10 h-10 flex items-center justify-center transition-colors duration-300 text-gray-800 hover:text-brand-primary`}
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             <div className="relative w-6 h-6">
@@ -85,7 +85,7 @@ export default function Header() {
                 <a
                   key={item.href}
                   href={item.href}
-                  className={`transition-colors duration-300 font-medium font-heading text-base py-2 border-l-2 border-transparent pl-4 text-gray-800 hover:text-[#004A81] hover:border-[#004A81]`}
+                  className={`transition-colors duration-300 font-medium font-heading text-base py-2 border-l-2 border-transparent pl-4 text-gray-800 hover:text-brand-primary hover:border-brand-primary`}
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.label}

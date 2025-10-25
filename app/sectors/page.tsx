@@ -51,7 +51,7 @@ const fallbackSectors = [
     description: "Digital transformation and technology consulting services for modern businesses.",
     features: ["Digital Transformation", "IT Consulting", "Software Development", "System Integration"],
     icon: "T",
-    color: "from-indigo-500 to-purple-500",
+    color: "from-brand-primary to-brand-secondary",
     image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=800&h=600&fit=crop&crop=center"
   },
   {
@@ -351,7 +351,7 @@ export default function SectorsPage() {
                       className="text-title-md md:text-title-lg font-bold text-brand-primary mb-2"
                       duration={2000}
                     />
-                    <div className="absolute -top-2 -left-2 w-2 h-2 bg-cyan-400 rounded-full opacity-60 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div className="absolute -top-2 -left-2 w-2 h-2 bg-brand-secondary rounded-full opacity-60 group-hover:opacity-100 transition-opacity duration-300"></div>
                   </div>
                   <div className="text-body-sm text-gray-600">Years of Excellence</div>
                 </div>

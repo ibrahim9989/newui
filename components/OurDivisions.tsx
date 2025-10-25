@@ -11,7 +11,7 @@ const divisions = [
     image: "https://images.unsplash.com/photo-1583212292454-1fe6229603b7?w=800&h=600&fit=crop&crop=center",
     category: "Marine",
     stats: "200+ Projects",
-    background: "from-blue-500 to-cyan-500"
+    background: "from-brand-primary to-brand-secondary"
   },
   {
     title: "Ship Agency",
@@ -19,7 +19,7 @@ const divisions = [
     image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop&crop=center",
     category: "Marine",
     stats: "15+ Ports",
-    background: "from-blue-600 to-indigo-600"
+    background: "from-brand-primary to-brand-secondary"
   },
   {
     title: "Freight Forwarding",
@@ -232,7 +232,7 @@ export default function OurDivisions() {
                 className="text-3xl font-bold text-brand-primary mb-2"
                 duration={2500}
               />
-              <div className="absolute -top-2 -left-2 w-2 h-2 bg-cyan-400 rounded-full opacity-60 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="absolute -top-2 -left-2 w-2 h-2 bg-brand-secondary rounded-full opacity-60 group-hover:opacity-100 transition-opacity duration-300"></div>
             </div>
             <div className="text-gray-600">Projects Completed</div>
           </div>

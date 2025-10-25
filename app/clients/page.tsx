@@ -69,7 +69,7 @@ const fallbackClientSectors = [
     id: 5,
     division: "Technology Solutions",
     icon: "T",
-    color: "from-indigo-500 to-purple-500",
+    color: "from-brand-primary to-brand-secondary",
     clients: [
       { name: "STC", type: "Corporation" },
       { name: "Saudi Aramco", type: "Corporation" },
@@ -459,7 +459,7 @@ export default function ClientsPage() {
                       className="text-title-md md:text-title-lg font-bold text-brand-primary mb-2"
                       duration={2000}
                     />
-                    <div className="absolute -top-2 -left-2 w-2 h-2 bg-cyan-400 rounded-full opacity-60 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div className="absolute -top-2 -left-2 w-2 h-2 bg-brand-secondary rounded-full opacity-60 group-hover:opacity-100 transition-opacity duration-300"></div>
                   </div>
                   <div className="text-body-sm text-gray-600">Client Retention Rate</div>
                 </div>

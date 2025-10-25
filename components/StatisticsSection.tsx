@@ -41,7 +41,7 @@ export default function StatisticsSection() {
                   className="text-4xl md:text-5xl font-bold text-brand-primary mb-2"
                   duration={2000}
                 />
-                <div className="absolute -top-2 -left-2 w-2 h-2 bg-cyan-400 rounded-full opacity-60 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute -top-2 -left-2 w-2 h-2 bg-brand-secondary rounded-full opacity-60 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
               <div className="text-gray-600 text-sm md:text-base">Years of Excellence</div>
             </div>

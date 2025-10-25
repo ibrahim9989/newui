@@ -105,7 +105,7 @@ const divisions = [
     image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=800&h=600&fit=crop&crop=center",
     category: "Technology",
     stats: "100+ Solutions",
-    background: "from-indigo-500 to-purple-500"
+    background: "from-brand-primary to-brand-secondary"
   }
 ]
 
@@ -459,7 +459,7 @@ export default function AboutPage() {
               </div>
               
               <div className="apple-card rounded-xl p-8 shadow-lg apple-hover-lift apple-fade-in" style={{ animationDelay: '0.2s' }}>
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center mb-6 apple-float" style={{ animationDelay: '0.5s' }}>
+                <div className="w-16 h-16 bg-gradient-to-br from-brand-primary to-brand-secondary rounded-full flex items-center justify-center mb-6 apple-float" style={{ animationDelay: '0.5s' }}>
                   <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                   </svg>

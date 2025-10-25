@@ -44,7 +44,7 @@ export default function ClosingCTA() {
   return (
     <section 
       id="closing-cta" 
-      className="py-24 bg-[#004A81] relative overflow-hidden"
+      className="py-24 bg-brand-primary relative overflow-hidden"
     >
       {/* Enhanced Background Effects */}
       <div className="absolute inset-0">
@@ -126,7 +126,7 @@ export default function ClosingCTA() {
                 required
               />
               <div className="flex justify-center">
-                <button type="submit" className="bg-white text-[#004A81] border border-[#004A81] hover:bg-[#004A81] hover:text-white px-8 py-3 rounded-lg font-medium transition-colors">
+                <button type="submit" className="bg-white text-brand-primary border border-brand-primary hover:bg-brand-primary hover:text-white px-8 py-3 rounded-lg font-medium transition-colors">
                   Send Message
                 </button>
               </div>

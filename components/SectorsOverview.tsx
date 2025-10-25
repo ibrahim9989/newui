@@ -69,7 +69,7 @@ export default function SectorsOverview() {
             <span className="font-extralight">Sectors at a </span>
             <span className="font-extralight text-gray-900">Glance</span>
           </h2>
-          <div className={`w-24 h-1 bg-[#004A81] mx-auto rounded-full transition-all duration-1000 delay-300 ${isVisible ? 'scale-x-100' : 'scale-x-0'}`}></div>
+          <div className={`w-24 h-1 bg-brand-primary mx-auto rounded-full transition-all duration-1000 delay-300 ${isVisible ? 'scale-x-100' : 'scale-x-0'}`}></div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -101,7 +101,7 @@ export default function SectorsOverview() {
                   )}
                 </div>
                 
-                <h3 className="text-title-sm font-semibold text-gray-900 mb-4 font-heading group-hover:text-[#004A81] transition-colors duration-300">
+                <h3 className="text-title-sm font-semibold text-gray-900 mb-4 font-heading group-hover:text-brand-primary transition-colors duration-300">
                   {sector.title}
                 </h3>
                 
@@ -110,7 +110,7 @@ export default function SectorsOverview() {
                 </p>
                 
                 <div className="opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
-                  <div className="flex items-center text-[#004A81] text-body-sm font-medium font-heading">
+                  <div className="flex items-center text-brand-primary text-body-sm font-medium font-heading">
                     <span>Discover More</span>
                     <svg className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -123,7 +123,7 @@ export default function SectorsOverview() {
         </div>
 
         <div className={`text-center mt-16 transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <button className="bg-[#004A81] text-white px-8 py-4 text-button-lg font-medium font-heading hover:bg-[#66AADD] rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
+          <button className="bg-brand-primary text-white px-8 py-4 text-button-lg font-medium font-heading hover:bg-brand-secondary rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
             Explore All Sectors
           </button>
         </div>

@@ -71,7 +71,7 @@ export default function SectorCarousel() {
 
               {/* Professional buttons */}
               <div className="flex flex-col sm:flex-row gap-6 animate-bounce-in stagger-4 justify-start">
-                <button className="apple-btn bg-[#004A81] text-white px-6 py-3 text-button-lg font-medium font-heading hover:bg-[#66AADD] rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
+                <button className="apple-btn bg-brand-primary text-white px-6 py-3 text-button-lg font-medium font-heading hover:bg-brand-secondary rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
                   <span className="relative z-10 tracking-wide">Explore Our Sectors</span>
                 </button>
               </div>
