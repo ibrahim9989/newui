@@ -3,7 +3,6 @@
 import { useState, useEffect } from 'react'
 
 export default function HeroSection() {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
   const [scrollY, setScrollY] = useState(0)
   const [isClient, setIsClient] = useState(false)
 
@@ -14,19 +13,13 @@ export default function HeroSection() {
   useEffect(() => {
     if (!isClient) return
     
-    const handleMouseMove = (e: MouseEvent) => {
-      setMousePosition({ x: e.clientX, y: e.clientY })
-    }
-
     const handleScroll = () => {
       setScrollY(window.scrollY)
     }
 
-    window.addEventListener('mousemove', handleMouseMove)
     window.addEventListener('scroll', handleScroll)
 
     return () => {
-      window.removeEventListener('mousemove', handleMouseMove)
       window.removeEventListener('scroll', handleScroll)
     }
   }, [])
@@ -58,7 +51,6 @@ export default function HeroSection() {
                   top: `${Math.random() * 100}%`,
                   animationDelay: `${Math.random() * 3}s`,
                   animationDuration: `${2 + Math.random() * 2}s`,
-                  transform: `translate(${(mousePosition.x - (typeof window !== 'undefined' ? window.innerWidth / 2 : 0)) * (i % 3) * 0.01}px, ${(mousePosition.y - (typeof window !== 'undefined' ? window.innerHeight / 2 : 0)) * (i % 3) * 0.01}px)`,
                   transition: 'transform 0.1s ease-out'
                 }}
               />
@@ -66,15 +58,6 @@ export default function HeroSection() {
           })}
         </div>
 
-        {/* Mouse-following glow effect */}
-        <div 
-          className="absolute w-96 h-96 bg-brand-primary/10 rounded-full blur-3xl pointer-events-none transition-all duration-300"
-          style={{
-            left: mousePosition.x - 192,
-            top: mousePosition.y - 192,
-            transform: `translate(${scrollY * 0.1}px, ${scrollY * 0.05}px)`
-          }}
-        />
         
         {/* Premium clock background with parallax */}
         <div 

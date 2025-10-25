@@ -3,13 +3,10 @@
 import { useState, useEffect } from 'react'
 import Header from '@/components/Header'
 import ConditionalFooter from '@/components/ConditionalFooter'
-import AdvancedParticleSystem from '@/components/AdvancedParticleSystem'
-import CustomCursor from '@/components/CustomCursor'
 import SectionTransition from '@/components/SectionTransition'
 
 export default function ContactPage() {
   const [isVisible, setIsVisible] = useState(false)
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
   const [isClient, setIsClient] = useState(false)
   const [formData, setFormData] = useState({
     name: '',
@@ -27,19 +24,6 @@ export default function ContactPage() {
     setIsClient(true)
   }, [])
 
-  useEffect(() => {
-    if (!isClient) return
-    
-    const handleMouseMove = (e: MouseEvent) => {
-      setMousePosition({ x: e.clientX, y: e.clientY })
-    }
-
-    window.addEventListener('mousemove', handleMouseMove)
-
-    return () => {
-      window.removeEventListener('mousemove', handleMouseMove)
-    }
-  }, [isClient])
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -137,8 +121,6 @@ export default function ContactPage() {
 
   return (
     <main className="min-h-screen bg-white">
-      <AdvancedParticleSystem />
-      <CustomCursor />
       <Header />
       
       {/* Hero Section */}
@@ -174,7 +156,6 @@ export default function ContactPage() {
                       top: `${Math.random() * 100}%`,
                       animationDelay: `${Math.random() * 3}s`,
                       animationDuration: `${2 + Math.random() * 2}s`,
-                      transform: `translate(${(mousePosition.x - (typeof window !== 'undefined' ? window.innerWidth / 2 : 0)) * (i % 3) * 0.01}px, ${(mousePosition.y - (typeof window !== 'undefined' ? window.innerHeight / 2 : 0)) * (i % 3) * 0.01}px)`,
                       transition: 'transform 0.1s ease-out'
                     }}
                   />

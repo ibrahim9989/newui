@@ -3,8 +3,6 @@
 import { useState, useEffect } from 'react'
 import Header from '@/components/Header'
 import ConditionalFooter from '@/components/ConditionalFooter'
-import AdvancedParticleSystem from '@/components/AdvancedParticleSystem'
-import CustomCursor from '@/components/CustomCursor'
 import SectionTransition from '@/components/SectionTransition'
 import AnimatedCounter from '@/components/AnimatedCounter'
 import Image from 'next/image'
@@ -130,26 +128,12 @@ const testimonials = [
 export default function ClientsPage() {
   const [isVisible, setIsVisible] = useState(false)
   const [isStatsVisible, setIsStatsVisible] = useState(false)
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
   const [isClient, setIsClient] = useState(false)
 
   useEffect(() => {
     setIsClient(true)
   }, [])
 
-  useEffect(() => {
-    if (!isClient) return
-    
-    const handleMouseMove = (e: MouseEvent) => {
-      setMousePosition({ x: e.clientX, y: e.clientY })
-    }
-
-    window.addEventListener('mousemove', handleMouseMove)
-
-    return () => {
-      window.removeEventListener('mousemove', handleMouseMove)
-    }
-  }, [isClient])
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -197,8 +181,6 @@ export default function ClientsPage() {
 
   return (
     <main className="min-h-screen bg-white">
-      <AdvancedParticleSystem />
-      <CustomCursor />
       <Header />
       
       {/* Hero Section */}
@@ -234,7 +216,6 @@ export default function ClientsPage() {
                       top: `${Math.random() * 100}%`,
                       animationDelay: `${Math.random() * 3}s`,
                       animationDuration: `${2 + Math.random() * 2}s`,
-                      transform: `translate(${(mousePosition.x - (typeof window !== 'undefined' ? window.innerWidth / 2 : 0)) * (i % 3) * 0.01}px, ${(mousePosition.y - (typeof window !== 'undefined' ? window.innerHeight / 2 : 0)) * (i % 3) * 0.01}px)`,
                       transition: 'transform 0.1s ease-out'
                     }}
                   />

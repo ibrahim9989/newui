@@ -4,7 +4,6 @@ import { useState, useEffect } from 'react'
 
 
 export default function SectorCarousel() {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
   const [scrollY, setScrollY] = useState(0)
   const [isClient, setIsClient] = useState(false)
 
@@ -15,19 +14,13 @@ export default function SectorCarousel() {
   useEffect(() => {
     if (!isClient) return
     
-    const handleMouseMove = (e: MouseEvent) => {
-      setMousePosition({ x: e.clientX, y: e.clientY })
-    }
-
     const handleScroll = () => {
       setScrollY(window.scrollY)
     }
 
-    window.addEventListener('mousemove', handleMouseMove)
     window.addEventListener('scroll', handleScroll)
 
     return () => {
-      window.removeEventListener('mousemove', handleMouseMove)
       window.removeEventListener('scroll', handleScroll)
     }
   }, [isClient])
@@ -48,15 +41,6 @@ export default function SectorCarousel() {
         <div className="absolute inset-0 bg-black/30"></div>
         
 
-        {/* Subtle mouse-following effect */}
-        <div 
-          className="absolute w-64 h-64 bg-white/10 rounded-full blur-3xl pointer-events-none transition-all duration-500 animate-gentle-pulse"
-          style={{
-            left: mousePosition.x - 128,
-            top: mousePosition.y - 128,
-            transform: `translate(${scrollY * 0.05}px, ${scrollY * 0.02}px)`
-          }}
-        />
         
       </div>
 
