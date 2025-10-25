@@ -269,7 +269,7 @@ export default function AboutPage() {
             <div className="grid lg:grid-cols-2 gap-16 items-start">
               {/* Our Story */}
               <div className="apple-card rounded-2xl p-8 shadow-xl apple-hover-lift">
-                <h2 className="text-3xl font-light text-gray-900 mb-6 font-heading"><span className="font-extralight">Our </span><span className="font-extralight text-gray-900">Story</span></h2>
+                <h2 className="text-title-md md:text-title-lg font-light text-gray-900 mb-6 font-heading"><span className="font-extralight">Our </span><span className="font-extralight text-gray-900">Story</span></h2>
                 <div className="space-y-6 text-gray-600 leading-relaxed font-body">
                   <p>
                     Established in 2005, HASCO Group was founded with a vision to practice integrated supply chain & logistics solutions. Over the past 19+ years, we have created an active ecosystem of maritime and logistics services that has become a leading force in the Middle East.
@@ -288,37 +288,37 @@ export default function AboutPage() {
                     <AnimatedCounter 
                       end={19} 
                       suffix="+" 
-                      className="text-3xl font-bold text-brand-primary mb-2"
+                      className="text-title-md md:text-title-lg font-bold text-brand-primary mb-2"
                       duration={2000}
                     />
-                    <div className="text-gray-600 text-sm">Years of Excellence</div>
+                    <div className="text-gray-600 text-body-sm font-body">Years of Excellence</div>
                   </div>
                   <div className="text-center">
                     <AnimatedCounter 
                       end={500} 
                       suffix="+" 
-                      className="text-3xl font-bold text-brand-primary mb-2"
+                      className="text-title-md md:text-title-lg font-bold text-brand-primary mb-2"
                       duration={2500}
                     />
-                    <div className="text-gray-600 text-sm">Projects Completed</div>
+                    <div className="text-gray-600 text-body-sm font-body">Projects Completed</div>
                   </div>
                   <div className="text-center">
                     <AnimatedCounter 
                       end={50} 
                       suffix="+" 
-                      className="text-3xl font-bold text-brand-primary mb-2"
+                      className="text-title-md md:text-title-lg font-bold text-brand-primary mb-2"
                       duration={1800}
                     />
-                    <div className="text-gray-600 text-sm">Team Members</div>
+                    <div className="text-gray-600 text-body-sm font-body">Team Members</div>
                   </div>
                   <div className="text-center">
                     <AnimatedCounter 
                       end={15} 
                       suffix="+" 
-                      className="text-3xl font-bold text-brand-primary mb-2"
+                      className="text-title-md md:text-title-lg font-bold text-brand-primary mb-2"
                       duration={1500}
                     />
-                    <div className="text-gray-600 text-sm">Countries Served</div>
+                    <div className="text-gray-600 text-body-sm font-body">Countries Served</div>
                   </div>
                 </div>
               </div>
@@ -335,7 +335,7 @@ export default function AboutPage() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                   <div className="absolute bottom-6 left-6 text-white">
-                    <h3 className="text-2xl font-semibold mb-2">HASCO Group Headquarters</h3>
+                    <h3 className="text-title-sm font-semibold mb-2 font-heading">HASCO Group Headquarters</h3>
                     <p className="text-gray-200">Dammam, Saudi Arabia</p>
                   </div>
                 </div>
@@ -366,7 +366,7 @@ export default function AboutPage() {
           
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-light text-gray-900 mb-6 font-heading apple-fade-in">
+              <h2 className="text-title-lg md:text-title-xl font-light text-gray-900 mb-6 font-heading apple-fade-in">
                 <span className="font-extralight">Our </span><span className="font-extralight text-gray-900">Core Services</span>
               </h2>
               <div className="w-24 h-1 bg-gradient-to-r from-brand-primary to-brand-secondary mx-auto mb-8 apple-scale-in apple-stagger-1"></div>
@@ -391,7 +391,7 @@ export default function AboutPage() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                     <div className="absolute top-4 left-4">
-                      <div className="bg-white/20 backdrop-blur-sm rounded-full px-3 py-1 text-white text-sm font-semibold">
+                      <div className="bg-white/20 backdrop-blur-sm rounded-full px-3 py-1 text-white text-body-sm font-semibold font-heading">
                         {service.stats}
                       </div>
                     </div>
@@ -458,7 +458,7 @@ export default function AboutPage() {
           
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-light text-gray-900 mb-6 font-heading apple-fade-in">
+              <h2 className="text-title-lg md:text-title-xl font-light text-gray-900 mb-6 font-heading apple-fade-in">
                 <span className="font-extralight">Mission & </span><span className="font-extralight text-gray-900">Vision</span>
               </h2>
               <div className="w-24 h-1 bg-gradient-to-r from-brand-primary to-brand-secondary mx-auto mb-8 apple-scale-in apple-stagger-1"></div>
@@ -515,7 +515,7 @@ export default function AboutPage() {
           
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-light text-gray-900 mb-6 font-heading apple-fade-in">
+              <h2 className="text-title-lg md:text-title-xl font-light text-gray-900 mb-6 font-heading apple-fade-in">
                 <span className="font-extralight">Our </span><span className="font-extralight text-gray-900">Divisions</span>
               </h2>
               <div className="w-24 h-1 bg-gradient-to-r from-brand-primary to-brand-secondary mx-auto mb-8 apple-scale-in apple-stagger-1"></div>
@@ -548,7 +548,7 @@ export default function AboutPage() {
                       </div>
                     </div>
                     <div className="absolute bottom-4 right-4">
-                      <div className="bg-white/20 backdrop-blur-sm rounded-full px-3 py-1 text-white text-sm font-semibold">
+                      <div className="bg-white/20 backdrop-blur-sm rounded-full px-3 py-1 text-white text-body-sm font-semibold font-heading">
                         {division.stats}
                       </div>
                     </div>
@@ -607,7 +607,7 @@ export default function AboutPage() {
       >
         <div id="ready-to-work-about" className="py-24 bg-gradient-to-r from-brand-primary to-brand-secondary">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-4xl md:text-5xl font-light text-white mb-6 font-heading apple-fade-in">
+            <h2 className="text-title-lg md:text-title-xl font-light text-white mb-6 font-heading apple-fade-in">
               <span className="font-extralight">Ready to Work With </span><span className="font-extralight text-white">Us?</span>
             </h2>
             <p className="text-subtitle-md md:text-subtitle-lg text-white/90 max-w-3xl mx-auto mb-8 font-body apple-slide-up apple-stagger-1">

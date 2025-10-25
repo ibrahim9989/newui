@@ -284,7 +284,7 @@ export default function ClientsPage() {
           
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-light text-gray-900 mb-6 font-heading apple-fade-in">
+              <h2 className="text-title-lg md:text-title-xl font-light text-gray-900 mb-6 font-heading apple-fade-in">
                 <span className="font-extralight">Our </span><span className="font-extralight text-gray-900">Client Sectors</span>
               </h2>
               <div className="w-24 h-1 bg-gradient-to-r from-brand-primary to-brand-secondary mx-auto mb-8 apple-scale-in apple-stagger-1"></div>
@@ -389,7 +389,7 @@ export default function ClientsPage() {
           
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-light text-gray-900 mb-6 font-heading apple-fade-in">
+              <h2 className="text-title-lg md:text-title-xl font-light text-gray-900 mb-6 font-heading apple-fade-in">
                 <span className="font-extralight">Client </span><span className="font-extralight text-gray-900">Testimonials</span>
               </h2>
               <div className="w-24 h-1 bg-gradient-to-r from-brand-primary to-brand-secondary mx-auto mb-8 apple-scale-in apple-stagger-1"></div>
@@ -422,7 +422,7 @@ export default function ClientsPage() {
                   {/* Client Info */}
                   <div className="flex items-center">
                     <div className="w-12 h-12 bg-gradient-to-br from-brand-primary to-brand-secondary rounded-full flex items-center justify-center mr-4">
-                      <span className="text-lg font-bold text-white font-heading">{testimonial.avatar}</span>
+                      <span className="text-title-sm font-bold text-white font-heading">{testimonial.avatar}</span>
                     </div>
                     <div>
                       <p className="text-body-sm font-semibold text-gray-900 font-heading">{testimonial.name}</p>
@@ -459,7 +459,7 @@ export default function ClientsPage() {
           
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-light text-gray-900 mb-6 font-heading apple-fade-in">
+              <h2 className="text-title-lg md:text-title-xl font-light text-gray-900 mb-6 font-heading apple-fade-in">
                 <span className="font-extralight">Client </span><span className="font-extralight text-gray-900">Satisfaction</span>
               </h2>
               <div className="w-24 h-1 bg-gradient-to-r from-brand-primary to-brand-secondary mx-auto mb-8 apple-scale-in apple-stagger-1"></div>
@@ -475,7 +475,7 @@ export default function ClientsPage() {
                     <AnimatedCounter 
                       end={100} 
                       suffix="%" 
-                      className="text-4xl md:text-5xl font-bold text-brand-primary mb-2"
+                      className="text-title-md md:text-title-lg font-bold text-brand-primary mb-2"
                       duration={2000}
                     />
                     <div className="absolute -top-2 -left-2 w-2 h-2 bg-cyan-400 rounded-full opacity-60 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -490,7 +490,7 @@ export default function ClientsPage() {
                       className="text-4xl md:text-5xl font-bold text-brand-primary mr-1"
                       duration={1800}
                     />
-                    <span className="text-2xl text-gray-500">/5</span>
+                    <span className="text-title-sm text-gray-500">/5</span>
                   </div>
                   <div className="text-body-sm text-gray-600">Average Rating</div>
                 </div>
@@ -528,7 +528,7 @@ export default function ClientsPage() {
       >
         <div id="become-partner" className="py-24 bg-gradient-to-r from-brand-primary to-brand-secondary">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-4xl md:text-5xl font-light text-white mb-6 font-heading apple-fade-in">
+            <h2 className="text-title-lg md:text-title-xl font-light text-white mb-6 font-heading apple-fade-in">
               <span className="font-extralight">Become Our </span><span className="font-extralight text-white">Partner</span>
             </h2>
             <p className="text-subtitle-md md:text-subtitle-lg text-white/90 max-w-3xl mx-auto mb-8 font-body apple-slide-up apple-stagger-1">

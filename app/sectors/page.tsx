@@ -224,7 +224,7 @@ export default function SectorsPage() {
           
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-light text-gray-900 mb-6 font-heading apple-fade-in">
+              <h2 className="text-title-lg md:text-title-xl font-light text-gray-900 mb-6 font-heading apple-fade-in">
                 <span className="font-extralight">Our </span><span className="font-extralight text-gray-900">Business Sectors</span>
               </h2>
               <div className="w-24 h-1 bg-gradient-to-r from-brand-primary to-brand-secondary mx-auto mb-8 apple-scale-in apple-stagger-1"></div>
@@ -255,7 +255,7 @@ export default function SectorsPage() {
                     {/* Icon */}
                     <div className="absolute top-6 left-6">
                       <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
-                        <span className="text-2xl font-bold text-white font-heading">{sector.icon}</span>
+                        <span className="text-title-sm font-bold text-white font-heading">{sector.icon}</span>
                       </div>
                     </div>
                     
@@ -351,7 +351,7 @@ export default function SectorsPage() {
           
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-light text-gray-900 mb-6 font-heading apple-fade-in">
+              <h2 className="text-title-lg md:text-title-xl font-light text-gray-900 mb-6 font-heading apple-fade-in">
                 <span className="font-extralight">Our </span><span className="font-extralight text-gray-900">Impact</span>
               </h2>
               <div className="w-24 h-1 bg-gradient-to-r from-brand-primary to-brand-secondary mx-auto mb-8 apple-scale-in apple-stagger-1"></div>
@@ -367,7 +367,7 @@ export default function SectorsPage() {
                     <AnimatedCounter 
                       end={19} 
                       suffix="+" 
-                      className="text-4xl md:text-5xl font-bold text-brand-primary mb-2"
+                      className="text-title-md md:text-title-lg font-bold text-brand-primary mb-2"
                       duration={2000}
                     />
                     <div className="absolute -top-2 -left-2 w-2 h-2 bg-cyan-400 rounded-full opacity-60 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -417,7 +417,7 @@ export default function SectorsPage() {
       >
         <div id="ready-to-work" className="py-24 bg-gradient-to-r from-brand-primary to-brand-secondary">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-4xl md:text-5xl font-light text-white mb-6 font-heading apple-fade-in">
+            <h2 className="text-title-lg md:text-title-xl font-light text-white mb-6 font-heading apple-fade-in">
               <span className="font-extralight">Ready to Work </span><span className="font-extralight text-white">Together?</span>
             </h2>
             <p className="text-subtitle-md md:text-subtitle-lg text-white/90 max-w-3xl mx-auto mb-8 font-body apple-slide-up apple-stagger-1">
