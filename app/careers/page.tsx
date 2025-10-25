@@ -255,7 +255,7 @@ export default function CareersPage() {
         transitionType="reveal" 
         addGradientOverlay={true}
       >
-        <div id="careers-hero" className="pt-48 pb-20 bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 relative overflow-hidden">
+        <div id="careers-hero" className="pt-48 pb-20 bg-gradient-to-br from-gray-900 via-brand-primary to-gray-900 relative overflow-hidden">
           <div className="absolute inset-0 bg-black/20"></div>
           
           {/* Premium background effects - matching homepage */}
@@ -328,7 +328,7 @@ export default function CareersPage() {
             </div>
             
             {/* Gradient overlays */}
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-50/20 to-transparent"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-brand-primary/20 to-transparent"></div>
           </div>
           
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -339,7 +339,7 @@ export default function CareersPage() {
                   onClick={() => setActiveTab('openings')}
                   className={`apple-btn px-8 py-3 rounded-xl text-button-md font-medium font-heading transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 ${
                     activeTab === 'openings'
-                      ? 'bg-gradient-to-r from-blue-600 to-blue-700 text-white hover:from-blue-700 hover:to-blue-800 hover:shadow-blue-500/25'
+                      ? 'bg-brand-primary text-white hover:bg-brand-secondary hover:shadow-brand-primary/25'
                       : 'text-gray-600 hover:text-gray-900'
                   }`}
                 >
@@ -349,7 +349,7 @@ export default function CareersPage() {
                   onClick={() => setActiveTab('apply')}
                   className={`apple-btn px-8 py-3 rounded-xl text-button-md font-medium font-heading transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 ${
                     activeTab === 'apply'
-                      ? 'bg-gradient-to-r from-blue-600 to-blue-700 text-white hover:from-blue-700 hover:to-blue-800 hover:shadow-blue-500/25'
+                      ? 'bg-brand-primary text-white hover:bg-brand-secondary hover:shadow-brand-primary/25'
                       : 'text-gray-600 hover:text-gray-900'
                   }`}
                 >
@@ -359,7 +359,7 @@ export default function CareersPage() {
                   onClick={() => setActiveTab('benefits')}
                   className={`apple-btn px-8 py-3 rounded-xl text-button-md font-medium font-heading transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 ${
                     activeTab === 'benefits'
-                      ? 'bg-gradient-to-r from-blue-600 to-blue-700 text-white hover:from-blue-700 hover:to-blue-800 hover:shadow-blue-500/25'
+                      ? 'bg-brand-primary text-white hover:bg-brand-secondary hover:shadow-brand-primary/25'
                       : 'text-gray-600 hover:text-gray-900'
                   }`}
                 >
@@ -413,7 +413,7 @@ export default function CareersPage() {
                         </div>
                         <button
                           onClick={() => setActiveTab('apply')}
-                          className="apple-btn mt-4 lg:mt-0 bg-gradient-to-r from-blue-600 to-blue-700 text-white px-6 py-3 rounded-xl text-button-md font-medium font-heading hover:from-blue-700 hover:to-blue-800 hover:shadow-blue-500/25 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+                          className="apple-btn mt-4 lg:mt-0 bg-brand-primary text-white px-6 py-3 rounded-xl text-button-md font-medium font-heading hover:bg-brand-secondary hover:shadow-brand-primary/25 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
                         >
                           Apply Now
                         </button>
@@ -636,7 +636,7 @@ export default function CareersPage() {
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="apple-btn w-full bg-gradient-to-r from-blue-600 to-blue-700 text-white py-4 px-8 rounded-xl text-button-md font-medium font-heading hover:from-blue-700 hover:to-blue-800 hover:shadow-blue-500/25 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-xl transform hover:scale-105"
+                      className="apple-btn w-full bg-brand-primary text-white py-4 px-8 rounded-xl text-button-md font-medium font-heading hover:bg-brand-secondary hover:shadow-brand-primary/25 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-xl transform hover:scale-105"
                     >
                       {isSubmitting ? (
                         <div className="flex items-center justify-center">

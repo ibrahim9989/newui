@@ -43,7 +43,7 @@ const divisions = [
     image: "https://images.unsplash.com/photo-1583212292454-1fe6229603b7?w=800&h=600&fit=crop&crop=center",
     category: "Marine",
     stats: "200+ Projects",
-    background: "from-blue-500 to-cyan-500"
+    background: "from-brand-primary to-brand-secondary"
   },
   {
     title: "Ship Agency",
@@ -51,7 +51,7 @@ const divisions = [
     image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop&crop=center",
     category: "Marine",
     stats: "15+ Ports",
-    background: "from-blue-600 to-indigo-600"
+    background: "from-brand-primary to-brand-secondary"
   },
   {
     title: "Freight Forwarding",
@@ -167,7 +167,7 @@ export default function AboutPage() {
         transitionType="reveal" 
         addGradientOverlay={true}
       >
-        <div id="about-hero" className="pt-48 pb-20 bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 relative overflow-hidden">
+        <div id="about-hero" className="pt-48 pb-20 bg-gradient-to-br from-gray-900 via-brand-primary to-gray-900 relative overflow-hidden">
           <div className="absolute inset-0 bg-black/20"></div>
           
           {/* Premium background effects - matching homepage */}
@@ -246,8 +246,8 @@ export default function AboutPage() {
             
             {/* Floating geometric elements */}
             <div className="absolute inset-0 opacity-5">
-              <div className="absolute top-20 left-20 w-32 h-32 border border-blue-200 rotate-45 bg-element-float" style={{ animationDuration: '4s' }}></div>
-              <div className="absolute bottom-20 right-20 w-24 h-24 border border-blue-200 rotate-12 bg-element-rotate" style={{ animationDuration: '3s', animationDelay: '1s' }}></div>
+              <div className="absolute top-20 left-20 w-32 h-32 border border-brand-primary/30 rotate-45 bg-element-float" style={{ animationDuration: '4s' }}></div>
+              <div className="absolute bottom-20 right-20 w-24 h-24 border border-brand-primary/30 rotate-12 bg-element-rotate" style={{ animationDuration: '3s', animationDelay: '1s' }}></div>
             </div>
             
             {/* Floating tech elements */}
@@ -361,7 +361,7 @@ export default function AboutPage() {
             </div>
             
             {/* Gradient overlays */}
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-50/20 to-transparent"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-brand-primary/20 to-transparent"></div>
           </div>
           
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -437,8 +437,8 @@ export default function AboutPage() {
             
             {/* Floating geometric elements */}
             <div className="absolute inset-0 opacity-5">
-              <div className="absolute top-20 left-20 w-32 h-32 border border-blue-200 rotate-45 bg-element-float" style={{ animationDuration: '4s' }}></div>
-              <div className="absolute bottom-20 right-20 w-24 h-24 border border-blue-200 rotate-12 bg-element-rotate" style={{ animationDuration: '3s', animationDelay: '1s' }}></div>
+              <div className="absolute top-20 left-20 w-32 h-32 border border-brand-primary/30 rotate-45 bg-element-float" style={{ animationDuration: '4s' }}></div>
+              <div className="absolute bottom-20 right-20 w-24 h-24 border border-brand-primary/30 rotate-12 bg-element-rotate" style={{ animationDuration: '3s', animationDelay: '1s' }}></div>
             </div>
             
             {/* Floating tech elements */}
@@ -466,7 +466,7 @@ export default function AboutPage() {
 
             <div className="grid md:grid-cols-2 gap-8">
               <div className="apple-card rounded-xl p-8 shadow-lg apple-hover-lift apple-fade-in">
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center mb-6 apple-float">
+                <div className="w-16 h-16 bg-gradient-to-br from-brand-primary to-brand-secondary rounded-full flex items-center justify-center mb-6 apple-float">
                   <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
@@ -510,7 +510,7 @@ export default function AboutPage() {
             </div>
             
             {/* Gradient overlays */}
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-50/20 to-transparent"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-brand-primary/20 to-transparent"></div>
           </div>
           
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">

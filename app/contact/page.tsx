@@ -146,7 +146,7 @@ export default function ContactPage() {
         transitionType="reveal" 
         addGradientOverlay={true}
       >
-        <div id="contact-hero" className="pt-48 pb-20 bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 relative overflow-hidden">
+        <div id="contact-hero" className="pt-48 pb-20 bg-gradient-to-br from-gray-900 via-brand-primary to-gray-900 relative overflow-hidden">
           <div className="absolute inset-0 bg-black/20"></div>
           
           {/* Premium background effects - matching homepage */}
@@ -219,7 +219,7 @@ export default function ContactPage() {
             </div>
             
             {/* Gradient overlays */}
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-50/20 to-transparent"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-brand-primary/20 to-transparent"></div>
           </div>
           
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -362,7 +362,7 @@ export default function ContactPage() {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="apple-btn w-full bg-gradient-to-r from-blue-600 to-blue-700 text-white py-4 px-8 rounded-xl text-button-md font-medium font-heading hover:from-blue-700 hover:to-blue-800 hover:shadow-blue-500/25 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-xl transform hover:scale-105"
+                    className="apple-btn w-full bg-brand-primary text-white py-4 px-8 rounded-xl text-button-md font-medium font-heading hover:bg-brand-secondary hover:shadow-brand-primary/25 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-xl transform hover:scale-105"
                   >
                     {isSubmitting ? (
                       <div className="flex items-center justify-center">
@@ -412,7 +412,7 @@ export default function ContactPage() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <a
                     href="tel:+966131234567"
-                    className="apple-btn bg-gradient-to-r from-blue-600 to-blue-700 text-white py-4 px-6 rounded-xl text-button-md font-medium font-heading hover:from-blue-700 hover:to-blue-800 hover:shadow-blue-500/25 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xl transform hover:scale-105"
+                    className="apple-btn bg-brand-primary text-white py-4 px-6 rounded-xl text-button-md font-medium font-heading hover:bg-brand-secondary hover:shadow-brand-primary/25 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xl transform hover:scale-105"
                   >
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
@@ -421,7 +421,7 @@ export default function ContactPage() {
                   </a>
                   <a
                     href="mailto:info@hascogroup.com"
-                    className="apple-btn bg-gradient-to-r from-blue-600 to-blue-700 text-white py-4 px-6 rounded-xl text-button-md font-medium font-heading hover:from-blue-700 hover:to-blue-800 hover:shadow-blue-500/25 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xl transform hover:scale-105"
+                    className="apple-btn bg-brand-primary text-white py-4 px-6 rounded-xl text-button-md font-medium font-heading hover:bg-brand-secondary hover:shadow-brand-primary/25 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xl transform hover:scale-105"
                   >
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />

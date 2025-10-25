@@ -17,7 +17,7 @@ const fallbackSectors = [
     description: "Comprehensive marine services including consultancy, operations, construction, and professional diving services.",
     features: ["Marine Consultancy", "Marine Operations", "Marine Construction", "Professional Diving"],
     icon: "M",
-    color: "from-blue-500 to-cyan-500",
+    color: "from-brand-primary to-brand-secondary",
     image: "https://images.unsplash.com/photo-1583212292454-1fe6229603b7?w=800&h=600&fit=crop&crop=center"
   },
   {
@@ -146,7 +146,7 @@ export default function SectorsPage() {
         transitionType="reveal" 
         addGradientOverlay={true}
       >
-        <div id="sectors-hero" className="pt-48 pb-20 bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 relative overflow-hidden">
+        <div id="sectors-hero" className="pt-48 pb-20 bg-gradient-to-br from-gray-900 via-brand-primary to-gray-900 relative overflow-hidden">
           <div className="absolute inset-0 bg-black/20"></div>
           
           {/* Premium background effects - matching homepage */}
@@ -219,7 +219,7 @@ export default function SectorsPage() {
             </div>
             
             {/* Gradient overlays */}
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-50/20 to-transparent"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-brand-primary/20 to-transparent"></div>
           </div>
           
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -314,7 +314,7 @@ export default function SectorsPage() {
         addDivider={false}
         addGradientOverlay={true}
       >
-        <div id="impact-section" className="py-24 bg-gradient-to-r from-gray-50 to-blue-50 relative overflow-hidden">
+        <div id="impact-section" className="py-24 bg-gradient-to-r from-gray-50 to-brand-primary/10 relative overflow-hidden">
           {/* Enhanced Background Effects - matching homepage */}
           <div className="absolute inset-0">
             {/* Background Image */}
@@ -330,8 +330,8 @@ export default function SectorsPage() {
             
             {/* Floating geometric elements */}
             <div className="absolute inset-0 opacity-5">
-              <div className="absolute top-20 left-20 w-32 h-32 border border-blue-200 rotate-45 bg-element-float" style={{ animationDuration: '4s' }}></div>
-              <div className="absolute bottom-20 right-20 w-24 h-24 border border-blue-200 rotate-12 bg-element-rotate" style={{ animationDuration: '3s', animationDelay: '1s' }}></div>
+              <div className="absolute top-20 left-20 w-32 h-32 border border-brand-primary/30 rotate-45 bg-element-float" style={{ animationDuration: '4s' }}></div>
+              <div className="absolute bottom-20 right-20 w-24 h-24 border border-brand-primary/30 rotate-12 bg-element-rotate" style={{ animationDuration: '3s', animationDelay: '1s' }}></div>
             </div>
             
             {/* Floating tech elements */}
