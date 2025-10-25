@@ -11,7 +11,7 @@ const divisions = [
     image: "https://images.unsplash.com/photo-1583212292454-1fe6229603b7?w=800&h=600&fit=crop&crop=center",
     category: "Marine",
     stats: "200+ Projects",
-    background: "from-brand-primary to-brand-secondary"
+    background: "bg-brand-primary"
   },
   {
     title: "Ship Agency",
@@ -19,7 +19,7 @@ const divisions = [
     image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop&crop=center",
     category: "Marine",
     stats: "15+ Ports",
-    background: "from-brand-primary to-brand-secondary"
+    background: "bg-brand-primary"
   },
   {
     title: "Freight Forwarding",
@@ -27,7 +27,7 @@ const divisions = [
     image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop&crop=center",
     category: "Logistics",
     stats: "10K+ Shipments",
-    background: "from-green-500 to-emerald-500"
+    background: "bg-green-500"
   },
   {
     title: "Logistics & Supply Chain",
@@ -35,7 +35,7 @@ const divisions = [
     image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&h=600&fit=crop&crop=center",
     category: "Logistics",
     stats: "12 Warehouses",
-    background: "from-green-600 to-teal-600"
+    background: "bg-green-600"
   },
   {
     title: "Hospitality & Events",
@@ -43,7 +43,7 @@ const divisions = [
     image: "https://images.unsplash.com/photo-1519167758481-83f1426e6b1c?w=800&h=600&fit=crop&crop=center",
     category: "Hospitality",
     stats: "1000+ Events",
-    background: "from-purple-500 to-pink-500"
+    background: "bg-purple-500"
   },
   {
     title: "Facility Management",
@@ -51,7 +51,7 @@ const divisions = [
     image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&h=600&fit=crop&crop=center",
     category: "Management",
     stats: "50+ Facilities",
-    background: "from-orange-500 to-red-500"
+    background: "bg-orange-500"
   },
   {
     title: "Property Development",
@@ -59,7 +59,7 @@ const divisions = [
     image: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800&h=600&fit=crop&crop=center",
     category: "Development",
     stats: "$500M+ Value",
-    background: "from-yellow-500 to-orange-500"
+    background: "bg-yellow-500"
   },
   {
     title: "Construction",
@@ -67,7 +67,7 @@ const divisions = [
     image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&h=600&fit=crop&crop=center",
     category: "Construction",
     stats: "25+ Projects",
-    background: "from-gray-600 to-gray-800"
+    background: "bg-gray-600"
   }
 ]
 
@@ -145,7 +145,7 @@ export default function OurDivisions() {
               style={{ transitionDelay: `${index * 100}ms`, animationDelay: `${index * 0.1}s` }}
             >
               {/* Division Header with Background */}
-              <div className={`h-32 bg-gradient-to-br ${division.background} relative overflow-hidden`}>
+              <div className={`h-32 ${division.background} relative overflow-hidden`}>
                 <div className="absolute inset-0">
                   <Image
                     src={division.image}
@@ -201,7 +201,6 @@ export default function OurDivisions() {
               </div>
 
               {/* Hover Effect Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-br from-brand-primary/5 to-brand-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
             </div>
           ))}
         </div>
@@ -249,7 +248,7 @@ export default function OurDivisions() {
 
         {/* Call to Action */}
         <div className="text-center mt-16">
-          <div className="bg-gradient-to-r from-brand-primary to-brand-secondary rounded-2xl p-8 text-white">
+          <div className="bg-brand-primary rounded-2xl p-8 text-white">
             <h3 className="text-title-md md:text-title-lg font-semibold mb-4 font-heading">Ready to Work Together?</h3>
             <p className="text-body-lg mb-6 opacity-90 font-body">
               Explore our comprehensive range of services and discover how we can support your project

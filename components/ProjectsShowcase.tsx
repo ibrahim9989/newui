@@ -109,11 +109,11 @@ export default function ProjectsShowcase() {
 
         {/* Project Carousel */}
         <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <div className="bg-gradient-to-br from-gray-50 to-white rounded-3xl p-8 shadow-2xl">
+          <div className="bg-white rounded-3xl p-8 shadow-2xl">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               {/* Project Image/Visual */}
               <div className="relative">
-                <div className="bg-gradient-to-br from-brand-primary/10 to-brand-secondary/10 rounded-2xl overflow-hidden">
+                <div className="bg-brand-primary/10 rounded-2xl overflow-hidden">
                   <div className="relative h-80">
                     <Image
                       src={projects[currentProject].image}

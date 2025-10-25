@@ -144,7 +144,6 @@ export default function OurServices() {
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-300"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                 <div className="absolute top-4 right-4">
                   <div className="text-xs text-white bg-black/50 px-2 py-1 rounded-full backdrop-blur-sm">
                     {service.category}
@@ -166,7 +165,6 @@ export default function OurServices() {
               </div>
 
               {/* Hover Effect Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-br from-brand-primary/5 to-brand-secondary/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
             </div>
           ))}
         </div>

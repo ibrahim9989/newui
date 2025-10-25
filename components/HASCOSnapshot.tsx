@@ -24,7 +24,7 @@ export default function HASCOSnapshot() {
   }, [])
 
   return (
-    <section id="hasco-snapshot" className="py-24 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
+    <section id="hasco-snapshot" className="py-24 bg-white relative overflow-hidden">
       {/* Enhanced Background Effects */}
       <div className="absolute inset-0">
         {/* Background Image */}
@@ -36,7 +36,6 @@ export default function HASCOSnapshot() {
         ></div>
         
         {/* Subtle gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/50 to-transparent"></div>
         
         {/* Floating geometric elements */}
         <div className="absolute inset-0 opacity-5">

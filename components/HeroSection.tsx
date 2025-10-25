@@ -29,7 +29,6 @@ export default function HeroSection() {
       {/* Premium background effects */}
       <div className="absolute inset-0">
         {/* Subtle overlay for depth without color */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
         
         {/* Animated geometric patterns */}
         <div className="absolute inset-0 opacity-5">
@@ -118,8 +117,6 @@ export default function HeroSection() {
             ></div>
             {/* Premium briefcase with enhanced shine */}
             <div className="absolute bottom-20 right-12 w-8 h-6 bg-white rounded-sm shadow-lg relative overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent animate-pulse"></div>
-              <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent"></div>
             </div>
             {/* Briefcase handle */}
             <div className="absolute bottom-24 right-14 w-4 h-1 bg-white shadow-sm"></div>
@@ -161,20 +158,17 @@ export default function HeroSection() {
             {/* Monitor screen with advanced effects */}
             <div className="bg-white rounded-lg p-2 shadow-2xl shadow-black/50 relative overflow-hidden">
               {/* Screen reflection effect */}
-              <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-transparent"></div>
               <div className="bg-gray-800 rounded h-full flex items-center justify-center relative">
                 {/* Animated screen content */}
                 <div className="text-gray-400 text-sm animate-pulse">Monitor Display</div>
                 {/* Enhanced screen glow effect */}
                 <div className="absolute inset-0 bg-brand-secondary/10 rounded animate-pulse"></div>
                 {/* Screen scan lines */}
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/5 to-transparent animate-pulse" style={{ animationDuration: '2s' }}></div>
                 {/* Corner highlights */}
                 <div className="absolute top-2 left-2 w-4 h-4 bg-white/20 rounded-full blur-sm"></div>
                 <div className="absolute top-2 right-2 w-4 h-4 bg-white/20 rounded-full blur-sm"></div>
               </div>
               {/* Monitor frame glow */}
-              <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-white/10 via-transparent to-white/10"></div>
             </div>
             {/* Premium monitor stand with glow */}
             <div 
@@ -207,12 +201,10 @@ export default function HeroSection() {
           <div className="flex flex-col sm:flex-row gap-4 max-w-md animate-fade-in-up" style={{ animationDelay: '0.8s' }}>
             <button className="group relative bg-brand-primary text-white px-8 py-4 text-lg font-semibold hover:bg-brand-secondary transition-all duration-300 rounded-lg overflow-hidden shadow-lg hover:shadow-xl hover:shadow-brand-primary/25 transform hover:scale-105">
               {/* Button shine effect */}
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
               <span className="relative z-10">READ MORE</span>
             </button>
             <button className="group relative bg-white text-brand-primary border-2 border-brand-primary px-8 py-4 text-lg font-semibold hover:bg-brand-primary hover:text-white transition-all duration-300 rounded-lg overflow-hidden shadow-lg hover:shadow-xl hover:shadow-brand-primary/25 transform hover:scale-105">
               {/* Button shine effect */}
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-brand-primary/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
               <span className="relative z-10">JOIN US</span>
             </button>
           </div>

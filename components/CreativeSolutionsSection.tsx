@@ -58,7 +58,7 @@ export default function CreativeSolutionsSection() {
                 <div className="bg-gray-800 rounded-t-lg p-4 relative">
                   <div className="bg-white rounded-lg overflow-hidden aspect-video relative">
                     {/* Desktop background image */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-brand-primary via-brand-primary to-brand-secondary">
+                    <div className="absolute inset-0 bg-brand-primary">
                       {/* Desert landscape representation */}
                       <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-yellow-200">
                         <div className="absolute right-1/4 top-0 w-16 h-16 bg-yellow-300 transform rotate-45"></div>

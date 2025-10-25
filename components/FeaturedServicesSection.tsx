@@ -86,7 +86,7 @@ export default function FeaturedServicesSection() {
     : services.filter(service => service.category === activeTab)
 
   return (
-    <section className="bg-gradient-to-br from-brand-dark to-brand-secondary py-20">
+    <section className="bg-brand-dark py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Title */}
         <div className="text-center mb-12">
@@ -110,7 +110,6 @@ export default function FeaturedServicesSection() {
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               {/* Shine effect */}
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-500"></div>
               <span className="relative z-10">{tab}</span>
             </button>
           ))}
@@ -127,10 +126,8 @@ export default function FeaturedServicesSection() {
                   className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
                 />
                 {/* Premium overlay effects */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="absolute inset-0 bg-brand-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 {/* Shine effect */}
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
               </div>
               <div className="p-6 relative">
                 <h3 className="text-title-sm font-semibold text-gray-800 mb-2 group-hover:text-brand-primary transition-colors duration-300 font-heading">

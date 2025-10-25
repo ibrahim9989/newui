@@ -64,7 +64,7 @@ export default function AboutHASCOGroup() {
           <h2 className="text-title-lg md:text-title-xl font-light text-gray-900 mb-6 font-heading apple-fade-in">
             <span className="font-extralight">About </span><span className="font-extralight text-gray-900">HASCO Group</span>
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-brand-primary to-brand-secondary mx-auto mb-8 apple-scale-in apple-stagger-1"></div>
+          <div className="w-24 h-1 bg-brand-primary mx-auto mb-8 apple-scale-in apple-stagger-1"></div>
           <p className="text-subtitle-md md:text-subtitle-lg text-gray-600 max-w-3xl mx-auto font-body apple-slide-up apple-stagger-2">
             Pioneering excellence in integrated solutions across marine, logistics, and development sectors with 
             <span className="text-brand-primary font-semibold"> 19+ years of proven expertise</span>
@@ -141,7 +141,7 @@ export default function AboutHASCOGroup() {
         {/* Mission & Vision */}
         <div className="mt-16 grid md:grid-cols-2 gap-6">
           <div className="apple-card rounded-xl p-6 shadow-lg apple-hover-lift apple-fade-in apple-stagger-5">
-            <div className="w-12 h-12 bg-gradient-to-br from-brand-primary to-brand-secondary rounded-full flex items-center justify-center mb-4 apple-float">
+            <div className="w-12 h-12 bg-brand-primary rounded-full flex items-center justify-center mb-4 apple-float">
               <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>

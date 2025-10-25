@@ -64,7 +64,7 @@ export default function FeaturedProjects() {
   }, [])
 
   return (
-    <section id="featured-projects" className="py-24 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
+    <section id="featured-projects" className="py-24 bg-white relative overflow-hidden">
       {/* Enhanced Background Effects */}
       <div className="absolute inset-0">
         {/* Subtle pattern overlay */}
@@ -74,7 +74,6 @@ export default function FeaturedProjects() {
         </div>
         
         {/* Gradient overlays */}
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-brand-primary/20 to-transparent"></div>
       </div>
       
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
@@ -111,13 +110,12 @@ export default function FeaturedProjects() {
                       
                       {/* Enhanced Sector Badge */}
                       <div className="absolute top-6 left-6">
-                        <span className="bg-gradient-to-r from-brand-primary to-brand-secondary text-white px-6 py-3 rounded-full text-body-sm font-medium font-heading shadow-lg">
+                        <span className="bg-brand-primary text-white px-6 py-3 rounded-full text-body-sm font-medium font-heading shadow-lg">
                           {project.sector}
                         </span>
                       </div>
                       
                       {/* Hover overlay */}
-                      <div className="absolute inset-0 bg-gradient-to-br from-brand-primary/20 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                     </div>
 
                     {/* Project Content */}
@@ -131,7 +129,7 @@ export default function FeaturedProjects() {
                           {project.description}
                         </p>
                         
-                        <div className="bg-gradient-to-r from-brand-primary/10 to-brand-secondary/10 p-8 rounded-2xl border border-brand-primary/20 shadow-lg">
+                        <div className="bg-brand-primary/5 p-8 rounded-2xl border border-brand-primary/20 shadow-lg">
                           <div className="flex items-start space-x-4">
                             <div className="w-8 h-8 bg-brand-primary rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                               <span className="text-white text-sm font-bold">💡</span>
@@ -146,8 +144,7 @@ export default function FeaturedProjects() {
                       </div>
 
                       <div className="pt-4">
-                        <button className="group relative bg-gradient-to-r from-brand-primary to-brand-secondary text-white px-8 py-4 text-button-lg font-medium font-heading hover:from-brand-secondary hover:to-brand-primary rounded-xl shadow-lg hover:shadow-xl hover:shadow-brand-primary/25 transform hover:scale-105 transition-all duration-300 overflow-hidden">
-                          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
+                        <button className="group relative bg-brand-primary text-white px-8 py-4 text-button-lg font-medium font-heading hover:bg-brand-secondary rounded-xl shadow-lg hover:shadow-xl hover:shadow-brand-primary/25 transform hover:scale-105 transition-all duration-300 overflow-hidden">
                           <span className="relative z-10 tracking-wide">Learn More</span>
                         </button>
                       </div>
