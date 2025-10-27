@@ -9,18 +9,18 @@ export default function ConditionalFooter() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Information */}
           <div className="lg:col-span-2">
-            <div className="flex items-center mb-2">
-              <div className="relative w-48 h-48">
+            <div className="flex items-center mb-0">
+              <div className="relative w-24 h-24">
                 <Image
                   src="/logo.png"
                   alt="HASCO Group Logo"
-                  width={192}
-                  height={192}
+                  width={96}
+                  height={96}
                   className="object-contain"
                 />
               </div>
             </div>
-            <p className="text-black leading-relaxed mb-4 max-w-md">
+            <p className="text-black leading-relaxed mt-0 mb-0 max-w-md">
               Excellence in integrated solutions across marine, logistics, and development sectors with 19+ years of proven expertise. Your trust, our commitment.
             </p>
             <div className="flex space-x-4">
