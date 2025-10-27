@@ -10,12 +10,12 @@ export default function Header() {
     <header className={`fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200 shadow-sm py-1`}>
 
       {/* Main navigation */}
-      <div className="w-full pl-4 sm:pl-6 lg:pl-8 pr-4 sm:pr-6 lg:pr-8">
-        <div className="flex justify-between items-center">
+      <div className="w-full pl-6 sm:pl-8 lg:pl-12 pr-4 sm:pr-6 lg:pr-8">
+        <div className="flex justify-between items-center h-[54px]">
           {/* Logo Section */}
           <div className="flex items-center pl-0">
             <a href="/" className="flex items-center">
-              <div className="w-15 h-15 sm:w-18 sm:h-18 lg:w-20 lg:h-20 flex items-center justify-center">
+              <div className="w-22 h-22 sm:w-24 sm:h-24 lg:w-28 lg:h-28 flex items-center justify-center">
                 <Image
                   src="/logo.png"
                   alt="HASCO Group Logo"

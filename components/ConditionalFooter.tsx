@@ -9,7 +9,7 @@ export default function ConditionalFooter() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Information */}
           <div className="lg:col-span-2">
-            <div className="flex items-center mb-4">
+            <div className="flex items-center mb-2">
               <div className="relative w-48 h-48">
                 <Image
                   src="/logo.png"
