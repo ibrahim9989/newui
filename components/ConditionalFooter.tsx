@@ -10,12 +10,12 @@ export default function ConditionalFooter() {
           {/* Company Information */}
           <div className="lg:col-span-2">
             <div className="flex items-center mb-4">
-              <div className="relative w-24 h-24">
+              <div className="relative w-48 h-48">
                 <Image
                   src="/logo.png"
                   alt="HASCO Group Logo"
-                  width={96}
-                  height={96}
+                  width={192}
+                  height={192}
                   className="object-contain"
                 />
               </div>

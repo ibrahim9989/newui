@@ -7,15 +7,15 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200 shadow-sm py-2`}>
+    <header className={`fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200 shadow-sm py-1`}>
 
       {/* Main navigation */}
-      <div className="w-full pl-6 sm:pl-8 lg:pl-12 pr-6 sm:pr-8 lg:pr-12">
+      <div className="w-full pl-4 sm:pl-6 lg:pl-8 pr-4 sm:pr-6 lg:pr-8">
         <div className="flex justify-between items-center">
           {/* Logo Section */}
           <div className="flex items-center pl-0">
             <a href="/" className="flex items-center">
-              <div className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 flex items-center justify-center">
+              <div className="w-15 h-15 sm:w-18 sm:h-18 lg:w-20 lg:h-20 flex items-center justify-center">
                 <Image
                   src="/logo.png"
                   alt="HASCO Group Logo"
@@ -29,7 +29,7 @@ export default function Header() {
           </div>
 
           {/* Desktop Navigation */}
-        <nav className="hidden lg:flex items-center space-x-6">
+        <nav className="hidden lg:flex items-center space-x-4">
           {[
             { href: '/', label: 'Home' },
             { href: '/about', label: 'About' },
@@ -41,7 +41,7 @@ export default function Header() {
               <a
                 key={item.href}
                 href={item.href}
-                className={`group relative transition-all duration-300 font-medium font-heading text-base md:text-lg text-gray-800 hover:text-brand-primary`}
+                className={`group relative transition-all duration-300 font-medium font-heading text-sm md:text-base text-gray-800 hover:text-brand-primary`}
               >
                 <span className="relative z-10">{item.label}</span>
                 <div className={`absolute -bottom-1 left-0 w-0 h-0.5 group-hover:w-full transition-all duration-300 bg-brand-primary`}></div>

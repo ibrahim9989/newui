@@ -82,7 +82,7 @@ export default function FeaturedProjects() {
             <span className="font-extralight">Featured </span>
             <span className="font-extralight text-gray-900">Projects</span>
           </h2>
-          <p className="text-subtitle-md md:text-subtitle-lg text-gray-600 max-w-3xl mx-auto font-body">
+          <p className="text-body-md md:text-body-lg text-gray-600 max-w-3xl mx-auto font-body">
             Discover how HASCO is contributing to Saudi Arabia's most ambitious development projects, delivering world-class solutions across multiple sectors.
           </p>
         </div>

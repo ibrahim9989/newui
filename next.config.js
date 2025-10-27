@@ -74,6 +74,18 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'icon2.cleanpng.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'www.dhl.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'static.vecteezy.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 's44783.pcdn.co',
+      },
     ],
   },
   output: 'standalone',

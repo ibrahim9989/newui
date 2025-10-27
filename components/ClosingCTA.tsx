@@ -88,7 +88,7 @@ export default function ClosingCTA() {
 
           {/* Description */}
           <div className={`max-w-3xl mx-auto transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-            <p className="text-subtitle-md md:text-subtitle-lg text-gray-300 leading-relaxed font-body">
+            <p className="text-body-md md:text-body-lg text-gray-300 leading-relaxed font-body">
               Join us in shaping the future of Saudi Arabia. Whether you're planning a mega-project, need specialized marine services, or require comprehensive logistics solutions, HASCO delivers the expertise and reliability you need.
             </p>
           </div>
