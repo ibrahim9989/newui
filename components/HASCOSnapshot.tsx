@@ -59,7 +59,7 @@ export default function HASCOSnapshot() {
           <div className="space-y-8 text-center">
             <div className={`space-y-6 transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
               <div className="space-y-4">
-                <p className="text-subtitle-md md:text-subtitle-lg text-gray-700 leading-relaxed font-body">
+                <p className="text-body-md md:text-body-lg text-gray-700 leading-relaxed font-body">
                   HASCO has grown from a focused logistics provider into a diversified holding group. Based in the Kingdom of Saudi Arabia, we operate across Marine, Logistics, Construction, Shipping, Tourism, Hospitality, and Consultancy, supporting the nation's transformation under Vision 2030.
                 </p>
               </div>

@@ -4,15 +4,15 @@ import Image from 'next/image'
 
 export default function ConditionalFooter() {
   return (
-    <footer className="bg-white text-black py-16">
+    <footer className="bg-white text-black py-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Information */}
           <div className="lg:col-span-2">
-            <div className="flex items-center mb-6">
+            <div className="flex items-center mb-4">
               <div className="relative w-24 h-24">
                 <Image
-                  src="/images/hasco-white-logo.png"
+                  src="/logo.png"
                   alt="HASCO Group Logo"
                   width={96}
                   height={96}
@@ -20,7 +20,7 @@ export default function ConditionalFooter() {
                 />
               </div>
             </div>
-            <p className="text-black leading-relaxed mb-6 max-w-md">
+            <p className="text-black leading-relaxed mb-4 max-w-md">
               Excellence in integrated solutions across marine, logistics, and development sectors with 19+ years of proven expertise. Your trust, our commitment.
             </p>
             <div className="flex space-x-4">
@@ -34,7 +34,7 @@ export default function ConditionalFooter() {
 
           {/* Useful Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-6">Useful Links</h3>
+            <h3 className="text-lg font-semibold mb-4">Useful Links</h3>
             <ul className="space-y-3">
               <li>
                 <a href="#home" className="text-black hover:text-brand-primary transition-colors duration-300">
@@ -66,7 +66,7 @@ export default function ConditionalFooter() {
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-lg font-semibold mb-6">Contact Info</h3>
+            <h3 className="text-lg font-semibold mb-4">Contact Info</h3>
             <div className="space-y-4">
               <div className="flex items-start space-x-3">
                 <svg className="w-5 h-5 text-brand-primary mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
@@ -100,7 +100,7 @@ export default function ConditionalFooter() {
         </div>
 
         {/* Bottom Border */}
-        <div className="border-t border-gray-200 mt-12 pt-8">
+        <div className="border-t border-gray-200 mt-8 pt-6">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-gray-600 text-sm mb-4 md:mb-0">
               ©Copyright HASCO 2025. All rights reserved.

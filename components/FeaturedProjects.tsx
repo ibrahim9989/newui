@@ -76,8 +76,8 @@ export default function FeaturedProjects() {
         {/* Gradient overlays */}
       </div>
       
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
-        <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+      <div className="w-full relative z-10">
+        <div className={`text-center mb-16 px-6 sm:px-8 lg:px-12 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <h2 className="text-title-lg md:text-title-xl font-light text-gray-900 leading-tight font-heading mb-6">
             <span className="font-extralight">Featured </span>
             <span className="font-extralight text-gray-900">Projects</span>
@@ -89,14 +89,14 @@ export default function FeaturedProjects() {
 
         {/* Project Carousel */}
         <div className={`relative transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <div className="overflow-hidden rounded-2xl">
+          <div className="overflow-hidden">
             <div 
               className="flex transition-transform duration-500 ease-in-out"
               style={{ transform: `translateX(-${currentProject * 100}%)` }}
             >
               {projects.map((project, index) => (
                 <div key={index} className="w-full flex-shrink-0">
-                  <div className="grid lg:grid-cols-2 gap-16 items-center min-h-[500px]">
+                  <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center min-h-[500px] px-6 sm:px-8 lg:px-12">
                     {/* Project Image */}
                     <div className="relative group">
                       <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl transform group-hover:scale-105 transition-transform duration-500 img-gentle-hover">
@@ -156,7 +156,7 @@ export default function FeaturedProjects() {
           </div>
 
           {/* Navigation Dots */}
-          <div className="flex justify-center mt-8 space-x-3">
+          <div className="flex justify-center mt-8 space-x-3 px-6 sm:px-8 lg:px-12">
             {projects.map((_, index) => (
               <button
                 key={index}

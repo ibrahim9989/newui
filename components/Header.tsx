@@ -15,7 +15,7 @@ export default function Header() {
           {/* Logo Section */}
           <div className="flex items-center pl-0">
             <a href="/" className="flex items-center">
-              <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 flex items-center justify-center">
+              <div className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 flex items-center justify-center">
                 <Image
                   src="/logo.png"
                   alt="HASCO Group Logo"
