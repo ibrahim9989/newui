@@ -5,6 +5,7 @@ import SectorsOverview from '@/components/SectorsOverview'
 import OurClientsSection from '@/components/OurClientsSection'
 import StatsSection from '@/components/StatsSection'
 import FeaturedProjects from '@/components/FeaturedProjects'
+import LatestNews from '@/components/LatestNews'
 import ClosingCTA from '@/components/ClosingCTA'
 import ConditionalFooter from '@/components/ConditionalFooter'
 import SectionTransition from '@/components/SectionTransition'
@@ -57,21 +58,10 @@ export default function Home() {
         </div>
       </SectionTransition>
       
-      {/* Section 5: Stats Section */}
-      <SectionTransition 
-        transitionType="fade-in" 
-        delay={450}
-        addDivider={false}
-      >
-        <div id="stats-section">
-          <StatsSection />
-        </div>
-      </SectionTransition>
-      
-      {/* Section 6: Featured Projects */}
+      {/* Section 5: Featured Projects (moved before stats) */}
       <SectionTransition 
         transitionType="slide-up" 
-        delay={500}
+        delay={450}
         addDivider={false}
       >
         <div id="featured-projects">
@@ -79,7 +69,29 @@ export default function Home() {
         </div>
       </SectionTransition>
       
-      {/* Section 7: Closing CTA */}
+      {/* Section 6: Stats Section */}
+      <SectionTransition 
+        transitionType="fade-in" 
+        delay={500}
+        addDivider={false}
+      >
+        <div id="stats-section">
+          <StatsSection />
+        </div>
+      </SectionTransition>
+
+      {/* Section 7: Latest News (after stats) */}
+      <SectionTransition 
+        transitionType="slide-up" 
+        delay={550}
+        addDivider={false}
+      >
+        <div id="latest-news">
+          <LatestNews />
+        </div>
+      </SectionTransition>
+
+      {/* Section 8: Closing CTA */}
       <SectionTransition 
         transitionType="fade-in" 
         delay={600}
