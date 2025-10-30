@@ -41,7 +41,7 @@ export default function Header() {
               <a
                 key={item.href}
                 href={item.href}
-                className={`group relative transition-all duration-300 font-medium font-heading text-sm md:text-base text-gray-800 hover:text-brand-primary`}
+                className={`group relative transition-all duration-300 font-semibold font-heading text-sm md:text-base text-gray-800 hover:text-brand-primary`}
               >
                 <span className="relative z-10">{item.label}</span>
                 <div className={`absolute -bottom-1 left-0 w-0 h-0.5 group-hover:w-full transition-all duration-300 bg-brand-primary`}></div>
@@ -85,7 +85,7 @@ export default function Header() {
                 <a
                   key={item.href}
                   href={item.href}
-                  className={`transition-colors duration-300 font-medium font-heading text-base py-2 border-l-2 border-transparent pl-4 text-gray-800 hover:text-brand-primary hover:border-brand-primary`}
+                  className={`transition-colors duration-300 font-semibold font-heading text-base py-2 border-l-2 border-transparent pl-4 text-gray-800 hover:text-brand-primary hover:border-brand-primary`}
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.label}

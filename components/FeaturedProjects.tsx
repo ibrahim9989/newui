@@ -64,110 +64,40 @@ export default function FeaturedProjects() {
   }, [])
 
   return (
-    <section id="featured-projects" className="py-24 bg-white relative overflow-hidden">
-      {/* Enhanced Background Effects */}
-      <div className="absolute inset-0">
-        {/* Subtle pattern overlay */}
-        <div className="absolute inset-0 opacity-5">
-          <div className="absolute top-20 left-20 w-24 h-24 border border-gray-300 rotate-45 animate-pulse" style={{ animationDuration: '6s' }}></div>
-          <div className="absolute bottom-20 right-20 w-20 h-20 border border-gray-300 rotate-12 animate-pulse" style={{ animationDuration: '4s', animationDelay: '2s' }}></div>
-        </div>
-        
-        {/* Gradient overlays */}
-      </div>
-      
-      <div className="w-full relative z-10">
-        <div className={`text-center mb-16 px-6 sm:px-8 lg:px-12 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <h2 className="text-title-lg md:text-title-xl font-light text-gray-900 leading-tight font-heading mb-6">
-            <span className="font-extralight">Featured </span>
-            <span className="font-extralight text-gray-900">Projects</span>
-          </h2>
-          <p className="text-body-md md:text-body-lg text-gray-600 max-w-3xl mx-auto font-body">
-            Discover how HASCO is contributing to Saudi Arabia's most ambitious development projects, delivering world-class solutions across multiple sectors.
-          </p>
-        </div>
-
-        {/* Project Carousel */}
-        <div className={`relative transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <div className="overflow-hidden">
-            <div 
-              className="flex transition-transform duration-500 ease-in-out"
-              style={{ transform: `translateX(-${currentProject * 100}%)` }}
-            >
-              {projects.map((project, index) => (
-                <div key={index} className="w-full flex-shrink-0">
-                  <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center min-h-[500px] px-6 sm:px-8 lg:px-12">
-                    {/* Project Image */}
-                    <div className="relative group">
-                      <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl transform group-hover:scale-105 transition-transform duration-500 img-gentle-hover">
-                        <img
-                          src={project.image}
-                          alt={project.title}
-                          className="w-full h-full object-cover"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
-                      </div>
-                      
-                      {/* Enhanced Sector Badge */}
-                      <div className="absolute top-6 left-6">
-                        <span className="bg-brand-primary text-white px-6 py-3 rounded-full text-body-sm font-medium font-heading shadow-lg">
-                          {project.sector}
-                        </span>
-                      </div>
-                      
-                      {/* Hover overlay */}
-                    </div>
-
-                    {/* Project Content */}
-                    <div className="space-y-8">
-                      <div className="space-y-6">
-                        <h3 className="text-title-md md:text-title-lg font-semibold text-gray-900 leading-tight font-heading">
-                          {project.title}
-                        </h3>
-                        
-                        <p className="text-body-md text-gray-700 leading-relaxed font-body">
-                          {project.description}
-                        </p>
-                        
-                        <div className="bg-brand-primary/5 p-8 rounded-2xl border border-brand-primary/20 shadow-lg">
-                          <div className="flex items-start space-x-4">
-                            <div className="w-8 h-8 bg-brand-primary rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                              <span className="text-white text-sm font-bold">💡</span>
-                            </div>
-                            <div>
-                              <p className="text-gray-800 font-medium font-body text-body-md leading-relaxed">
-                                <span className="font-semibold">Impact:</span> {project.impact}
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div className="pt-4">
-                        <button className="group relative bg-brand-primary text-white px-8 py-4 text-button-lg font-medium font-heading hover:bg-brand-secondary rounded-xl shadow-lg hover:shadow-xl hover:shadow-brand-primary/25 transform hover:scale-105 transition-all duration-300 overflow-hidden">
-                          <span className="relative z-10 tracking-wide">Learn More</span>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
+    <section id="featured-projects" className="py-24 bg-white relative">
+      <div className="px-6 sm:px-8 lg:px-12">
+        <div className={`grid lg:grid-cols-12 gap-10 items-start transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          {/* Left title/intro like reference */}
+          <div className="lg:col-span-4">
+            <h2 className="text-title-lg md:text-title-xl font-light text-gray-900 leading-tight font-heading mb-4">
+              <span className="font-extralight">Featured </span>
+              <span className="font-extralight text-gray-900">Projects</span>
+            </h2>
+            <p className="text-body-md md:text-body-lg text-gray-600 font-body max-w-md">
+              Discover how HASCO is contributing to Saudi Arabia's most ambitious development projects, delivering world-class solutions across multiple sectors.
+            </p>
           </div>
 
-          {/* Navigation Dots */}
-          <div className="flex justify-center mt-8 space-x-3 px-6 sm:px-8 lg:px-12">
-            {projects.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentProject(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  index === currentProject 
-                    ? 'bg-brand-primary scale-125' 
-                    : 'bg-gray-300 hover:bg-gray-400'
-                }`}
-              />
-            ))}
+          {/* Right - horizontally scrollable cards */}
+          <div className="lg:col-span-8">
+            <div className="relative overflow-hidden">
+              <div className="flex gap-6 overflow-x-auto snap-x snap-mandatory no-scrollbar pb-6">
+                {projects.map((project, index) => (
+                  <article key={index} className="relative snap-start flex-shrink-0 w-[85%] md:w-[70%] lg:w-[85%]">
+                    <div className="relative aspect-[16/9] overflow-hidden">
+                      <img src={project.image} alt={project.title} className="w-full h-full object-cover" />
+                      <div className="absolute inset-0 bg-black/35"></div>
+                      <div className="absolute bottom-0 left-0 right-0 p-6">
+                        <span className="inline-block bg-brand-primary text-white text-xs px-3 py-1 rounded-full mb-3 font-heading">NEWS</span>
+                        <h3 className="text-white text-title-sm md:text-title-md font-heading">
+                          {project.title}
+                        </h3>
+                      </div>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </div>

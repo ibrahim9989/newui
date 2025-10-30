@@ -51,7 +51,7 @@ export default function SectorsOverview() {
       title: "Hospitality & Events",
       description: "High-quality hospitality, catering, and event management services.",
       icon: "/images/reception.png",
-      backgroundImage: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrnsHpy5UFIK3dAhpdqCNJ4SZ-njMterDo9A&s"
+      backgroundImage: "https://aaft.com/blog/wp-content/uploads/2025/05/tourist-giving-passport-receptionist-scaled.jpg"
     },
     {
       title: "Tourism",
@@ -78,75 +78,37 @@ export default function SectorsOverview() {
           <div className={`w-24 h-1 bg-brand-primary mx-auto rounded-full transition-all duration-1000 delay-300 ${isVisible ? 'scale-x-100' : 'scale-x-0'}`}></div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6 px-4 sm:px-6 lg:px-8">
-          {sectors.map((sector, index) => (
-            <div
-              key={index}
-              className={`group relative bg-white p-6 lg:p-8 rounded-xl lg:rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 hover:border-[#66AADD] overflow-hidden min-h-[280px] ${
-                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-              }`}
-              style={{ transitionDelay: `${index * 100}ms` }}
-            >
-              {/* Background Image */}
-              <div className={`absolute inset-0 transition-opacity duration-500 ${
-                sector.title === "Tourism" 
-                  ? "opacity-55 group-hover:opacity-65" 
-                  : "opacity-40 group-hover:opacity-50"
-              }`}>
+        {/* Seamless auto-scrolling carousel */}
+        <div className={`relative overflow-hidden px-0 ${isVisible ? 'opacity-100' : 'opacity-0 translate-y-8'}`}>
+          <div className="flex w-[200%] animate-[glanceScroll_40s_linear_infinite] hover:pause">
+            {[...sectors, ...sectors].map((sector, index) => (
+              <div
+                key={`${sector.title}-${index}`}
+                className="relative group min-h-[220px] md:min-h-[260px] lg:min-h-[340px] flex-shrink-0 w-1/2 md:w-1/4 lg:w-1/6"
+              >
                 <Image
                   src={sector.backgroundImage}
                   alt={sector.title}
                   fill
-                  className="object-cover"
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  priority={index < 2}
                 />
-              </div>
-              
-              {/* Gradient Overlay */}
-              <div className={`absolute inset-0 transition-all duration-500 ${
-                sector.title === "Tourism"
-                  ? "bg-gradient-to-br from-white/60 via-white/50 to-white/40 group-hover:from-white/65 group-hover:via-white/55 group-hover:to-white/45"
-                  : "bg-gradient-to-br from-white/70 via-white/60 to-white/50 group-hover:from-white/75 group-hover:via-white/65 group-hover:to-white/55"
-              }`}></div>
-              
-              <div className="relative z-10">
-                {/* Icon - Image or Placeholder */}
-                <div className="w-14 h-14 lg:w-16 lg:h-16 mb-4 lg:mb-6 group-hover:scale-110 transition-transform duration-500">
-                  {sector.icon.startsWith('/images/') ? (
-                    <Image
-                      src={sector.icon}
-                      alt={sector.title}
-                      width={64}
-                      height={64}
-                      className="w-full h-full object-contain"
-                    />
-                  ) : (
-                    <div className="w-full h-full bg-gray-100 rounded-lg flex items-center justify-center border-2 border-dashed border-gray-300">
-                      <span className="text-gray-400 text-sm font-medium">
-                        {sector.icon}
-                      </span>
-                    </div>
-                  )}
-                </div>
-                
-                <h3 className="text-lg lg:text-title-sm font-semibold text-gray-900 mb-3 lg:mb-4 font-heading group-hover:text-brand-primary transition-colors duration-300">
-                  {sector.title}
-                </h3>
-                
-                <p className="text-gray-600 text-sm lg:text-body-md leading-relaxed font-body mb-4 lg:mb-6">
-                  {sector.description}
-                </p>
-                
-                <div className="opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
-                  <div className="flex items-center text-brand-primary text-sm lg:text-body-sm font-medium font-heading">
-                    <span>Discover More</span>
-                    <svg className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </div>
+                <div className="absolute inset-0 bg-black/45 group-hover:bg-black/25 transition-colors duration-500"></div>
+                <div className="absolute inset-x-0 bottom-4 text-center px-2">
+                  <h3 className="text-white whitespace-nowrap text-xl md:text-2xl lg:text-3xl font-medium tracking-tight drop-shadow-lg">
+                    {sector.title}
+                  </h3>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
+          <style jsx>{`
+            @keyframes glanceScroll {
+              0% { transform: translateX(0); }
+              100% { transform: translateX(-50%); }
+            }
+            .hover\\:pause:hover { animation-play-state: paused; }
+          `}</style>
         </div>
 
         <div className={`text-center mt-16 px-6 sm:px-8 lg:px-12 transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>

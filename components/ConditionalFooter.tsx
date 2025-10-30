@@ -9,13 +9,12 @@ export default function ConditionalFooter() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Information */}
           <div className="lg:col-span-2">
-            <div className="flex items-center mb-0">
-              <div className="relative w-24 h-24">
+            <div className="flex items-center mb-0 -mt-2 lg:-mt-3">
+              <div className="relative w-32 h-32 lg:w-48 lg:h-48 xl:w-56 xl:h-56">
                 <Image
                   src="/logo.png"
                   alt="HASCO Group Logo"
-                  width={96}
-                  height={96}
+                  fill
                   className="object-contain"
                 />
               </div>

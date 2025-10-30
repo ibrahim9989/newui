@@ -86,6 +86,10 @@ const nextConfig = {
         protocol: 'https',
         hostname: 's44783.pcdn.co',
       },
+      {
+        protocol: 'https',
+        hostname: 'aaft.com',
+      },
     ],
   },
   output: 'standalone',

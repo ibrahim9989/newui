@@ -1278,3 +1278,7 @@ a {
   transform: scale(1.05);
   filter: brightness(1.05) contrast(1.02);
 }
+
+/* Utility: hide scrollbars where applied */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
